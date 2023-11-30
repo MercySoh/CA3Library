@@ -1,0 +1,71 @@
+CREATE TABLE users(
+	userID int NOT NULL AUTO_INCREMENT,
+    userName varchar(50) NOT NULL UNIQUE,
+    email varchar(255) NOT NULL UNIQUE,
+    password varchar(80) NOT NULL,
+    address varchar(80),
+    phone varchar(20),
+    userType int not null,
+    primary key(userID)
+);
+
+CREATE TABLE books(
+	bookID int NOT NULL AUTO_INCREMENT,
+    bookName varchar(50) NOT NULL,
+    author varchar(50) NOT NULL,
+    description varchar(120),
+    quantity int NOT NULL,
+    primary key(bookID)
+);
+
+CREATE TABLE userBooks(
+	userID int NOT NULL,
+    bookID int NOT NULL,
+    borrowDate DATETIME NOT NULL,
+    dueDate DATETIME NOT NULL,
+    returnedDate DATETIME,
+    fees int,
+    foreign key(userID) REFERENCES users(userID),
+    foreign key(bookID) REFERENCES books(bookID)
+);
+
+CREATE TABLE genres(
+    genreID int not null AUTO_INCREMENT,
+    genreName varchar(40) unique NOT NULL,
+    primary key(genreID)
+);
+
+CREATE TABLE bookGenres(
+    bookID int NOT NULL,
+    genreID int NOT NULL,
+    FOREIGN KEY(bookID) REFERENCES books(bookID),
+    FOREIGN KEY(genreID) REFERENCES genres(genreID)
+);
+
+
+insert into users values (1, "jerry", "jerry@gmail.com", "$2a$10$K.uvVBVFs1HRMO83Y6Er0.Qx6CTy40VJf38TgkA7csG1.ecyKctUC",
+"address", "231030213", 0);
+
+insert into users values (2, "admin", "admin@gmail.com",
+"$2a$10$KLMZQ1aqt95iVgI/ir1qWOmE.Docxd5VucQRSIE62IkAVhvPVbXk2", "address", "0231030213", 1);
+
+insert into books(bookName, author, description, quantity) VALUES ("one piece", "oda", "it is a manga of pirates", 1000);
+insert into books(bookName, author, description, quantity) VALUES ("gintama", "Hideaki Sorachi", "it is a manga of gintama", 20);
+insert into books(bookName, author, description, quantity) VALUES ("naruto", "Masashi Kishimoto", "it is a manga of ninjas", 5);
+insert into books(bookName, author, description, quantity) VALUES ("Mieruko-chan", "Tomoki Izumi", "horror manga with ability to see ghost", 4);
+insert into books(bookName, author, description, quantity) VALUES ("blue lock", "yusuke nomura", "hardcore soccer", 66);
+
+insert into genres (genreName) VALUES ("comedy");
+insert into genres (genreName) VALUES ("action");
+insert into genres (genreName) VALUES ("horror");
+insert into genres (genreName) VALUES ("romance");
+insert into genres (genreName) VALUES ("sci-fi");
+
+insert into bookGenres VALUES(1, 1);
+insert into bookGenres VALUES(1, 2);
+insert into bookGenres VALUES(2, 1);
+insert into bookGenres VALUES(2, 2);
+insert into bookGenres VALUES(3, 2);
+insert into bookGenres VALUES(4, 3);
+insert into bookGenres VALUES(4, 1);
+insert into bookGenres VALUES(5, 2);

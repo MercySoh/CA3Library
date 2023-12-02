@@ -18,13 +18,15 @@ CREATE TABLE books(
     primary key(bookID)
 );
 
-CREATE TABLE userBooks(
+CREATE TABLE loans(
+    loanID int not null AUTO_INCREMENT,
 	userID int NOT NULL,
     bookID int NOT NULL,
-    borrowDate DATETIME NOT NULL,
-    dueDate DATETIME NOT NULL,
-    returnedDate DATETIME,
-    fees int,
+    borrowDate DATE NOT NULL,
+    dueDate DATE NOT NULL,
+    returnedDate DATE,
+    fees decimal(10, 2),
+    primary key (loanID),
     foreign key(userID) REFERENCES users(userID),
     foreign key(bookID) REFERENCES books(bookID)
 );

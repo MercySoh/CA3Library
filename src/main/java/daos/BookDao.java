@@ -16,6 +16,10 @@ public class BookDao extends Dao implements BookDaoInterface {
     }
     public BookDao(Connection con) {super(con); }
 
+    /**
+     * get all the books in the table
+     * @return all books in table
+     */
     @Override
     public List<Book> getAllBooks() {
         List<Book> books = new ArrayList<>();
@@ -48,6 +52,11 @@ public class BookDao extends Dao implements BookDaoInterface {
     }
 
 
+    /**
+     * get a book based on an ID
+     * @param bookID the bookID
+     * @return the book found, or null if not found
+     */
     @Override
     public Book getBookByID(int bookID) {
         Book book = null;
@@ -82,6 +91,12 @@ public class BookDao extends Dao implements BookDaoInterface {
         return book;
     }
 
+    /**
+     * updates the book quantity
+     * @param bookID the bookID
+     * @param quantity quantity to add / subtract
+     * @return the rows affected, 1 for success, 0 for fail
+     */
     @Override
     public int updateBookQuantity(int bookID, int quantity) {
         int rowsAffected = 0;
@@ -110,6 +125,14 @@ public class BookDao extends Dao implements BookDaoInterface {
         return rowsAffected;
     }
 
+    /**
+     * add a book to the table
+     * @param bookName the name of book
+     * @param author the author
+     * @param desc description
+     * @param quantity the amount
+     * @return the rowsAffected, 1 for success, 0 for fail
+     */
     @Override
     public int addBook(String bookName, String author, String desc, int quantity) {
         int rowsAffected = 0;
@@ -135,6 +158,11 @@ public class BookDao extends Dao implements BookDaoInterface {
         return rowsAffected;
     }
 
+    /**
+     * deletes a book from the table
+     * @param bookID the bookID
+     * @return the rowsAffected, 1 for success, 0 for fail
+     */
     @Override
     public int deleteBook(int bookID) {
         int rowsAffected = 0;

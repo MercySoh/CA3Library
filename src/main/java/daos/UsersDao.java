@@ -2,10 +2,7 @@ package daos;
 
 import business.Users;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -131,11 +128,117 @@ public class UsersDao extends Dao implements UsersDaoInterface {
 
     @Override
     public Users findUserById(int id) {
-        return null;
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        Users u = null;
+        try {
+            con = this.getConnection();
+
+            String query = "SELECT * FROM USERS WHERE ID = ?";
+            ps = con.prepareStatement(query);
+            ps.setInt(1, id);
+
+            rs = ps.executeQuery();
+            if (rs.next())
+            {
+                int userId = rs.getInt("userID");
+                String username = rs.getString("userName");
+                String email = rs.getString("email");
+                String password = rs.getString("password");
+                String address = rs.getString("address");
+                String phone = rs.getString("phone");
+                int userType = rs.getInt("userType");
+                u = new Users(userId, username, email, password, address,phone,userType);
+            }
+        }
+        catch (SQLException e)
+        {
+            System.out.println("An error occurred in the findUserById() method: " + e.getMessage());
+        }
+        finally
+        {
+            try
+            {
+                if (rs != null)
+                {
+                    rs.close();
+                }
+                if (ps != null)
+                {
+                    ps.close();
+                }
+                if (con != null)
+                {
+                    freeConnection(con);
+                }
+            }
+            catch (SQLException e)
+            {
+                System.out.println("An error occurred when shutting down the findUserById() method: " + e.getMessage());
+            }
+        }
+        return u;
     }
 
     @Override
-    public int addUser(String uname, String pword, String fName, String lName) {
-        return 0;
+    public int addUser(String uname, String email, String pword, String address, String phone, int userType) {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet generatedKeys = null;
+        int newId = -1;
+        try {
+            con = this.getConnection();
+
+            String query = "INSERT INTO users(userName, email,password,address,phone,userType) VALUES (?, ?, ?, ?,?,?)";
+
+            ps = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+
+            ps.setString(1, uname);
+            ps.setString(2, email);
+            ps.setString(3, pword);
+            ps.setString(4, address);
+            ps.setString(5,phone);
+            ps.setInt(6,userType);
+
+            ps.executeUpdate();
+
+            generatedKeys = ps.getGeneratedKeys();
+
+            if(generatedKeys.next())
+            {
+                newId = generatedKeys.getInt(1);
+            }
+        }
+        catch (SQLException e)
+        {
+            System.err.println("\tA problem occurred during the addUser method:");
+            System.err.println("\t"+e.getMessage());
+            newId = -1;
+        }
+        finally
+        {
+            try
+            {
+                if(generatedKeys != null){
+                    generatedKeys.close();
+                }
+                if (ps != null)
+                {
+                    ps.close();
+                }
+                if (con != null)
+                {
+                    freeConnection();
+                }
+            }
+            catch (SQLException e)
+            {
+                System.err.println("A problem occurred when closing down the addUser method:\n" + e.getMessage());
+            }
+        }
+        return newId;
     }
+
+
 }

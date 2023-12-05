@@ -2,6 +2,7 @@ package daos;
 
 import business.Loan;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public interface LoanDaoInterface {
@@ -12,4 +13,5 @@ public interface LoanDaoInterface {
     public boolean payOverDueFee(int loanId, double fee);
     public boolean returnBook(int loanId);
     public Loan getLoanById(int loanId);
+    public boolean borrowBook(int userId, int bookId, LocalDate dueDate);
  }

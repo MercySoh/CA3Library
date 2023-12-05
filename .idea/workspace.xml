@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="creating LoanDao and LoanDaoInterface">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" afterDir="false" />
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/daos/BookgenreDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/daos/BookgenreDaoInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/daos/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/Dao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/daos/LoanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/LoanDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/daos/LoanDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/LoanDaoInterface.java" afterDir="false" />
     </list>
@@ -75,7 +75,7 @@
       <workItem from="1701439664181" duration="3538000" />
       <workItem from="1701510706090" duration="559000" />
       <workItem from="1701727185697" duration="3612000" />
-      <workItem from="1701812439873" duration="2160000" />
+      <workItem from="1701812439873" duration="5760000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -125,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701730776330</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="completing methods in LoanDao">
+      <option name="closed" value="true" />
+      <created>1701814660057</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701814660057</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +156,7 @@
     <MESSAGE value="creating Loan" />
     <MESSAGE value="add the sql file" />
     <MESSAGE value="creating LoanDao and LoanDaoInterface" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating LoanDao and LoanDaoInterface" />
+    <MESSAGE value="completing methods in LoanDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="completing methods in LoanDao" />
   </component>
 </project>

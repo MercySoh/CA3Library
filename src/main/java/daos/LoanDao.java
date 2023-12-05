@@ -2,10 +2,10 @@ package daos;
 
 import business.Loan;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 
 public class LoanDao extends Dao implements LoanDaoInterface {
@@ -256,5 +256,43 @@ public class LoanDao extends Dao implements LoanDaoInterface {
         return loan;
     }
 
+    public boolean borrowBook(int userId,int bookId, LocalDate dueDate){
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        int rowsAffected=0;
+        boolean state=false;
+        try {
+            con = getConnection();
+
+            String command = "insert into loans (userID,bookID,borrowDate,dueDate) values (?,?,now(),?) ";
+            ps = con.prepareStatement(command);
+            ps.setInt(1, userId);
+            ps.setInt(2, bookId);
+            ps.setDate(3, Date.valueOf(dueDate));
+            rowsAffected = ps.executeUpdate();
+            if(rowsAffected==1) {
+                state=true;
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Exception occurred in the borrowBook() method: " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            } catch (SQLException e) {
+                System.out.println("Exception occurred in the final section of the borrowBook() method: " + e.getMessage());
+            }
+        }
+        return state;
+    }
 
 }

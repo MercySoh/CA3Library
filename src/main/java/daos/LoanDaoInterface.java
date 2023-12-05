@@ -11,5 +11,5 @@ public interface LoanDaoInterface {
     public ArrayList <Loan> getOverDueLoans(int userId);
     public boolean payOverDueFee(int loanId, double fee);
     public boolean returnBook(int loanId);
-    public Loan getLoan(int loanId);
+    public Loan getLoanById(int loanId);
  }

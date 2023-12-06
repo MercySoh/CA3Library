@@ -17,7 +17,11 @@ public class LoanDao extends Dao implements LoanDaoInterface {
     public LoanDao(Connection con) {
         super(con);
     }
-
+/**
+ * Method gets all the user's existing loans
+ * @param userId, the intended user's Id
+ * @return ArrayList of loans                
+* */
     @Override
     public ArrayList<Loan> getCurrentLoans(int userId) {
         Connection con = null;

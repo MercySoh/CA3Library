@@ -40,7 +40,7 @@ public class Dao {
     /**
      * free the connection
      */
-    public void freeConnection() {
+    public void freeConnection(String error) {
         try {
             if (rs != null){
                 rs.close();
@@ -52,6 +52,7 @@ public class Dao {
                 con.close();
             }
         } catch (SQLException e) {
+            System.out.println(error);
             System.out.println("Failed to free connection: " + e.getMessage());
             System.exit(1);
         }
@@ -60,7 +61,7 @@ public class Dao {
     /**
      * free connection, for insert, update, delete
      */
-    public void freeConnectionUpdate() {
+    public void freeConnectionUpdate(String error) {
         try {
             if (ps != null){
                 ps.close();
@@ -69,6 +70,7 @@ public class Dao {
                 con.close();
             }
         } catch (SQLException e) {
+            System.out.println(error);
             System.out.println("Failed to free connection: " + e.getMessage());
             System.exit(1);
         }
@@ -91,7 +93,7 @@ public class Dao {
             System.err.println("\tA problem occurred during the updateIncrement method:");
             System.err.println("\t" + e.getMessage());
         } finally {
-            freeConnectionUpdate();
+            freeConnectionUpdate("fail to close connection at updateIncrement");
         }
     }
 

@@ -16,6 +16,11 @@ public interface BookDaoInterface {
     public Book getBookByID(int bookID);
 
     /**
+     * search book by the title
+     */
+    public List<Book> searchBookByTitle(String title);
+
+    /**
      * update the quantity in the book
      */
     public int updateBookQuantity(int bookID, int increase);

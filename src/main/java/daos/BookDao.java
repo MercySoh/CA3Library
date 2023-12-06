@@ -26,9 +26,10 @@ public class BookDao extends Dao implements BookDaoInterface {
 
         String query = "SELECT * FROM books";
 
-        try (Connection con = getConnection();
-             PreparedStatement ps = con.prepareStatement(query);
-             ResultSet rs = ps.executeQuery()) {
+        try {
+            Connection con = getConnection();
+            PreparedStatement ps = con.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
                 books.add(new Book(
@@ -45,7 +46,7 @@ public class BookDao extends Dao implements BookDaoInterface {
             System.out.println(e.getMessage());
         }
         finally {
-            freeConnection();
+            freeConnection("fail to free connection at getAllBooks");
         }
 
         return books;
@@ -63,8 +64,9 @@ public class BookDao extends Dao implements BookDaoInterface {
 
         String query = "SELECT * FROM books WHERE bookID = ?";
 
-        try (Connection con = getConnection();
-             PreparedStatement ps = con.prepareStatement(query)) {
+        try {
+            Connection con = getConnection();
+            PreparedStatement ps = con.prepareStatement(query);
 
             ps.setInt(1, bookID);
 
@@ -85,10 +87,43 @@ public class BookDao extends Dao implements BookDaoInterface {
             System.out.println(e.getMessage());
         }
         finally {
-            freeConnection();
+            freeConnection("fail to free connection at getBookByID");
         }
 
         return book;
+    }
+
+    @Override
+    public List<Book> searchBookByTitle(String title) {
+        List<Book> books = new ArrayList<>();
+
+        String query = "SELECT * FROM books WHERE title LIKE ?%";
+
+        try {
+            Connection con = getConnection();
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setString(1, title);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                books.add(new Book(
+                        rs.getInt("bookID"),
+                        rs.getString("bookName"),
+                        rs.getString("author"),
+                        rs.getString("description"),
+                        rs.getInt("quantity")
+                ));
+            }
+        } catch (SQLException e) {
+            // Handle or log the exception
+            System.out.println("something went wrong with the getAllBooks");
+            System.out.println(e.getMessage());
+        }
+        finally {
+            freeConnection("fail to close connection at the getAllBooks");
+        }
+
+        return books;
     }
 
     /**
@@ -120,7 +155,7 @@ public class BookDao extends Dao implements BookDaoInterface {
             System.out.println(e.getMessage());
         }
         finally {
-            freeConnectionUpdate();
+            freeConnectionUpdate("fail to close connection at the updateBookQuantity");
         }
         return rowsAffected;
     }
@@ -153,7 +188,7 @@ public class BookDao extends Dao implements BookDaoInterface {
             System.out.println(e.getMessage());
         }
         finally {
-            freeConnectionUpdate();
+            freeConnectionUpdate("fail to close connection at the addBook");
         }
         return rowsAffected;
     }
@@ -179,7 +214,7 @@ public class BookDao extends Dao implements BookDaoInterface {
             System.out.println(e.getMessage());
         }
         finally {
-            freeConnectionUpdate();
+            freeConnectionUpdate("fail to close connection at the deleteBook");
         }
         return rowsAffected;
     }

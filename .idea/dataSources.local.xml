@@ -11,10 +11,7 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema">
-            <name qname="@" />
-            <name qname="ca3library" />
-          </node>
+          <node kind="schema" qname="ca3library" />
         </introspection-scope>
       </schema-mapping>
     </data-source>

@@ -20,7 +20,7 @@ public class LoanDao extends Dao implements LoanDaoInterface {
 /**
  * Method gets all the user's existing loans
  * @param userId, the intended user's Id
- * @return ArrayList of loans                
+ * @return ArrayList of loans
 * */
     @Override
     public ArrayList<Loan> getCurrentLoans(int userId) {

@@ -94,4 +94,16 @@ public class Dao {
             freeConnectionUpdate();
         }
     }
+
+    public void freeConnection(Connection con) {
+        try {
+            if (con != null) {
+                con.close();
+                con = null;
+            }
+        } catch (SQLException e) {
+            System.out.println("Failed to free connection: " + e.getMessage());
+            System.exit(1);
+        }
+    }
 }

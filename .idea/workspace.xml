@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="add the sql file">
-      <change beforePath="$PROJECT_DIR$/src/main/java/daos/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/daos/GenreDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/GenreDaoInterface.java" afterDir="false" />
-    </list>
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="add javadocs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +66,7 @@
       <workItem from="1701173596241" duration="811000" />
       <workItem from="1701361469049" duration="1479000" />
       <workItem from="1701439664181" duration="3538000" />
-      <workItem from="1701510706090" duration="559000" />
+      <workItem from="1701510706090" duration="715000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -103,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701510938894</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add javadocs">
+      <option name="closed" value="true" />
+      <created>1701511286471</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701511286471</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +129,7 @@
     <MESSAGE value="add book, genre and some dependency. Also add sql database" />
     <MESSAGE value="added the daos to the project" />
     <MESSAGE value="add the sql file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add the sql file" />
+    <MESSAGE value="add javadocs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add javadocs" />
   </component>
 </project>

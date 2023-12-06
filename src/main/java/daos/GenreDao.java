@@ -25,9 +25,10 @@ public class GenreDao extends Dao implements GenreDaoInterface{
 
         String query = "SELECT * FROM genres";
 
-        try (Connection con = getConnection();
-             PreparedStatement ps = con.prepareStatement(query);
-             ResultSet rs = ps.executeQuery()) {
+        try {
+            Connection con = getConnection();
+            PreparedStatement ps = con.prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
                 genres.add(new Genre(
@@ -39,6 +40,9 @@ public class GenreDao extends Dao implements GenreDaoInterface{
             // Handle or log the exception
             System.out.println("something went wrong with the getAllGenres");
             System.out.println(e.getMessage());
+        }
+        finally{
+            freeConnection("fail to close connection at getAllGenres");
         }
 
         return genres;
@@ -56,8 +60,9 @@ public class GenreDao extends Dao implements GenreDaoInterface{
 
         String query = "SELECT * FROM genres WHERE genreID = ?";
 
-        try (Connection con = getConnection();
-             PreparedStatement ps = con.prepareStatement(query)) {
+        try {
+            Connection con = getConnection();
+            PreparedStatement ps = con.prepareStatement(query);
 
             ps.setInt(1, genreID);
 
@@ -74,6 +79,10 @@ public class GenreDao extends Dao implements GenreDaoInterface{
             System.out.println("something went wrong with the getGenreByID");
             System.out.println(e.getMessage());
         }
+        finally {
+            freeConnection("fail to close connection at getGenreByID");
+        }
+
 
         return genre;
     }

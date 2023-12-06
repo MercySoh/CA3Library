@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="Update and Change freeConnection() in UsersDao method.">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="Add checkUsername() in UsersDao and interface.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/daos/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/UsersDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/daos/UsersDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/UsersDaoInterface.java" afterDir="false" />
@@ -97,7 +97,7 @@
       <workItem from="1701439664181" duration="3538000" />
       <workItem from="1701510706090" duration="559000" />
       <workItem from="1701885540510" duration="1397000" />
-      <workItem from="1701897432313" duration="1273000" />
+      <workItem from="1701897432313" duration="1553000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -139,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701898301977</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add checkUsername() in UsersDao and interface.">
+      <option name="closed" value="true" />
+      <created>1701898748508</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701898748509</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +169,7 @@
     <MESSAGE value="added the daos to the project" />
     <MESSAGE value="add the sql file" />
     <MESSAGE value="Update and Change freeConnection() in UsersDao method." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update and Change freeConnection() in UsersDao method." />
+    <MESSAGE value="Add checkUsername() in UsersDao and interface." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add checkUsername() in UsersDao and interface." />
   </component>
 </project>

@@ -298,7 +298,34 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         }
         return isPresent;
     }
+
+    @Override
+    public boolean checkEmail(String email) {
+        boolean isPresent = false;
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            con = this.getConnection();
+            String query = "SELECT * from users where email=? ";
+            ps = con.prepareStatement(query);
+            ps.setString(1, email);
+
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                int count = rs.getInt(1);
+                isPresent = count > 0;
+
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            System.out.println("A problem occurred during the checkEmail() method:");
+        } finally {
+            freeConnection("An error occurred when shutting down the checkEmail() method: ");
+        }
+        return isPresent;
     }
-
-
 }
+

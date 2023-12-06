@@ -11,5 +11,5 @@ public interface UsersDaoInterface {
     public int addUser(String uname,String email, String pword, String address, String phone, int userType);
     public int deleteUser(int userId);
     public int amendUser(Users u) ;
-
+    public boolean checkUsername(String uname);
 }

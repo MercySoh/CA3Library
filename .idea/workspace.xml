@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="Update and Change freeConnection() in UsersDao method.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/daos/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/UsersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/daos/UsersDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/UsersDaoInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +97,7 @@
       <workItem from="1701439664181" duration="3538000" />
       <workItem from="1701510706090" duration="559000" />
       <workItem from="1701885540510" duration="1397000" />
-      <workItem from="1701897432313" duration="763000" />
+      <workItem from="1701897432313" duration="1273000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -132,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701510938894</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update and Change freeConnection() in UsersDao method.">
+      <option name="closed" value="true" />
+      <created>1701898301977</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701898301977</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +160,7 @@
     <MESSAGE value="add book, genre and some dependency. Also add sql database" />
     <MESSAGE value="added the daos to the project" />
     <MESSAGE value="add the sql file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add the sql file" />
+    <MESSAGE value="Update and Change freeConnection() in UsersDao method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update and Change freeConnection() in UsersDao method." />
   </component>
 </project>

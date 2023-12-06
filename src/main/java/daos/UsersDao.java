@@ -271,5 +271,34 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         return rowsAffected;
     }
 
+    @Override
+    public boolean checkUsername(String uname) {
+        boolean isPresent = false;
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            con = this.getConnection();
+            String query = "SELECT * from users where username=? ";
+            ps = con.prepareStatement(query);
+            ps.setString(1, uname);
+
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                int count = rs.getInt(1);
+                isPresent = count > 0;
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            System.out.println(" A problem occurred during the checkUsername() method:");
+        } finally {
+            freeConnection("An error occurred when shutting down the checkUsername() method: ");
+        }
+        return isPresent;
+    }
+    }
+
 
 }

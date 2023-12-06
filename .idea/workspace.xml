@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="Create UsersDao and set up findAllUsers() and findUserByUsernamePassword().">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="Add deleteUser() and amendUser() in UserDaoInterface.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/daos/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/UsersDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/daos/UsersDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/UsersDaoInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +79,7 @@
       <workItem from="1701510706090" duration="559000" />
       <workItem from="1701727185697" duration="3612000" />
       <workItem from="1701812439873" duration="5760000" />
-      <workItem from="1701818970239" duration="1354000" />
+      <workItem from="1701818970239" duration="1926000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -163,7 +161,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701819567791</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Set up findUserById() and addUser() in UserDao.">
+      <option name="closed" value="true" />
+      <created>1701820385808</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701820385808</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add deleteUser() and amendUser() in UserDaoInterface.">
+      <option name="closed" value="true" />
+      <created>1701820562469</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701820562469</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +204,8 @@
     <MESSAGE value="Create Users Class and set up generate part." />
     <MESSAGE value="Create UsersDaoInterface and set up interface method." />
     <MESSAGE value="Create UsersDao and set up findAllUsers() and findUserByUsernamePassword()." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create UsersDao and set up findAllUsers() and findUserByUsernamePassword()." />
+    <MESSAGE value="Set up findUserById() and addUser() in UserDao." />
+    <MESSAGE value="Add deleteUser() and amendUser() in UserDaoInterface." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add deleteUser() and amendUser() in UserDaoInterface." />
   </component>
 </project>

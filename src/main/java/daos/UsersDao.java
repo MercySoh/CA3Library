@@ -240,5 +240,90 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         return newId;
     }
 
+    @Override
+    public int deleteUser(int userId) {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        int rowsAffected = 0;
+        try {
+            con = getConnection();
+
+            String command = "DELETE FROM Users WHERE ID=?";
+            ps = con.prepareStatement(command);
+            ps.setInt(1, userId);
+
+            rowsAffected = ps.executeUpdate();
+
+        }
+        catch (SQLException e)
+        {
+            System.out.println("An error occurred in the deleteUser() method: " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection();
+                }
+            } catch (SQLException e)
+            {
+                System.out.println("An error occurred when shutting down the deleteUser() method: " + e.getMessage());
+            }
+        }
+        return rowsAffected;
+    }
+
+    @Override
+    public int amendUser(Users u) {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        int rowsAffected = 0;
+        try {
+            con = getConnection();
+
+            String query = "SELECT userID, username FROM users WHERE username = ?";
+            ps = con.prepareStatement(query);
+            ps.setString(1, u.getUserName());
+
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                int id = rs.getInt("userID");
+                if (id != u.getUserID())
+                    throw new SQLException("Username " + u.getUserName() + " already exists for another user.");
+            }
+
+            String command = "UPDATE Users SET Username=? WHERE userID=?";
+            ps = con.prepareStatement(command);
+            ps.setString(1, u.getUserName());
+            ps.setInt(2, u.getUserID());
+
+            rowsAffected = ps.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("An error occurred in the amendUser() method: " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            } catch (SQLException e) {
+                System.out.println("An error occurred when shutting down the amendUser() method: " + e.getMessage());
+            }
+        }
+        return rowsAffected;
+    }
+
 
 }

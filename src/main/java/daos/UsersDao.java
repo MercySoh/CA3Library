@@ -47,25 +47,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         }
         finally
         {
-            try
-            {
-                if (rs != null)
-                {
-                    rs.close();
-                }
-                if (ps != null)
-                {
-                    ps.close();
-                }
-                if (con != null)
-                {
-                    freeConnection();
-                }
-            }
-            catch (SQLException e)
-            {
-                System.out.println("An error occurred when shutting down the findAllUsers() method: " + e.getMessage());
-            }
+            freeConnection("An error occurred when shutting down the findAllUsers() method: ");
         }
         return users;
     }
@@ -103,25 +85,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         }
         finally
         {
-            try
-            {
-                if (rs != null)
-                {
-                    rs.close();
-                }
-                if (ps != null)
-                {
-                    ps.close();
-                }
-                if (con != null)
-                {
-                    freeConnection();
-                }
-            }
-            catch (SQLException e)
-            {
-                System.out.println("An error occurred when shutting down the findUserByUsernamePassword() method: " + e.getMessage());
-            }
+            freeConnection("An error occurred when shutting down the findUserByUsernamePassword() method: ");
         }
         return u;
     }
@@ -158,25 +122,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         }
         finally
         {
-            try
-            {
-                if (rs != null)
-                {
-                    rs.close();
-                }
-                if (ps != null)
-                {
-                    ps.close();
-                }
-                if (con != null)
-                {
-                    freeConnection(con);
-                }
-            }
-            catch (SQLException e)
-            {
-                System.out.println("An error occurred when shutting down the findUserById() method: " + e.getMessage());
-            }
+            freeConnection("An error occurred when shutting down the findUserById() method: ");
         }
         return u;
     }
@@ -229,7 +175,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
                 }
                 if (con != null)
                 {
-                    freeConnection();
+                    freeConnection(con);
                 }
             }
             catch (SQLException e)
@@ -268,7 +214,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
                     ps.close();
                 }
                 if (con != null) {
-                    freeConnection();
+                    freeConnection(con);
                 }
             } catch (SQLException e)
             {

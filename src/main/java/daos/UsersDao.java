@@ -59,7 +59,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
                 }
                 if (con != null)
                 {
-                    freeConnection();
+                    freeConnection("");
                 }
             }
             catch (SQLException e)
@@ -115,7 +115,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
                 }
                 if (con != null)
                 {
-                    freeConnection();
+                    freeConnection("");
                 }
             }
             catch (SQLException e)
@@ -229,7 +229,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
                 }
                 if (con != null)
                 {
-                    freeConnection();
+                    freeConnection("");
                 }
             }
             catch (SQLException e)
@@ -268,7 +268,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
                     ps.close();
                 }
                 if (con != null) {
-                    freeConnection();
+                    freeConnection("");
                 }
             } catch (SQLException e)
             {

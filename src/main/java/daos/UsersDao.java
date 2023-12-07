@@ -325,5 +325,15 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         return rowsAffected;
     }
 
+    @Override
+    public boolean checkUsername(String uname) {
+        return false;
+    }
+
+    @Override
+    public boolean checkEmail(String email) {
+        return false;
+    }
+
 
 }

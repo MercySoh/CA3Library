@@ -84,6 +84,8 @@ public class UsersDao extends Dao implements UsersDaoInterface {
             ps.setString(1, uname);
             ps.setString(2, pword);
 
+            BCrypt.checkpw(pword, hashPass);
+
             rs = ps.executeQuery();
             if (rs.next())
             {
@@ -187,6 +189,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         PreparedStatement ps = null;
         ResultSet generatedKeys = null;
         int newId = -1;
+        String hashPassword = BCrypt.hashpw(pword, BCrypt.gensalt);
         try {
             con = this.getConnection();
 
@@ -196,12 +199,14 @@ public class UsersDao extends Dao implements UsersDaoInterface {
 
             ps.setString(1, uname);
             ps.setString(2, email);
-            ps.setString(3, pword);
+            ps.setString(3, hashPassword(pword));
             ps.setString(4, address);
             ps.setString(5,phone);
             ps.setInt(6,userType);
 
+
             ps.executeUpdate();
+
 
             generatedKeys = ps.getGeneratedKeys();
 
@@ -331,13 +336,59 @@ public class UsersDao extends Dao implements UsersDaoInterface {
 
     @Override
     public boolean checkUsername(String uname) {
-        return false;
+        boolean isPresent = false;
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            con = this.getConnection();
+            String query = "SELECT * from users where username=? ";
+            ps = con.prepareStatement(query);
+            ps.setString(1, uname);
+
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                int count = rs.getInt(1);
+                isPresent = count > 0;
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            System.out.println(" A problem occurred during the checkUsername() method:");
+        } finally {
+            freeConnection("An error occurred when shutting down the checkUsername() method: ");
+        }
+        return isPresent;
     }
 
     @Override
     public boolean checkEmail(String email) {
-        return false;
+        boolean isPresent = false;
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            con = this.getConnection();
+            String query = "SELECT * from users where email=? ";
+            ps = con.prepareStatement(query);
+            ps.setString(1, email);
+
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                int count = rs.getInt(1);
+                isPresent = count > 0;
+
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            System.out.println("A problem occurred during the checkEmail() method:");
+        } finally {
+            freeConnection("An error occurred when shutting down the checkEmail() method: ");
+        }
+        return isPresent;
+    }
     }
 
-
-}

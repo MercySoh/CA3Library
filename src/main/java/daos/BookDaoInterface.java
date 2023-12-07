@@ -24,14 +24,4 @@ public interface BookDaoInterface {
      * update the quantity in the book
      */
     public int updateBookQuantity(int bookID, int increase);
-
-    /**
-     * Add book to the library database.
-     */
-    public int addBook (String bookName, String author, String desc, int quantity);
-
-    /**
-     * Add book to the library database.
-     */
-    public int deleteBook(int bookID);
 }

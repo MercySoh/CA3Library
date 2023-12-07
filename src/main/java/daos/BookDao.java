@@ -97,12 +97,12 @@ public class BookDao extends Dao implements BookDaoInterface {
     public List<Book> searchBookByTitle(String title) {
         List<Book> books = new ArrayList<>();
 
-        String query = "SELECT * FROM books WHERE title LIKE ?%";
+        String query = "SELECT * FROM books WHERE bookName LIKE ?";
 
         try {
             Connection con = getConnection();
             PreparedStatement ps = con.prepareStatement(query);
-            ps.setString(1, title);
+            ps.setString(1, title + "%");
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
@@ -156,65 +156,6 @@ public class BookDao extends Dao implements BookDaoInterface {
         }
         finally {
             freeConnectionUpdate("fail to close connection at the updateBookQuantity");
-        }
-        return rowsAffected;
-    }
-
-    /**
-     * add a book to the table
-     * @param bookName the name of book
-     * @param author the author
-     * @param desc description
-     * @param quantity the amount
-     * @return the rowsAffected, 1 for success, 0 for fail
-     */
-    @Override
-    public int addBook(String bookName, String author, String desc, int quantity) {
-        int rowsAffected = 0;
-        String query = "INSERT INTO books (bookName, author, description, quantity) VALUES(?, ?, ?, ?)";
-
-        try{
-            con = getConnection();
-            ps = con.prepareStatement(query);
-            ps.setString(1, bookName);
-            ps.setString(2, author);
-            ps.setString(3, desc);
-            ps.setInt(4, quantity);
-
-            rowsAffected = ps.executeUpdate();
-        }
-        catch (SQLException e){
-            System.out.println("something went wrong with the addBook");
-            System.out.println(e.getMessage());
-        }
-        finally {
-            freeConnectionUpdate("fail to close connection at the addBook");
-        }
-        return rowsAffected;
-    }
-
-    /**
-     * deletes a book from the table
-     * @param bookID the bookID
-     * @return the rowsAffected, 1 for success, 0 for fail
-     */
-    @Override
-    public int deleteBook(int bookID) {
-        int rowsAffected = 0;
-        String query = "DELETE FROM books WHERE bookID = ?";
-        try{
-            con = getConnection();
-            ps = con.prepareStatement(query);
-            ps.setInt(1, bookID);
-
-            rowsAffected = ps.executeUpdate();
-        }
-        catch (SQLException e){
-            System.out.println("something went wrong with the deleteBook");
-            System.out.println(e.getMessage());
-        }
-        finally {
-            freeConnectionUpdate("fail to close connection at the deleteBook");
         }
         return rowsAffected;
     }

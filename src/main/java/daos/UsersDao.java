@@ -287,9 +287,9 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         try {
             con = getConnection();
 
-            String query = "SELECT userID, username FROM users WHERE username = ?";
+            String query = "SELECT userID, username FROM users WHERE userID = ?";
             ps = con.prepareStatement(query);
-            ps.setString(1, u.getUserName());
+            ps.setInt(1, u.getUserID());
 
             rs = ps.executeQuery();
             if (rs.next()) {
@@ -298,10 +298,14 @@ public class UsersDao extends Dao implements UsersDaoInterface {
                     throw new SQLException("Username " + u.getUserName() + " already exists for another user.");
             }
 
-            String command = "UPDATE Users SET Username=? WHERE userID=?";
+            String command = "UPDATE users SET username=?, email=?, password=?, address=?, phone=? WHERE userID=?";
             ps = con.prepareStatement(command);
             ps.setString(1, u.getUserName());
-            ps.setInt(2, u.getUserID());
+            ps.setString(2, u.getEmail());
+            ps.setString(3, u.getPassword());
+            ps.setString(4, u.getAddress());
+            ps.setString(5,u.getPhone());
+            ps.setInt(6, u.getUserID());
 
             rowsAffected = ps.executeUpdate();
 

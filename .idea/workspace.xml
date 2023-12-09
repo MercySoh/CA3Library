@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" afterDir="false" />
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="Add checkUsername() in UsersDao and interface.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/daos/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/UsersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/daos/UsersDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/UsersDaoInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +24,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="1ec9a36f8e0ec74070f4617a2a0d61628dc7d1ba" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{

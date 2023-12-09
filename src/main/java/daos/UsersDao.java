@@ -1,6 +1,7 @@
 package daos;
 
 import business.Users;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -84,19 +85,19 @@ public class UsersDao extends Dao implements UsersDaoInterface {
             ps.setString(1, uname);
             ps.setString(2, pword);
 
-            BCrypt.checkpw(pword, hashPass);
-
             rs = ps.executeQuery();
             if (rs.next())
             {
-                int userId = rs.getInt("userID");
-                String username = rs.getString("userName");
-                String email = rs.getString("email");
                 String password = rs.getString("password");
-                String address = rs.getString("address");
-                String phone = rs.getString("phone");
-                int userType = rs.getInt("userType");
-                u = new Users(userId, username, email, password, address,phone,userType);
+                if(BCrypt.checkpw(pword, password)){
+                    int userId = rs.getInt("userID");
+                    String username = rs.getString("userName");
+                    String email = rs.getString("email");
+                    String address = rs.getString("address");
+                    String phone = rs.getString("phone");
+                    int userType = rs.getInt("userType");
+                    u = new Users(userId, username, email, password, address,phone,userType);
+                }
             }
         }
         catch (SQLException e)
@@ -189,7 +190,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         PreparedStatement ps = null;
         ResultSet generatedKeys = null;
         int newId = -1;
-        String hashPassword = BCrypt.hashpw(pword, BCrypt.gensalt);
+        String hashPassword = BCrypt.hashpw(pword, BCrypt.gensalt());
         try {
             con = this.getConnection();
 
@@ -199,7 +200,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
 
             ps.setString(1, uname);
             ps.setString(2, email);
-            ps.setString(3, hashPassword(pword));
+            ps.setString(3, hashPassword);
             ps.setString(4, address);
             ps.setString(5,phone);
             ps.setInt(6,userType);

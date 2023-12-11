@@ -7,6 +7,6 @@
 <body>
 <h1><%= "Hello World!" %></h1>
 <br/>
-<a href="controller">Hello Servlet</a>
+<a href="controller?action=test">Hello Servlet</a>
 </body>
 </html>

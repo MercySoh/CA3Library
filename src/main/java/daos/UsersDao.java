@@ -1,6 +1,7 @@
 package daos;
 
 import business.Users;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -47,7 +48,25 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         }
         finally
         {
-            freeConnection("An error occurred when shutting down the findAllUsers() method: ");
+            try
+            {
+                if (rs != null)
+                {
+                    rs.close();
+                }
+                if (ps != null)
+                {
+                    ps.close();
+                }
+                if (con != null)
+                {
+                    freeConnection("");
+                }
+            }
+            catch (SQLException e)
+            {
+                System.out.println("An error occurred when shutting down the findAllUsers() method: " + e.getMessage());
+            }
         }
         return users;
     }
@@ -69,14 +88,16 @@ public class UsersDao extends Dao implements UsersDaoInterface {
             rs = ps.executeQuery();
             if (rs.next())
             {
-                int userId = rs.getInt("userID");
-                String username = rs.getString("userName");
-                String email = rs.getString("email");
                 String password = rs.getString("password");
-                String address = rs.getString("address");
-                String phone = rs.getString("phone");
-                int userType = rs.getInt("userType");
-                u = new Users(userId, username, email, password, address,phone,userType);
+                if(BCrypt.checkpw(pword, password)){
+                    int userId = rs.getInt("userID");
+                    String username = rs.getString("userName");
+                    String email = rs.getString("email");
+                    String address = rs.getString("address");
+                    String phone = rs.getString("phone");
+                    int userType = rs.getInt("userType");
+                    u = new Users(userId, username, email, password, address,phone,userType);
+                }
             }
         }
         catch (SQLException e)
@@ -85,7 +106,25 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         }
         finally
         {
-            freeConnection("An error occurred when shutting down the findUserByUsernamePassword() method: ");
+            try
+            {
+                if (rs != null)
+                {
+                    rs.close();
+                }
+                if (ps != null)
+                {
+                    ps.close();
+                }
+                if (con != null)
+                {
+                    freeConnection("");
+                }
+            }
+            catch (SQLException e)
+            {
+                System.out.println("An error occurred when shutting down the findUserByUsernamePassword() method: " + e.getMessage());
+            }
         }
         return u;
     }
@@ -122,7 +161,25 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         }
         finally
         {
-            freeConnection("An error occurred when shutting down the findUserById() method: ");
+            try
+            {
+                if (rs != null)
+                {
+                    rs.close();
+                }
+                if (ps != null)
+                {
+                    ps.close();
+                }
+                if (con != null)
+                {
+                    freeConnection(con);
+                }
+            }
+            catch (SQLException e)
+            {
+                System.out.println("An error occurred when shutting down the findUserById() method: " + e.getMessage());
+            }
         }
         return u;
     }
@@ -133,6 +190,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         PreparedStatement ps = null;
         ResultSet generatedKeys = null;
         int newId = -1;
+        String hashPassword = BCrypt.hashpw(pword, BCrypt.gensalt());
         try {
             con = this.getConnection();
 
@@ -142,12 +200,14 @@ public class UsersDao extends Dao implements UsersDaoInterface {
 
             ps.setString(1, uname);
             ps.setString(2, email);
-            ps.setString(3, pword);
+            ps.setString(3, hashPassword);
             ps.setString(4, address);
             ps.setString(5,phone);
             ps.setInt(6,userType);
 
+
             ps.executeUpdate();
+
 
             generatedKeys = ps.getGeneratedKeys();
 
@@ -175,7 +235,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
                 }
                 if (con != null)
                 {
-                    freeConnection(con);
+                    freeConnection("");
                 }
             }
             catch (SQLException e)
@@ -214,7 +274,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
                     ps.close();
                 }
                 if (con != null) {
-                    freeConnection(con);
+                    freeConnection("");
                 }
             } catch (SQLException e)
             {
@@ -233,9 +293,9 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         try {
             con = getConnection();
 
-            String query = "SELECT userID, username FROM users WHERE username = ?";
+            String query = "SELECT userID, username FROM users WHERE userID = ?";
             ps = con.prepareStatement(query);
-            ps.setString(1, u.getUserName());
+            ps.setInt(1, u.getUserID());
 
             rs = ps.executeQuery();
             if (rs.next()) {
@@ -244,10 +304,14 @@ public class UsersDao extends Dao implements UsersDaoInterface {
                     throw new SQLException("Username " + u.getUserName() + " already exists for another user.");
             }
 
-            String command = "UPDATE Users SET Username=? WHERE userID=?";
+            String command = "UPDATE users SET username=?, email=?, password=?, address=?, phone=? WHERE userID=?";
             ps = con.prepareStatement(command);
             ps.setString(1, u.getUserName());
-            ps.setInt(2, u.getUserID());
+            ps.setString(2, u.getEmail());
+            ps.setString(3, u.getPassword());
+            ps.setString(4, u.getAddress());
+            ps.setString(5,u.getPhone());
+            ps.setInt(6, u.getUserID());
 
             rowsAffected = ps.executeUpdate();
 
@@ -327,5 +391,5 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         }
         return isPresent;
     }
-}
+    }
 

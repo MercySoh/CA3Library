@@ -123,4 +123,16 @@ public class Users {
                 ", userType=" + userType +
                 '}';
     }
+
+    public boolean update(Users u){
+        if(this.equals(u)) {
+            this.userName = u.userName;
+            this.email = u.email;
+            this.password = u.password;
+            this.address = u.address;
+            this.phone = u.phone;
+            return true;
+        }
+        return false;
+    }
 }

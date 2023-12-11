@@ -1,6 +1,9 @@
 package controller;
 
 import java.io.*;
+
+import business.Users;
+import daos.UsersDao;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
@@ -23,6 +26,7 @@ public class Controller extends HttpServlet {
     }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException{
+        HttpSession session = request.getSession(true);
         String action = request.getParameter("action");
         String dest = "index.jsp";
 
@@ -32,10 +36,30 @@ public class Controller extends HttpServlet {
                     dest = "test.jsp";
                     break;
 
-
+                case "logout":
+                    session.invalidate();
+                    dest = "index.jsp";
+                    break;
             }
         }
         response.sendRedirect(dest);
+    }
+
+    private String loginCommand(HttpServletRequest request, HttpServletResponse response){
+        HttpSession session = request.getSession(true);
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        UsersDao userDao = new UsersDao("ca3library");
+        Users user = userDao.findUserByUsernamePassword(username, password);
+
+        if(user != null){
+            session.setAttribute("user", user);
+            return "dashboard.jsp";
+        }
+        else{
+            return "login.jsp";
+        }
     }
 
     public void destroy() {

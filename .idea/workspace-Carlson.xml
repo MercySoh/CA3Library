@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="creating login.jsp">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/daos/LoanDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/17a4b430-44d2-4ef1-998d-c99ebfd3861d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/17a4b430-44d2-4ef1-998d-c99ebfd3861d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb/storage_v2/_src_/schema/ca3library.huMYYg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb/storage_v2/_src_/schema/ca3library.huMYYg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/daos/LoanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/LoanDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,26 +28,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;playerzer0-ui&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="371105bf-dea1-44a6-b377-706ba5efac50" />
-        <option name="url" value="https://github.com/MercySoh/CA3Library.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
-  <component name="LogFilters">
-    <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="false" />
-    <option name="FILTER_DEBUG" value="false" />
-    <option name="CUSTOM_FILTER" />
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/daos/LoanDao.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -75,6 +55,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/OneDrive - Dundalk Institute of Technology/d00243400/Y3/web patterns/library&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -92,68 +73,69 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="tests" />
+      <recent name="daos" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoanDaoTest">
-    <configuration name="LoanDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LoanDaoTest.borrowBook2">
+    <configuration name="LoanDaoTest.borrowBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="daos.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoanDaoTest.getLoanByLoanFields_whenDoNotMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA3Library" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
-      <option name="METHOD_NAME" value="getLoanByLoanFields_whenDoNotMatch" />
+      <option name="PACKAGE_NAME" value="daos" />
+      <option name="MAIN_CLASS_NAME" value="daos.LoanDaoTest" />
+      <option name="METHOD_NAME" value="borrowBook" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoanDaoTest.payOverDueFee_WhenLoanIsPresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoanDaoTest.borrowBook2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="daos.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
-      <option name="METHOD_NAME" value="payOverDueFee_WhenLoanIsPresent" />
+      <option name="PACKAGE_NAME" value="daos" />
+      <option name="MAIN_CLASS_NAME" value="daos.LoanDaoTest" />
+      <option name="METHOD_NAME" value="borrowBook2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoanDaoTest.payOverDueFee_forNotDueLoan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoanDaoTest.getLoanById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="daos.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
-      <option name="METHOD_NAME" value="payOverDueFee_forNotDueLoan" />
+      <option name="PACKAGE_NAME" value="daos" />
+      <option name="MAIN_CLASS_NAME" value="daos.LoanDaoTest" />
+      <option name="METHOD_NAME" value="getLoanById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanDaoTest.getLoanById_WhenLoanDoesNotExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA3Library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="daos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="daos" />
+      <option name="MAIN_CLASS_NAME" value="daos.LoanDaoTest" />
+      <option name="METHOD_NAME" value="getLoanById_WhenLoanDoesNotExist" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,12 +145,12 @@
       <module name="CA3Library" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="daos.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
+      <option name="PACKAGE_NAME" value="daos" />
+      <option name="MAIN_CLASS_NAME" value="daos.LoanDaoTest" />
       <option name="METHOD_NAME" value="returnBook" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -177,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LoanDaoTest" />
-        <item itemvalue="JUnit.LoanDaoTest.payOverDueFee_forNotDueLoan" />
+        <item itemvalue="JUnit.LoanDaoTest.borrowBook2" />
+        <item itemvalue="JUnit.LoanDaoTest.borrowBook" />
+        <item itemvalue="JUnit.LoanDaoTest.getLoanById_WhenLoanDoesNotExist" />
         <item itemvalue="JUnit.LoanDaoTest.returnBook" />
-        <item itemvalue="JUnit.LoanDaoTest.payOverDueFee_WhenLoanIsPresent" />
-        <item itemvalue="JUnit.LoanDaoTest.getLoanByLoanFields_whenDoNotMatch" />
+        <item itemvalue="JUnit.LoanDaoTest.getLoanById" />
       </list>
     </recent_temporary>
   </component>
@@ -197,9 +179,13 @@
       <workItem from="1701361469049" duration="1479000" />
       <workItem from="1701439664181" duration="3538000" />
       <workItem from="1701510706090" duration="559000" />
-      <workItem from="1701885540510" duration="1397000" />
-      <workItem from="1701897432313" duration="1553000" />
-      <workItem from="1702395521970" duration="7050000" />
+      <workItem from="1701727185697" duration="3612000" />
+      <workItem from="1701812439873" duration="5903000" />
+      <workItem from="1701902542377" duration="2380000" />
+      <workItem from="1701984924698" duration="5803000" />
+      <workItem from="1702039709033" duration="8569000" />
+      <workItem from="1702249949932" duration="3120000" />
+      <workItem from="1702335632982" duration="43000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -233,23 +219,55 @@
       <option name="project" value="LOCAL" />
       <updated>1701510938894</updated>
     </task>
-    <task id="LOCAL-00005" summary="Update and Change freeConnection() in UsersDao method.">
+    <task id="LOCAL-00005" summary="creating Loan">
       <option name="closed" value="true" />
-      <created>1701898301977</created>
+      <created>1701728058525</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1701898301977</updated>
+      <updated>1701728058525</updated>
     </task>
-    <task id="LOCAL-00006" summary="Add checkUsername() in UsersDao and interface.">
+    <task id="LOCAL-00006" summary="creating LoanDao and LoanDaoInterface">
       <option name="closed" value="true" />
-      <created>1701898748508</created>
+      <created>1701730776330</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1701898748509</updated>
+      <updated>1701730776330</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="completing methods in LoanDao">
+      <option name="closed" value="true" />
+      <created>1701814660057</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701814660057</updated>
+    </task>
+    <task id="LOCAL-00008" summary="creating BookgenreDao and BookgenreDaoInterface">
+      <option name="closed" value="true" />
+      <created>1701818264267</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701818264267</updated>
+    </task>
+    <task id="LOCAL-00009" summary="adding some javadocs to loanDao">
+      <option name="closed" value="true" />
+      <created>1701904039792</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701904039792</updated>
+    </task>
+    <task id="LOCAL-00010" summary="adding some javadocs to loanDao">
+      <option name="closed" value="true" />
+      <created>1701904133359</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701904133360</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,9 +287,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add book, genre and some dependency. Also add sql database" />
     <MESSAGE value="added the daos to the project" />
+    <MESSAGE value="creating Loan" />
     <MESSAGE value="add the sql file" />
-    <MESSAGE value="Update and Change freeConnection() in UsersDao method." />
-    <MESSAGE value="Add checkUsername() in UsersDao and interface." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add checkUsername() in UsersDao and interface." />
+    <MESSAGE value="creating LoanDao and LoanDaoInterface" />
+    <MESSAGE value="completing methods in LoanDao" />
+    <MESSAGE value="creating BookgenreDao and BookgenreDaoInterface" />
+    <MESSAGE value="adding more methods to" />
+    <MESSAGE value="adding some javadocs to loanDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding some javadocs to loanDao" />
   </component>
 </project>

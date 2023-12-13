@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="creating login.jsp">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/17a4b430-44d2-4ef1-998d-c99ebfd3861d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/17a4b430-44d2-4ef1-998d-c99ebfd3861d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/17a4b430-44d2-4ef1-998d-c99ebfd3861d.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/17a4b430-44d2-4ef1-998d-c99ebfd3861d/storage_v2/_src_/schema/ca3library.huMYYg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/17a4b430-44d2-4ef1-998d-c99ebfd3861d/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/17a4b430-44d2-4ef1-998d-c99ebfd3861d/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/17a4b430-44d2-4ef1-998d-c99ebfd3861d/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/17a4b430-44d2-4ef1-998d-c99ebfd3861d/storage_v2/_src_/schema/testca3library.mBm4wA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb/storage_v2/_src_/schema/ca3library.huMYYg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb/storage_v2/_src_/schema/ca3library.huMYYg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/daos/LoanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/LoanDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +201,7 @@
       <workItem from="1701510706090" duration="559000" />
       <workItem from="1701885540510" duration="1397000" />
       <workItem from="1701897432313" duration="1553000" />
-      <workItem from="1702395521970" duration="7050000" />
+      <workItem from="1702395521970" duration="7687000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -249,13 +251,36 @@
       <option name="project" value="LOCAL" />
       <updated>1701898748509</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="adding more test in LoanDaoTest">
+      <option name="closed" value="true" />
+      <created>1702404864656</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702404864656</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -272,6 +297,8 @@
     <MESSAGE value="add the sql file" />
     <MESSAGE value="Update and Change freeConnection() in UsersDao method." />
     <MESSAGE value="Add checkUsername() in UsersDao and interface." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add checkUsername() in UsersDao and interface." />
+    <MESSAGE value="creating login.jsp" />
+    <MESSAGE value="adding more test in LoanDaoTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding more test in LoanDaoTest" />
   </component>
 </project>

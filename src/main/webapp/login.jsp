@@ -4,21 +4,15 @@
 
 <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
     <form action="controller" method="post">
-        <h3>Sign in!</h3>
+        <h3>Log in!</h3>
         <label class="form-label">username</label> <br/>
         <input class="form-control" name="username" required/> <br/>
         <label class="form-label">password</label> <br/>
         <input class="form-control" name="password" required/> <br/>
-        <label class="form-label">email</label> <br/>
-        <input class="form-control" name="email" required/> <br/>
-        <label class="form-label">address</label> <br/>
-        <input class="form-control" name="address" required/> <br/>
-        <label class="form-label">phone</label> <br/>
-        <input class="form-control" name="phone" required/> <br/><br/>
 
         <input type="submit" value="Register" class="btn btn-success"/>
         <!-- Include a hidden field to identify what the user wants to do -->
-        <input type="hidden" name ="action" value="register" />
+        <input type="hidden" name ="action" value="login" />
     </form>
 </div>
 

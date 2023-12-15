@@ -293,17 +293,6 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         try {
             con = getConnection();
 
-            String query = "SELECT userID, username FROM users WHERE userID = ?";
-            ps = con.prepareStatement(query);
-            ps.setInt(1, u.getUserID());
-
-            rs = ps.executeQuery();
-            if (rs.next()) {
-                int id = rs.getInt("userID");
-                if (id != u.getUserID())
-                    throw new SQLException("Username " + u.getUserName() + " already exists for another user.");
-            }
-
             String command = "UPDATE users SET username=?, email=?, password=?, address=?, phone=? WHERE userID=?";
             ps = con.prepareStatement(command);
             ps.setString(1, u.getUserName());

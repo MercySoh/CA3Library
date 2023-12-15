@@ -1,101 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@localhost">
   <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.49">
-    <root id="1">
-      <DefaultCasing>lower/lower</DefaultCasing>
-      <DefaultEngine>InnoDB</DefaultEngine>
-      <Grants>|root||root|127.0.0.1|ALTER|G
-|root||root|::1|ALTER|G
-|root||root|localhost|ALTER|G
-|root||root|127.0.0.1|ALTER ROUTINE|G
-|root||root|::1|ALTER ROUTINE|G
-|root||root|localhost|ALTER ROUTINE|G
-|root||root|127.0.0.1|CREATE|G
-|root||root|::1|CREATE|G
-|root||root|localhost|CREATE|G
-|root||root|127.0.0.1|CREATE ROUTINE|G
-|root||root|::1|CREATE ROUTINE|G
-|root||root|localhost|CREATE ROUTINE|G
-|root||root|127.0.0.1|CREATE TABLESPACE|G
-|root||root|::1|CREATE TABLESPACE|G
-|root||root|localhost|CREATE TABLESPACE|G
-|root||root|127.0.0.1|CREATE TEMPORARY TABLES|G
-|root||root|::1|CREATE TEMPORARY TABLES|G
-|root||root|localhost|CREATE TEMPORARY TABLES|G
-|root||root|127.0.0.1|CREATE USER|G
-|root||root|::1|CREATE USER|G
-|root||root|localhost|CREATE USER|G
-|root||root|127.0.0.1|CREATE VIEW|G
-|root||root|::1|CREATE VIEW|G
-|root||root|localhost|CREATE VIEW|G
-|root||root|127.0.0.1|DELETE|G
-|root||root|::1|DELETE|G
-|root||root|localhost|DELETE|G
-|root||root|127.0.0.1|DELETE HISTORY|G
-|root||root|::1|DELETE HISTORY|G
-|root||root|localhost|DELETE HISTORY|G
-|root||root|127.0.0.1|DROP|G
-|root||root|::1|DROP|G
-|root||root|localhost|DROP|G
-|root||root|127.0.0.1|EVENT|G
-|root||root|::1|EVENT|G
-|root||root|localhost|EVENT|G
-|root||root|127.0.0.1|EXECUTE|G
-|root||root|::1|EXECUTE|G
-|root||root|localhost|EXECUTE|G
-|root||root|127.0.0.1|FILE|G
-|root||root|::1|FILE|G
-|root||root|localhost|FILE|G
-|root||root|127.0.0.1|INDEX|G
-|root||root|::1|INDEX|G
-|root||root|localhost|INDEX|G
-|root||root|127.0.0.1|INSERT|G
-|root||root|::1|INSERT|G
-|root||root|localhost|INSERT|G
-|root||root|127.0.0.1|LOCK TABLES|G
-|root||root|::1|LOCK TABLES|G
-|root||root|localhost|LOCK TABLES|G
-|root||root|127.0.0.1|PROCESS|G
-|root||root|::1|PROCESS|G
-|root||root|localhost|PROCESS|G
-|root||root|127.0.0.1|REFERENCES|G
-|root||root|::1|REFERENCES|G
-|root||root|localhost|REFERENCES|G
-|root||root|127.0.0.1|RELOAD|G
-|root||root|::1|RELOAD|G
-|root||root|localhost|RELOAD|G
-|root||root|127.0.0.1|REPLICATION CLIENT|G
-|root||root|::1|REPLICATION CLIENT|G
-|root||root|localhost|REPLICATION CLIENT|G
-|root||root|127.0.0.1|REPLICATION SLAVE|G
-|root||root|::1|REPLICATION SLAVE|G
-|root||root|localhost|REPLICATION SLAVE|G
-|root||root|127.0.0.1|SELECT|G
-|root||root|::1|SELECT|G
-|root||root|localhost|SELECT|G
-|root||root|127.0.0.1|SHOW DATABASES|G
-|root||root|::1|SHOW DATABASES|G
-|root||root|localhost|SHOW DATABASES|G
-|root||root|127.0.0.1|SHOW VIEW|G
-|root||root|::1|SHOW VIEW|G
-|root||root|localhost|SHOW VIEW|G
-|root||root|127.0.0.1|SHUTDOWN|G
-|root||root|::1|SHUTDOWN|G
-|root||root|localhost|SHUTDOWN|G
-|root||root|127.0.0.1|SUPER|G
-|root||root|::1|SUPER|G
-|root||root|localhost|SUPER|G
-|root||root|127.0.0.1|TRIGGER|G
-|root||root|::1|TRIGGER|G
-|root||root|localhost|TRIGGER|G
-|root||root|127.0.0.1|UPDATE|G
-|root||root|::1|UPDATE|G
-|root||root|localhost|UPDATE|G
-|root||root|127.0.0.1|grant option|G
-|root||root|::1|grant option|G
-|root||root|localhost|grant option|G</Grants>
-      <ServerVersion>10.4.22</ServerVersion>
-    </root>
+    <root id="1"/>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
     </collation>
@@ -1103,8 +1009,6 @@
       <Charset>utf8mb4</Charset>
     </collation>
     <schema id="324" parent="1" name="ca3library">
-      <IntrospectionTimestamp>2023-12-11.23:43:48</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-12-11.23:43:48</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="325" parent="1" name="information_schema">
@@ -1122,537 +1026,253 @@
     <schema id="329" parent="1" name="test">
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
-    <schema id="330" parent="1" name="animals">
+    <schema id="330" parent="1" name="user_database">
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
-    <schema id="331" parent="1" name="cars">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="332" parent="1" name="chating">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="333" parent="1" name="classicmodels">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="334" parent="1" name="companies">
-      <CollationName>latin1_swedish_ci</CollationName>
-    </schema>
-    <schema id="335" parent="1" name="diverse">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="336" parent="1" name="jwtclient">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="337" parent="1" name="mainlibrary">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="338" parent="1" name="my_guitar_shop1">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="339" parent="1" name="sample_persistence">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="340" parent="1" name="socialnetwork">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="341" parent="1" name="stockdb">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="342" parent="1" name="task">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="343" parent="1" name="testca3library">
-      <IntrospectionTimestamp>2023-12-11.23:44:14</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-12-11.23:44:14</LocalIntrospectionTimestamp>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="344" parent="1" name="teststockdb">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="345" parent="1" name="tourism">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="346" parent="1" name="workhours">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <user id="347" parent="1" name="pma">
+    <user id="331" parent="1" name="pma">
       <Host>localhost</Host>
     </user>
-    <user id="348" parent="1" name="root">
+    <user id="332" parent="1" name="root">
       <Host>127.0.0.1</Host>
     </user>
-    <user id="349" parent="1" name="root">
+    <user id="333" parent="1" name="root">
       <Host>::1</Host>
     </user>
-    <user id="350" parent="1" name="root">
+    <user id="334" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <table id="351" parent="324" name="bookgenres">
+    <table id="335" parent="324" name="bookgenres">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="352" parent="324" name="books">
+    <table id="336" parent="324" name="books">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="353" parent="324" name="genres">
+    <table id="337" parent="324" name="genres">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="354" parent="324" name="loans">
+    <table id="338" parent="324" name="loans">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="355" parent="324" name="users">
+    <table id="339" parent="324" name="users">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="356" parent="343" name="bookgenres">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <table id="357" parent="343" name="books">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <table id="358" parent="343" name="genres">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <table id="359" parent="343" name="loans">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <table id="360" parent="343" name="users">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <column id="361" parent="351" name="bookID">
+    <column id="340" parent="335" name="bookID">
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="362" parent="351" name="genreID">
+    <column id="341" parent="335" name="genreID">
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="363" parent="351" name="bookgenres_ibfk_1">
+    <foreign-key id="342" parent="335" name="bookgenres_ibfk_1">
       <ColNames>bookID</ColNames>
       <RefColNames>bookID</RefColNames>
       <RefTableName>books</RefTableName>
     </foreign-key>
-    <foreign-key id="364" parent="351" name="bookgenres_ibfk_2">
+    <foreign-key id="343" parent="335" name="bookgenres_ibfk_2">
       <ColNames>genreID</ColNames>
       <RefColNames>genreID</RefColNames>
       <RefTableName>genres</RefTableName>
     </foreign-key>
-    <index id="365" parent="351" name="bookID">
+    <index id="344" parent="335" name="bookID">
       <ColNames>bookID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="366" parent="351" name="genreID">
+    <index id="345" parent="335" name="genreID">
       <ColNames>genreID</ColNames>
       <Type>btree</Type>
     </index>
-    <column id="367" parent="352" name="bookID">
+    <column id="346" parent="336" name="bookID">
       <AutoIncrement>6</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="368" parent="352" name="bookName">
+    <column id="347" parent="336" name="bookName">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="369" parent="352" name="author">
+    <column id="348" parent="336" name="author">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="370" parent="352" name="description">
+    <column id="349" parent="336" name="description">
       <DasType>varchar(120)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="371" parent="352" name="quantity">
+    <column id="350" parent="336" name="quantity">
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <index id="372" parent="352" name="PRIMARY">
+    <index id="351" parent="336" name="PRIMARY">
       <ColNames>bookID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="373" parent="352" name="PRIMARY">
+    <key id="352" parent="336" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="374" parent="353" name="genreID">
+    <column id="353" parent="337" name="genreID">
       <AutoIncrement>6</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="375" parent="353" name="genreName">
+    <column id="354" parent="337" name="genreName">
       <DasType>varchar(40)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="376" parent="353" name="PRIMARY">
+    <index id="355" parent="337" name="PRIMARY">
       <ColNames>genreID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="377" parent="353" name="genreName">
+    <index id="356" parent="337" name="genreName">
       <ColNames>genreName</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="378" parent="353" name="PRIMARY">
+    <key id="357" parent="337" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="379" parent="353" name="genreName">
+    <key id="358" parent="337" name="genreName">
       <UnderlyingIndexName>genreName</UnderlyingIndexName>
     </key>
-    <column id="380" parent="354" name="loanID">
+    <column id="359" parent="338" name="loanID">
       <AutoIncrement>1</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="381" parent="354" name="userID">
+    <column id="360" parent="338" name="userID">
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="382" parent="354" name="bookID">
+    <column id="361" parent="338" name="bookID">
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="383" parent="354" name="borrowDate">
+    <column id="362" parent="338" name="borrowDate">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="384" parent="354" name="dueDate">
+    <column id="363" parent="338" name="dueDate">
       <DasType>date|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="385" parent="354" name="returnedDate">
+    <column id="364" parent="338" name="returnedDate">
       <DasType>date|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="386" parent="354" name="fees">
+    <column id="365" parent="338" name="fees">
       <DasType>decimal(10,2 digit)|0s</DasType>
       <Position>7</Position>
     </column>
-    <foreign-key id="387" parent="354" name="loans_ibfk_1">
+    <foreign-key id="366" parent="338" name="loans_ibfk_1">
       <ColNames>userID</ColNames>
       <RefColNames>userID</RefColNames>
       <RefTableName>users</RefTableName>
     </foreign-key>
-    <foreign-key id="388" parent="354" name="loans_ibfk_2">
+    <foreign-key id="367" parent="338" name="loans_ibfk_2">
       <ColNames>bookID</ColNames>
       <RefColNames>bookID</RefColNames>
       <RefTableName>books</RefTableName>
     </foreign-key>
-    <index id="389" parent="354" name="PRIMARY">
+    <index id="368" parent="338" name="PRIMARY">
       <ColNames>loanID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="390" parent="354" name="userID">
+    <index id="369" parent="338" name="userID">
       <ColNames>userID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="391" parent="354" name="bookID">
+    <index id="370" parent="338" name="bookID">
       <ColNames>bookID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="392" parent="354" name="PRIMARY">
+    <key id="371" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="393" parent="355" name="userID">
+    <column id="372" parent="339" name="userID">
       <AutoIncrement>3</AutoIncrement>
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="394" parent="355" name="userName">
+    <column id="373" parent="339" name="userName">
       <DasType>varchar(50)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="395" parent="355" name="email">
+    <column id="374" parent="339" name="email">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="396" parent="355" name="password">
+    <column id="375" parent="339" name="password">
       <DasType>varchar(80)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="397" parent="355" name="address">
+    <column id="376" parent="339" name="address">
       <DasType>varchar(80)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="398" parent="355" name="phone">
+    <column id="377" parent="339" name="phone">
       <DasType>varchar(20)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="399" parent="355" name="userType">
+    <column id="378" parent="339" name="userType">
       <DasType>int(11)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <index id="400" parent="355" name="PRIMARY">
+    <index id="379" parent="339" name="PRIMARY">
       <ColNames>userID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="401" parent="355" name="userName">
+    <index id="380" parent="339" name="userName">
       <ColNames>userName</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="402" parent="355" name="email">
+    <index id="381" parent="339" name="email">
       <ColNames>email</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="403" parent="355" name="PRIMARY">
+    <key id="382" parent="339" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="404" parent="355" name="userName">
+    <key id="383" parent="339" name="userName">
       <UnderlyingIndexName>userName</UnderlyingIndexName>
     </key>
-    <key id="405" parent="355" name="email">
-      <UnderlyingIndexName>email</UnderlyingIndexName>
-    </key>
-    <column id="406" parent="356" name="bookID">
-      <DasType>int(11)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="407" parent="356" name="genreID">
-      <DasType>int(11)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <foreign-key id="408" parent="356" name="bookgenres_ibfk_1">
-      <ColNames>bookID</ColNames>
-      <RefColNames>bookID</RefColNames>
-      <RefTableName>books</RefTableName>
-    </foreign-key>
-    <foreign-key id="409" parent="356" name="bookgenres_ibfk_2">
-      <ColNames>genreID</ColNames>
-      <RefColNames>genreID</RefColNames>
-      <RefTableName>genres</RefTableName>
-    </foreign-key>
-    <index id="410" parent="356" name="bookID">
-      <ColNames>bookID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="411" parent="356" name="genreID">
-      <ColNames>genreID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <column id="412" parent="357" name="bookID">
-      <AutoIncrement>6</AutoIncrement>
-      <DasType>int(11)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="413" parent="357" name="bookName">
-      <DasType>varchar(50)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="414" parent="357" name="author">
-      <DasType>varchar(50)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="415" parent="357" name="description">
-      <DasType>varchar(120)|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <column id="416" parent="357" name="quantity">
-      <DasType>int(11)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <index id="417" parent="357" name="PRIMARY">
-      <ColNames>bookID</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="418" parent="357" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="419" parent="358" name="genreID">
-      <AutoIncrement>6</AutoIncrement>
-      <DasType>int(11)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="420" parent="358" name="genreName">
-      <DasType>varchar(40)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <index id="421" parent="358" name="PRIMARY">
-      <ColNames>genreID</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="422" parent="358" name="genreName">
-      <ColNames>genreName</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="423" parent="358" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <key id="424" parent="358" name="genreName">
-      <UnderlyingIndexName>genreName</UnderlyingIndexName>
-    </key>
-    <column id="425" parent="359" name="loanID">
-      <AutoIncrement>150</AutoIncrement>
-      <DasType>int(11)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="426" parent="359" name="userID">
-      <DasType>int(11)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="427" parent="359" name="bookID">
-      <DasType>int(11)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="428" parent="359" name="borrowDate">
-      <DasType>date|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <column id="429" parent="359" name="dueDate">
-      <DasType>date|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <column id="430" parent="359" name="returnedDate">
-      <DasType>date|0s</DasType>
-      <Position>6</Position>
-    </column>
-    <column id="431" parent="359" name="fees">
-      <DasType>decimal(10,2 digit)|0s</DasType>
-      <Position>7</Position>
-    </column>
-    <foreign-key id="432" parent="359" name="loans_ibfk_1">
-      <ColNames>userID</ColNames>
-      <RefColNames>userID</RefColNames>
-      <RefTableName>users</RefTableName>
-    </foreign-key>
-    <foreign-key id="433" parent="359" name="loans_ibfk_2">
-      <ColNames>bookID</ColNames>
-      <RefColNames>bookID</RefColNames>
-      <RefTableName>books</RefTableName>
-    </foreign-key>
-    <index id="434" parent="359" name="PRIMARY">
-      <ColNames>loanID</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="435" parent="359" name="userID">
-      <ColNames>userID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="436" parent="359" name="bookID">
-      <ColNames>bookID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="437" parent="359" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="438" parent="360" name="userID">
-      <AutoIncrement>3</AutoIncrement>
-      <DasType>int(11)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="439" parent="360" name="userName">
-      <DasType>varchar(50)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="440" parent="360" name="email">
-      <DasType>varchar(255)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="441" parent="360" name="password">
-      <DasType>varchar(80)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <column id="442" parent="360" name="address">
-      <DasType>varchar(80)|0s</DasType>
-      <Position>5</Position>
-    </column>
-    <column id="443" parent="360" name="phone">
-      <DasType>varchar(20)|0s</DasType>
-      <Position>6</Position>
-    </column>
-    <column id="444" parent="360" name="userType">
-      <DasType>int(11)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-    </column>
-    <index id="445" parent="360" name="PRIMARY">
-      <ColNames>userID</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="446" parent="360" name="userName">
-      <ColNames>userName</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="447" parent="360" name="email">
-      <ColNames>email</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="448" parent="360" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <key id="449" parent="360" name="userName">
-      <UnderlyingIndexName>userName</UnderlyingIndexName>
-    </key>
-    <key id="450" parent="360" name="email">
+    <key id="384" parent="339" name="email">
       <UnderlyingIndexName>email</UnderlyingIndexName>
     </key>
   </database-model>

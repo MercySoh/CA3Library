@@ -27,30 +27,35 @@ public class Controller extends HttpServlet {
         String action = request.getParameter("action");
         String dest = "index.jsp";
 
-        if(action != null){
-            switch (action){
-                case "test":
-                    dest = "test.jsp";
-                    break;
-                case "register":
-                    dest=RegisterCommand(request,response);
-                    break;
-
-                case "registering":
-                    dest = "register.jsp";
-                    break;
-
-                case "logout":
-                    session.invalidate();
-                    dest = "index.jsp";
-                    break;
-            }
+        if(action == null){
+            action = "dashboard";
         }
-        else {
-            dest = "register.jsp";
-            String error = "No action supplied. Please try again.";
-            session.setAttribute("errorMessage", error);
+
+        switch (action){
+            case "dashboard":
+                session.setAttribute("pageTitle", "dashboard");
+                dest = "dashboard.jsp";
+                break;
+            case "register":
+                dest=RegisterCommand(request,response);
+                break;
+
+            case "show_register":
+                session.setAttribute("pageTitle", "register");
+                dest = "register.jsp";
+                break;
+
+            case "show_login":
+                session.setAttribute("pageTitle", "login");
+                dest = "login.jsp";
+                break;
+
+            case "logout":
+                session.invalidate();
+                dest = "index.jsp";
+                break;
         }
+
         response.sendRedirect(dest);
     }
 

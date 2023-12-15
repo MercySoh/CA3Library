@@ -1,16 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: d00243400
-  Date: 11/12/2023
-  Time: 11:21
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<%@include file="header.jsp"%>
 
 <form action="controller" method="post">
     <label>username</label>
@@ -29,5 +17,4 @@
     <input type="hidden" name ="action" value="register" />
 </form>
 
-</body>
-</html>
+<%@include file="footer.jsp"%>

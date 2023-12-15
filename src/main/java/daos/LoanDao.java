@@ -41,10 +41,9 @@ public class LoanDao extends Dao implements LoanDaoInterface {
 
             while (rs.next()) {
                 Loan l;
-                if(rs.getDate("returnedDate")!=null) {
+                if (rs.getDate("returnedDate") != null) {
                     l = new Loan(rs.getInt("loanId"), rs.getInt("userId"), rs.getInt("bookId"), rs.getDate("borrowDate").toLocalDate(), rs.getDate("dueDate").toLocalDate(), rs.getDate("returnedDate").toLocalDate(), rs.getDouble("fees"));
-                }
-                else{
+                } else {
                     l = new Loan(rs.getInt("loanId"), rs.getInt("userId"), rs.getInt("bookId"), rs.getDate("borrowDate").toLocalDate(), rs.getDate("dueDate").toLocalDate(), null, rs.getDouble("fees"));
                 }
                 loans.add(l);
@@ -86,10 +85,9 @@ public class LoanDao extends Dao implements LoanDaoInterface {
 
             while (rs.next()) {
                 Loan l;
-                if(rs.getDate("returnedDate")!=null) {
+                if (rs.getDate("returnedDate") != null) {
                     l = new Loan(rs.getInt("loanId"), rs.getInt("userId"), rs.getInt("bookId"), rs.getDate("borrowDate").toLocalDate(), rs.getDate("dueDate").toLocalDate(), rs.getDate("returnedDate").toLocalDate(), rs.getDouble("fees"));
-                }
-                else{
+                } else {
                     l = new Loan(rs.getInt("loanId"), rs.getInt("userId"), rs.getInt("bookId"), rs.getDate("borrowDate").toLocalDate(), rs.getDate("dueDate").toLocalDate(), null, rs.getDouble("fees"));
                 }
                 loans.add(l);
@@ -131,10 +129,9 @@ public class LoanDao extends Dao implements LoanDaoInterface {
 
             while (rs.next()) {
                 Loan l;
-                if(rs.getDate("returnedDate")!=null) {
+                if (rs.getDate("returnedDate") != null) {
                     l = new Loan(rs.getInt("loanId"), rs.getInt("userId"), rs.getInt("bookId"), rs.getDate("borrowDate").toLocalDate(), rs.getDate("dueDate").toLocalDate(), rs.getDate("returnedDate").toLocalDate(), rs.getDouble("fees"));
-                }
-                else{
+                } else {
                     l = new Loan(rs.getInt("loanId"), rs.getInt("userId"), rs.getInt("bookId"), rs.getDate("borrowDate").toLocalDate(), rs.getDate("dueDate").toLocalDate(), null, rs.getDouble("fees"));
                 }
                 loans.add(l);
@@ -258,10 +255,9 @@ public class LoanDao extends Dao implements LoanDaoInterface {
             rs = ps.executeQuery();
 
             if (rs.next()) {
-                if(rs.getDate("returnedDate")!=null) {
+                if (rs.getDate("returnedDate") != null) {
                     loan = new Loan(rs.getInt("loanId"), rs.getInt("userId"), rs.getInt("bookId"), rs.getDate("borrowDate").toLocalDate(), rs.getDate("dueDate").toLocalDate(), rs.getDate("returnedDate").toLocalDate(), rs.getDouble("fees"));
-                }
-                else{
+                } else {
                     loan = new Loan(rs.getInt("loanId"), rs.getInt("userId"), rs.getInt("bookId"), rs.getDate("borrowDate").toLocalDate(), rs.getDate("dueDate").toLocalDate(), null, rs.getDouble("fees"));
                 }
             }
@@ -295,15 +291,15 @@ public class LoanDao extends Dao implements LoanDaoInterface {
         try {
 
             con = getConnection();
-               String command = "insert into loans (userID,bookID,borrowDate,dueDate) values (?,?,now(),?) ";
-               ps = con.prepareStatement(command);
-               ps.setInt(1, userId);
-               ps.setInt(2, bookId);
-               ps.setDate(3, Date.valueOf(dueDate));
-               rowsAffected = ps.executeUpdate();
-               if (rowsAffected == 1) {
-                   state = true;
-               }
+            String command = "insert into loans (userID,bookID,borrowDate,dueDate) values (?,?,now(),?) ";
+            ps = con.prepareStatement(command);
+            ps.setInt(1, userId);
+            ps.setInt(2, bookId);
+            ps.setDate(3, Date.valueOf(dueDate));
+            rowsAffected = ps.executeUpdate();
+            if (rowsAffected == 1) {
+                state = true;
+            }
 
 
         } catch (SQLException e) {
@@ -326,7 +322,7 @@ public class LoanDao extends Dao implements LoanDaoInterface {
         return state;
     }
 
-    public boolean borrowBook(int userId, int bookId,LocalDate borrowDate, LocalDate dueDate) {
+    public boolean borrowBook(int userId, int bookId, LocalDate borrowDate, LocalDate dueDate) {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -384,10 +380,49 @@ public class LoanDao extends Dao implements LoanDaoInterface {
             rs = ps.executeQuery();
 
             if (rs.next()) {
-                if(rs.getDate("returnedDate")!=null) {
+                if (rs.getDate("returnedDate") != null) {
                     loan = new Loan(rs.getInt("loanId"), rs.getInt("userId"), rs.getInt("bookId"), rs.getDate("borrowDate").toLocalDate(), rs.getDate("dueDate").toLocalDate(), rs.getDate("returnedDate").toLocalDate(), rs.getDouble("fees"));
+                } else {
+                    loan = new Loan(rs.getInt("loanId"), rs.getInt("userId"), rs.getInt("bookId"), rs.getDate("borrowDate").toLocalDate(), rs.getDate("dueDate").toLocalDate(), null, rs.getDouble("fees"));
                 }
-                else{
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Exception occurred in  the getLoanById() method: " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            } catch (SQLException e) {
+                System.out.println("Exception occurred in  the getLoanById() method:  " + e.getMessage());
+            }
+        }
+        return loan;
+    }
+
+    public Loan getTrendingBooks() {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        Loan loan = null;
+        try {
+            con = getConnection();
+
+            String query = "SELECT count(bookID) as num, bookID from loans where  DATEDIFF(now(),borrowDate)<30 group by bookID order by num;";
+            ps = con.prepareStatement(query);
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                if (rs.getDate("returnedDate") != null) {
+                    loan = new Loan(rs.getInt("loanId"), rs.getInt("userId"), rs.getInt("bookId"), rs.getDate("borrowDate").toLocalDate(), rs.getDate("dueDate").toLocalDate(), rs.getDate("returnedDate").toLocalDate(), rs.getDouble("fees"));
+                } else {
                     loan = new Loan(rs.getInt("loanId"), rs.getInt("userId"), rs.getInt("bookId"), rs.getDate("borrowDate").toLocalDate(), rs.getDate("dueDate").toLocalDate(), null, rs.getDouble("fees"));
                 }
             }

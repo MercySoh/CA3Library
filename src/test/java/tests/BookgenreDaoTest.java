@@ -2,6 +2,7 @@ package tests;
 
 import business.Bookgenre;
 import daos.BookgenreDao;
+import daos.LoanDao;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -9,12 +10,13 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BookgenreDaoTest {
+    BookgenreDao bookgenreDao = new BookgenreDao("testca3library");
+
     /**
      * when the book id exist in the bookgenres table
      **/
     @Test
     void getAllBookGenres() {
-        BookgenreDao bookgenreDao = new BookgenreDao("testca3library");
         ArrayList<Bookgenre> actual = bookgenreDao.getAllBookGenres(1);
         Bookgenre bg1 = new Bookgenre(1, 1);
         Bookgenre bg2 = new Bookgenre(1, 2);
@@ -29,7 +31,6 @@ class BookgenreDaoTest {
      **/
     @Test
     void getAllBookGenres_WhenNoMatch() {
-        BookgenreDao bookgenreDao = new BookgenreDao("testca3library");
         ArrayList<Bookgenre> actual = bookgenreDao.getAllBookGenres(10);
         ArrayList<Bookgenre> expected = new ArrayList();
         assertEquals(actual, expected);
@@ -40,7 +41,6 @@ class BookgenreDaoTest {
      **/
     @Test
     void getBookGenresByGenreId() {
-        BookgenreDao bookgenreDao = new BookgenreDao("testca3library");
         ArrayList<Bookgenre> actual = bookgenreDao.getBookGenresByGenreId(1);
         Bookgenre bg1 = new Bookgenre(1, 1);
         Bookgenre bg2 = new Bookgenre(2, 1);
@@ -57,7 +57,6 @@ class BookgenreDaoTest {
      **/
     @Test
     void getBookGenresByGenreId_WhenNoMatchExist() {
-        BookgenreDao bookgenreDao = new BookgenreDao("testca3library");
         ArrayList<Bookgenre> actual = bookgenreDao.getBookGenresByGenreId(10);
         ArrayList<Bookgenre> expected = new ArrayList();
         assertEquals(actual, expected);

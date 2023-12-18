@@ -80,10 +80,9 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         try {
             con = this.getConnection();
 
-            String query = "SELECT * FROM USERS WHERE USERNAME = ? AND PASSWORD = ?";
+            String query = "SELECT * FROM USERS WHERE USERNAME = ? ";
             ps = con.prepareStatement(query);
             ps.setString(1, uname);
-            ps.setString(2, pword);
 
             rs = ps.executeQuery();
             if (rs.next())
@@ -138,7 +137,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         try {
             con = this.getConnection();
 
-            String query = "SELECT * FROM USERS WHERE ID = ?";
+            String query = "SELECT * FROM USERS WHERE userID = ?";
             ps = con.prepareStatement(query);
             ps.setInt(1, id);
 

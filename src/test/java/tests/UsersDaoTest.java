@@ -24,7 +24,13 @@ class UsersDaoTest {
     }
 
     @Test
-    void findUserById() {
+    void findUserById_Found() {
+        UsersDao usersDao = new UsersDao("ca3librarytest");
+        System.out.println("findUserById_Found");
+        int userID = 1;
+        Users expResult = new Users(1,"jerry", "jerry@gmail.com", "$2a$10$K.uvVBVFs1HRMO83Y6Er0.Qx6CTy40VJf38TgkA7csG1.ecyKctUC", "address", "231030213", 0);
+        Users result = usersDao.findUserById(userID);
+        assertEquals(expResult, result);
     }
 
     @Test

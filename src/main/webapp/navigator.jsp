@@ -1,3 +1,4 @@
+<%@ page import="business.Users" %>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="controller?action=dashboard">
@@ -6,7 +7,8 @@
         </a>
 
         <!-- Toggle button for small screens -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -19,14 +21,16 @@
 
             <!-- right, could be a profile / logout too -->
             <ul class="navbar-nav ms-3">
-                <% if (session.getAttribute("user") != null){%>
+                <%
+                    Users u = (Users) session.getAttribute("user");
+                    if (u != null) {%>
                 <li class="nav-item">
                     <a class="nav-link" href="controller?action=logout">logout</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="controller?action=show_profile">profile</a>
                 </li>
-                <%}else{%>
+                <%} else {%>
                 <li class="nav-item">
                     <a class="nav-link" href="controller?action=show_login">login</a>
                 </li>

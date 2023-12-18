@@ -54,6 +54,9 @@ public class Controller extends HttpServlet {
                 session.invalidate();
                 dest = "index.jsp";
                 break;
+            case "login":
+                dest=loginCommand(request,response);
+                break;
         }
 
         response.sendRedirect(dest);
@@ -72,6 +75,8 @@ public class Controller extends HttpServlet {
             return "dashboard.jsp";
         }
         else{
+            String msg = "Wrong password or UserName";
+            session.setAttribute("errorMessage", msg);
             return "login.jsp";
         }
     }
@@ -96,9 +101,9 @@ public class Controller extends HttpServlet {
                 session.setAttribute("msg", msg);
             }
             else{
-                destination="index.jsp";
+                destination="error.jsp";
                 String msg = "registration was not successful!";
-                session.setAttribute("msg", msg);
+                session.setAttribute("errorMessage", msg);
             }
         }
       return destination;

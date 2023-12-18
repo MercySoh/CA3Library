@@ -8,7 +8,7 @@
         <label class="form-label">username</label> <br/>
         <input class="form-control" name="username" required/> <br/>
         <label class="form-label">password</label> <br/>
-        <input class="form-control" name="password" required/> <br/>
+        <input class="form-control" name="password" type="password" required/> <br/>
         <label class="form-label">email</label> <br/>
         <input class="form-control" name="email" required/> <br/>
         <label class="form-label">address</label> <br/>

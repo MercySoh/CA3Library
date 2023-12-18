@@ -13,11 +13,10 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LoanDaoTest {
-
+  private LoanDao loanDao = new LoanDao("testca3library");
     @BeforeEach
     void setUp() {
         // insert loan for payOverdueLoan
-        LoanDao loanDao = new LoanDao("testca3library");
         LocalDate borrowDate = LocalDate.of(2023, 12, 2);
         LocalDate dueDate = LocalDate.of(2023, 12, 7);
         loanDao.borrowBook(2, 5, borrowDate, dueDate);
@@ -36,7 +35,6 @@ class LoanDaoTest {
     @AfterEach
     void tearDown() {
         /**delete the inserted loan payOverdueLoan for**/
-        LoanDao loanDao = new LoanDao("testca3library");
         LocalDate borrowDate = LocalDate.of(2023, 12, 2);
         LocalDate dueDate = LocalDate.of(2023, 12, 7);
         LocalDate present = LocalDate.now();
@@ -66,7 +64,6 @@ class LoanDaoTest {
      **/
     @Test
     void getCurrentLoans_WhenLoansArePresent() {
-        LoanDao loanDao = new LoanDao("testca3library");
         LocalDate borrowDate1 = LocalDate.of(2023, 12, 7);
         LocalDate borrowDate2 = LocalDate.of(2023, 12, 8);
         LocalDate dueDate1 = LocalDate.of(2023, 12, 8);
@@ -94,7 +91,6 @@ class LoanDaoTest {
      **/
     @Test
     void getPreviousLoans_WhenPreviousLoansExist() {
-        LoanDao loanDao = new LoanDao("testca3library");
         LocalDate borrowDate1 = LocalDate.of(2023, 12, 5);
         LocalDate dueDate1 = LocalDate.of(2023, 12, 7);
         LocalDate returnDate1 = LocalDate.of(2023, 12, 7);
@@ -110,7 +106,6 @@ class LoanDaoTest {
      **/
     @Test
     void getPreviousLoans_WhenNoPreviousLoansExist() {
-        LoanDao loanDao = new LoanDao("testca3library");
         ArrayList<Loan> actual = loanDao.getPreviousLoans(10);
         ArrayList<Loan> expected = new ArrayList();
         assertEquals(actual, expected);
@@ -121,7 +116,7 @@ class LoanDaoTest {
      **/
     @Test
     void getOverDueLoans_WhenOverDueLoansExist() {
-        LoanDao loanDao = new LoanDao("testca3library");
+        //LoanDao loanDao = new LoanDao("testca3library");
         LocalDate borrowDate1 = LocalDate.of(2023, 12, 7);
         LocalDate dueDate1 = LocalDate.of(2023, 12, 8);
         ArrayList<Loan> actual = loanDao.getOverDueLoans(1);
@@ -136,7 +131,6 @@ class LoanDaoTest {
      **/
     @Test
     void getOverDueLoans_WhenNoOverDueLoansExist() {
-        LoanDao loanDao = new LoanDao("testca3library");
         ArrayList<Loan> actual = loanDao.getOverDueLoans(10);
         ArrayList<Loan> expected = new ArrayList();
         assertEquals(actual, expected);
@@ -147,7 +141,6 @@ class LoanDaoTest {
      **/
     @Test
     void payOverDueFee_WhenLoanIsPresent() {
-        LoanDao loanDao = new LoanDao("testca3library");
         LocalDate borrowDate = LocalDate.of(2023, 12, 2);
         LocalDate dueDate = LocalDate.of(2023, 12, 7);
         LocalDate present = LocalDate.now();
@@ -172,7 +165,6 @@ class LoanDaoTest {
      **/
     @Test
     void payOverDueFee_WhenLoanIsNotPresent() {
-        LoanDao loanDao = new LoanDao("testca3library");
         boolean actual = loanDao.payOverDueFee(10000, 20);
         boolean expected = false;
         assertEquals(actual, expected);
@@ -183,7 +175,6 @@ class LoanDaoTest {
      **/
     @Test
     void payOverDueFee_forAReturnedLoan() {
-        LoanDao loanDao = new LoanDao("testca3library");
         boolean actual = loanDao.payOverDueFee(3, 20);
         boolean expected = false;
         assertEquals(actual, expected);
@@ -195,7 +186,6 @@ class LoanDaoTest {
      **/
     @Test
     void payOverDueFee_forNotDueLoan() {
-        LoanDao loanDao = new LoanDao("testca3library");
         LocalDate borrowDate = LocalDate.now().minusDays(5);
         LocalDate dueDate = LocalDate.now().plusDays(1);
         LocalDate present = LocalDate.now();
@@ -222,7 +212,6 @@ class LoanDaoTest {
      **/
     @Test
     void returnBook() {
-        LoanDao loanDao = new LoanDao("testca3library");
         LocalDate borrowDate = LocalDate.now().minusDays(5);
         LocalDate dueDate = LocalDate.now().plusDays(1);
         Loan l = loanDao.getLoanByLoanFields(2, 3, borrowDate, dueDate);
@@ -248,7 +237,6 @@ class LoanDaoTest {
      **/
     @Test
     void returnBook_WhenLoanNotPresent() {
-        LoanDao loanDao = new LoanDao("testca3library");
         boolean actual = loanDao.returnBook(10000);
         boolean expected = false;
         assertEquals(actual, expected);
@@ -260,7 +248,6 @@ class LoanDaoTest {
      **/
     @Test
     void getLoanById_WhenLoanExist() {
-        LoanDao loanDao = new LoanDao("testca3library");
         LocalDate borrowDate = LocalDate.of(2023, 12, 7);
         LocalDate dueDate = LocalDate.of(2023, 12, 9);
         Loan actual = loanDao.getLoanById(1);
@@ -273,7 +260,7 @@ class LoanDaoTest {
      **/
     @Test
     void getLoanById_WhenLoanDoesNotExist() {
-        LoanDao loanDao = new LoanDao("testca3library");
+        //LoanDao loanDao = new LoanDao("testca3library");
         Loan actual = loanDao.getLoanById(10000);
         Loan expected = null;
         assertEquals(actual, expected);
@@ -281,7 +268,6 @@ class LoanDaoTest {
 
     @Test
     void borrowBook() {
-        LoanDao loanDao = new LoanDao("testca3library");
         LocalDate dueDate = LocalDate.now().plusDays(1);
         LocalDate borrowedDate = LocalDate.now();
         boolean actual = loanDao.borrowBook(1, 5, dueDate);
@@ -301,7 +287,6 @@ class LoanDaoTest {
 
     @Test
     void deleteLoan() {
-        LoanDao loanDao = new LoanDao("testca3library");
         LocalDate dueDate = LocalDate.now().plusDays(1);
         LocalDate borrowedDate = LocalDate.now();
         Loan actualLoan = loanDao.getLoanByLoanFields(1, 5, borrowedDate, dueDate);
@@ -321,7 +306,6 @@ class LoanDaoTest {
 /**Delete a loan when the loanId doesn't exist in the database **/
     @Test
     void deleteLoan_whenNoLoanIdIsFound() {
-        LoanDao loanDao = new LoanDao("testca3library");
         int actual = loanDao.deleteLoan(10000);
         int expected = 0;
         assertEquals(actual, expected);
@@ -329,7 +313,6 @@ class LoanDaoTest {
 /**Get a loan by loanId,bookId, borrowDate and dueDate when a loan exist with those details **/
     @Test
     void getLoanByLoanFields() {
-        LoanDao loanDao = new LoanDao("testca3library");
         LocalDate borrowDate = LocalDate.of(2023, 12, 7);
         LocalDate dueDate = LocalDate.of(2023, 12, 8);
         Loan expected = new Loan(1, 1, 1, borrowDate, dueDate, null);
@@ -339,7 +322,6 @@ class LoanDaoTest {
 /**Get a loan by loanId,bookId, borrowDate and dueDate when no loan exist with those details **/
     @Test
     void getLoanByLoanFields_whenFieldsDoNotMatch() {
-        LoanDao loanDao = new LoanDao("testca3library");
         LocalDate borrowDate = LocalDate.of(2023, 12, 7);
         LocalDate dueDate = LocalDate.of(2023, 12, 8);
         Loan expected = null;

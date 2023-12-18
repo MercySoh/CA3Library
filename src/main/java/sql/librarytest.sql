@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2023 at 01:06 PM
+-- Generation Time: Dec 18, 2023 at 02:10 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.4
 
@@ -109,6 +109,15 @@ CREATE TABLE `loans` (
                          `fees` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `loans`
+--
+
+INSERT INTO `loans` (`loanID`, `userID`, `bookID`, `borrowDate`, `dueDate`, `returnedDate`, `fees`) VALUES
+                                                                                                        (1, 1, 1, '2023-12-07', '2023-12-08', NULL, NULL),
+                                                                                                        (2, 1, 2, '2023-12-08', '2023-12-30', NULL, NULL),
+                                                                                                        (3, 1, 3, '2023-12-05', '2023-12-07', '2023-12-07', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -194,7 +203,7 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT for table `loans`
 --
 ALTER TABLE `loans`
-    MODIFY `loanID` int(11) NOT NULL AUTO_INCREMENT;
+    MODIFY `loanID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=293;
 
 --
 -- AUTO_INCREMENT for table `users`

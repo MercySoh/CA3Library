@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LoanDaoTest {
-  private LoanDao loanDao = new LoanDao("testca3library");
+  private LoanDao loanDao = new LoanDao("ca3librarytest");
     @BeforeEach
     void setUp() {
         // insert loan for payOverdueLoan
@@ -56,7 +56,7 @@ class LoanDaoTest {
         Loan l2 = loanDao.getLoanByLoanFields(2, 3, borrowDate2, dueDate2);
         loanDao.deleteLoan(l2.getLoanId());
 
-
+        loanDao.updateIncrement("loans", 4);
     }
 
     /**
@@ -80,7 +80,7 @@ class LoanDaoTest {
     /*Test for get current loans when no loans are present**/
     @Test
     void getCurrentLoans_WhenNoLoansArePresent() {
-        LoanDao loanDao = new LoanDao("testca3library");
+        //LoanDao loanDao = new LoanDao("testca3library");
         ArrayList<Loan> actual = loanDao.getCurrentLoans(10);
         ArrayList<Loan> expected = new ArrayList();
         assertEquals(actual, expected);

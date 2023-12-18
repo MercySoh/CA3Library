@@ -31,14 +31,17 @@ public class BorrowBookCommand implements Command {
         String msg = null;
         if (u != null) {
             //int userId= u.getUserID();
+
             int bookId = Integer.parseInt(request.getParameter("bookId"));
-            LocalDate returnDate = LocalDate.parse(request.getParameter("returnDate"));
+            LocalDate returnDate = LocalDate.now().plusDays(14);
             //int bookId2 = Integer.parseInt(bookId1);
             Book b1 = bookDao.getBookByID(bookId);
             if (b1.getQuantity() > 0) {
                 bookDao.updateBookQuantity(bookId, -1);
                 loanDao.borrowBook(u.getUserID(), bookId, returnDate);
-                destination = "borrowBook.jsp";
+                msg = "You borrowed " + b1.getBookName() +" successfully";
+                session.setAttribute("msg", msg);
+                destination = "index.jsp";
             } else {
                 msg =  "the are no more copies available";
                 session.setAttribute("msg", msg);
@@ -48,6 +51,7 @@ public class BorrowBookCommand implements Command {
         } else {
             msg = "You need to sign in in order to borrow a book";
             session.setAttribute("msg", msg);
+            destination = "login.jsp";
         }
         return destination;
     }

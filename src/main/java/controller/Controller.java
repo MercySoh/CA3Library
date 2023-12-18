@@ -6,6 +6,9 @@ import java.util.List;
 
 import business.Book;
 import business.Users;
+import commands.BorrowBookCommand;
+import commands.Command;
+import commands.CurrentLoansCommand;
 import daos.UsersDao;
 
 import jakarta.servlet.http.*;
@@ -28,6 +31,7 @@ public class Controller extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException{
         HttpSession session = request.getSession(true);
+        Command c=null;
         String action = request.getParameter("action");
         String dest = "index.jsp";
 
@@ -61,7 +65,9 @@ public class Controller extends HttpServlet {
                 break;
 
             case "borrow":
-                dest = "profile.jsp";
+               // dest = "profile.jsp";
+                c=new BorrowBookCommand(request,response);
+                dest= c.execute();
                 break;
 
             case "show_profile":
@@ -70,6 +76,11 @@ public class Controller extends HttpServlet {
 
             case "login":
                 dest=loginCommand(request,response);
+                break;
+
+            case "currentLoans":
+                c=new CurrentLoansCommand(request,response);
+                dest= c.execute();
                 break;
         }
 
@@ -90,7 +101,7 @@ public class Controller extends HttpServlet {
         }
         else{
             String msg = "Wrong password or UserName";
-            session.setAttribute("errorMessage", msg);
+            session.setAttribute("msg", msg);
             return "login.jsp";
         }
     }
@@ -115,9 +126,9 @@ public class Controller extends HttpServlet {
                 session.setAttribute("msg", msg);
             }
             else{
-                destination="error.jsp";
+                destination="register.jsp";
                 String msg = "registration was not successful!";
-                session.setAttribute("errorMessage", msg);
+                session.setAttribute("msg", msg);
             }
         }
       return destination;

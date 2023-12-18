@@ -9,18 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/BorrowBookCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/error.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/daos/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/UsersDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/navigator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/navigator.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BookgenreDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BookgenreDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -294,7 +283,7 @@
       <workItem from="1702395521970" duration="7687000" />
       <workItem from="1702505316287" duration="2193000" />
       <workItem from="1702583449699" duration="1939000" />
-      <workItem from="1702825531212" duration="9413000" />
+      <workItem from="1702825531212" duration="9491000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -376,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702825608762</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="creating BorrowBookCommand">
+      <option name="closed" value="true" />
+      <created>1702841844168</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702841844168</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,6 +416,7 @@
     <MESSAGE value="Commit" />
     <MESSAGE value="creating BookgenreDaoTest" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="creating BorrowBookCommand" />
+    <option name="LAST_COMMIT_MESSAGE" value="creating BorrowBookCommand" />
   </component>
 </project>

@@ -1,0 +1,19 @@
+Index: src/main/java/commands/BorrowBookCommand.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package commands;\r\n\r\nimport business.Book;\r\nimport business.Users;\r\nimport daos.BookDao;\r\nimport daos.LoanDao;\r\nimport jakarta.servlet.http.HttpServletRequest;\r\nimport jakarta.servlet.http.HttpServletResponse;\r\nimport jakarta.servlet.http.HttpSession;\r\n\r\nimport java.time.LocalDate;\r\n\r\npublic class BorrowBookCommand implements Command {\r\n\r\n    private HttpServletRequest request;\r\n    private HttpServletResponse response;\r\n\r\n    public BorrowBookCommand(HttpServletRequest request, HttpServletResponse response) {\r\n        this.request = request;\r\n        this.response = response;\r\n    }\r\n\r\n\r\n    @Override\r\n    public String execute() {\r\n        String destination = \"index.jsp\";\r\n        LoanDao loanDao = new LoanDao(\"ca3library\");\r\n        BookDao bookDao = new BookDao(\"ca3library\");\r\n        HttpSession session = request.getSession(true);\r\n        Users u = (Users) session.getAttribute(\"user\");\r\n        String msg = null;\r\n        if (u != null) {\r\n            //int userId= u.getUserID();\r\n            int bookId = Integer.parseInt(request.getParameter(\"bookId\"));\r\n            LocalDate returnDate = LocalDate.parse(request.getParameter(\"returnDate\"));\r\n            //int bookId2 = Integer.parseInt(bookId1);\r\n            Book b1 = bookDao.getBookByID(bookId);\r\n            if (b1.getQuantity() > 0) {\r\n                bookDao.updateBookQuantity(bookId, -1);\r\n                loanDao.borrowBook(u.getUserID(), bookId, returnDate);\r\n                destination = \"borrowBook.jsp\";\r\n            } else {\r\n                msg =  \"the are no more copies available\";\r\n                session.setAttribute(\"msg\", msg);\r\n            }\r\n            //loanDao.borrowBook()\r\n\r\n        } else {\r\n            msg = \"You need to sign in in order to borrow a book\";\r\n            session.setAttribute(\"msg\", msg);\r\n        }\r\n        return destination;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/commands/BorrowBookCommand.java b/src/main/java/commands/BorrowBookCommand.java
+--- a/src/main/java/commands/BorrowBookCommand.java	(revision e5a8f5a63d3964089cf03c637848d635b470c811)
++++ b/src/main/java/commands/BorrowBookCommand.java	(date 1702907105009)
+@@ -40,7 +40,7 @@
+                 loanDao.borrowBook(u.getUserID(), bookId, returnDate);
+                 destination = "borrowBook.jsp";
+             } else {
+-                msg =  "the are no more copies available";
++                msg = "the are no more copies available";
+                 session.setAttribute("msg", msg);
+             }
+             //loanDao.borrowBook()

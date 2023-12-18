@@ -1,6 +1,16 @@
-<%@include file="header.jsp"%>
+<%@include file="header.jsp" %>
 
-<%@include file="navigator.jsp"%>
+<%@include file="navigator.jsp" %>
+
+<%
+    String msg = (String) session.getAttribute("msg");
+    if (msg != null) {
+%>
+<p><%=msg%> </p>
+<%
+        session.removeAttribute("msg");
+    }
+%>
 
 <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
     <form action="controller" method="post">
@@ -12,8 +22,8 @@
 
         <input type="submit" value="Register" class="btn btn-success"/>
         <!-- Include a hidden field to identify what the user wants to do -->
-        <input type="hidden" name ="action" value="login" />
+        <input type="hidden" name="action" value="login"/>
     </form>
 </div>
 
-<%@include file="footer.jsp"%>
+<%@include file="footer.jsp" %>

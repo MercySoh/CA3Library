@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BookgenreDaoTest {
-    BookgenreDao bookgenreDao = new BookgenreDao("testca3library");
+    BookgenreDao bookgenreDao = new BookgenreDao("ca3librarytest");
 
     /**
      * when the book id exist in the bookgenres table

@@ -40,7 +40,7 @@ public class BorrowBookCommand implements Command {
                 loanDao.borrowBook(u.getUserID(), bookId, returnDate);
                 destination = "borrowBook.jsp";
             } else {
-                msg = "the are no more copies available";
+                msg =  "the are no more copies available";
                 session.setAttribute("msg", msg);
             }
             //loanDao.borrowBook()

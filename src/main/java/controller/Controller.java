@@ -3,19 +3,13 @@ package controller;
 import java.io.*;
 
 import business.Users;
-import daos.BookDao;
-import daos.GenreDao;
 import daos.UsersDao;
 
-import daos.UsersDao;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 @WebServlet(name = "Controller", value = "/controller")
 public class Controller extends HttpServlet {
-
-    private GenreDao genreDao = new GenreDao("ca3library");
-    private BookDao bookDao = new BookDao("ca3library");
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -59,6 +53,15 @@ public class Controller extends HttpServlet {
                 session.invalidate();
                 dest = "index.jsp";
                 break;
+
+            case "borrow":
+                dest = "profile.jsp";
+                break;
+
+            case "show_profile":
+                dest = "profile.jsp";
+                break;
+
             case "login":
                 dest=loginCommand(request,response);
                 break;

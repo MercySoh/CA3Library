@@ -55,6 +55,8 @@ class LoanDaoTest {
         LocalDate dueDate2 = LocalDate.now().plusDays(1);
         Loan l2 = loanDao.getLoanByLoanFields(2, 3, borrowDate2, dueDate2);
         loanDao.deleteLoan(l2.getLoanId());
+
+        loanDao.updateIncrement("loans", 4);
     }
 
     /**

@@ -9,10 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="reformat the librarytest.sql and the loan test">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="update controller, wondering what to do next">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/navigator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/navigator.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sql/librarytest.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sql/librarytest.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +104,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="GlassFish Server.GlassFish">
+  <component name="RunManager" selected="JUnit.LoanDaoTest">
     <configuration name="GlassFish" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -192,6 +192,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoanDaoTest.getCurrentLoans_WhenLoansArePresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA3Library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
+      <option name="METHOD_NAME" value="getCurrentLoans_WhenLoansArePresent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanDaoTest.getCurrentLoans_WhenNoLoansArePresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA3Library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
+      <option name="METHOD_NAME" value="getCurrentLoans_WhenNoLoansArePresent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoanDaoTest.getLoanByLoanFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
@@ -203,22 +235,6 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
       <option name="METHOD_NAME" value="getLoanByLoanFields" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoanDaoTest.getOverDueLoans_WhenOverDueLoansExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA3Library" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
-      <option name="METHOD_NAME" value="getOverDueLoans_WhenOverDueLoansExist" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -240,37 +256,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoanDaoTest.payOverDueFee_WhenLoanIsPresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA3Library" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
-      <option name="METHOD_NAME" value="payOverDueFee_WhenLoanIsPresent" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="GlassFish Server.GlassFish" />
+      <item itemvalue="JUnit.LoanDaoTest.getCurrentLoans_WhenLoansArePresent" />
+      <item itemvalue="JUnit.LoanDaoTest.getCurrentLoans_WhenNoLoansArePresent" />
       <item itemvalue="JUnit.LoanDaoTest.getLoanByLoanFields" />
-      <item itemvalue="JUnit.LoanDaoTest.getOverDueLoans_WhenOverDueLoansExist" />
       <item itemvalue="JUnit.LoanDaoTest.getPreviousLoans_WhenPreviousLoansExist" />
-      <item itemvalue="JUnit.LoanDaoTest.payOverDueFee_WhenLoanIsPresent" />
       <item itemvalue="JUnit.LoanDaoTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LoanDaoTest" />
+        <item itemvalue="JUnit.LoanDaoTest.getCurrentLoans_WhenNoLoansArePresent" />
+        <item itemvalue="JUnit.LoanDaoTest.getCurrentLoans_WhenLoansArePresent" />
         <item itemvalue="JUnit.LoanDaoTest.getPreviousLoans_WhenPreviousLoansExist" />
         <item itemvalue="JUnit.LoanDaoTest.getLoanByLoanFields" />
-        <item itemvalue="JUnit.LoanDaoTest.payOverDueFee_WhenLoanIsPresent" />
-        <item itemvalue="JUnit.LoanDaoTest.getOverDueLoans_WhenOverDueLoansExist" />
       </list>
     </recent_temporary>
   </component>
@@ -291,7 +291,7 @@
       <workItem from="1702395521970" duration="7687000" />
       <workItem from="1702505316287" duration="1748000" />
       <workItem from="1702599945942" duration="2102000" />
-      <workItem from="1702889139367" duration="13697000" />
+      <workItem from="1702889139367" duration="15155000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -413,7 +413,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702901985123</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update controller, wondering what to do next">
+      <option name="closed" value="true" />
+      <created>1702903628472</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702903628473</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,6 +469,18 @@
     <MESSAGE value="working on the dashboard.jsp" />
     <MESSAGE value="fixing main page and add profile, no functions yet" />
     <MESSAGE value="reformat the librarytest.sql and the loan test" />
-    <option name="LAST_COMMIT_MESSAGE" value="reformat the librarytest.sql and the loan test" />
+    <MESSAGE value="update controller, wondering what to do next" />
+    <option name="LAST_COMMIT_MESSAGE" value="update controller, wondering what to do next" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

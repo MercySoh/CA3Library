@@ -9,13 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="working on the dashboard.jsp">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="fixing main page and add profile, no functions yet">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb/storage_v2/_src_/schema/ca3librarytest.GPWFHA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb/storage_v2/_src_/schema/ca3librarytest.GPWFHA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/navigator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/navigator.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +106,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="GlassFish Server.GlassFish">
+  <component name="RunManager" selected="JUnit.LoanDaoTest">
     <configuration name="GlassFish" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -268,8 +267,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LoanDaoTest.getPreviousLoans_WhenPreviousLoansExist" />
         <item itemvalue="JUnit.LoanDaoTest" />
+        <item itemvalue="JUnit.LoanDaoTest.getPreviousLoans_WhenPreviousLoansExist" />
         <item itemvalue="JUnit.LoanDaoTest.getLoanByLoanFields" />
         <item itemvalue="JUnit.LoanDaoTest.payOverDueFee_WhenLoanIsPresent" />
         <item itemvalue="JUnit.LoanDaoTest.getOverDueLoans_WhenOverDueLoansExist" />
@@ -293,7 +292,7 @@
       <workItem from="1702395521970" duration="7687000" />
       <workItem from="1702505316287" duration="1748000" />
       <workItem from="1702599945942" duration="2102000" />
-      <workItem from="1702889139367" duration="10224000" />
+      <workItem from="1702889139367" duration="11716000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -399,7 +398,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702897831502</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fixing main page and add profile, no functions yet">
+      <option name="closed" value="true" />
+      <created>1702899724772</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702899724773</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,6 +452,7 @@
     <MESSAGE value="add design to the login and register.jsp" />
     <MESSAGE value="workspace.xml commit" />
     <MESSAGE value="working on the dashboard.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on the dashboard.jsp" />
+    <MESSAGE value="fixing main page and add profile, no functions yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing main page and add profile, no functions yet" />
   </component>
 </project>

@@ -1,7 +1,10 @@
 package controller;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
+import business.Book;
 import business.Users;
 import daos.UsersDao;
 
@@ -10,6 +13,8 @@ import jakarta.servlet.annotation.*;
 
 @WebServlet(name = "Controller", value = "/controller")
 public class Controller extends HttpServlet {
+
+    public static List<Book> books = new ArrayList<>();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -33,6 +38,7 @@ public class Controller extends HttpServlet {
         switch (action){
             case "dashboard":
                 session.setAttribute("pageTitle", "dashboard");
+
                 dest = "dashboard.jsp";
                 break;
             case "register":

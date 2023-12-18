@@ -9,12 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="fixing main page and add profile, no functions yet">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb/storage_v2/_src_/schema/ca3librarytest.GPWFHA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb/storage_v2/_src_/schema/ca3librarytest.GPWFHA.meta" afterDir="false" />
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="reformat the librarytest.sql and the loan test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/navigator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/navigator.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +104,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoanDaoTest">
+  <component name="RunManager" selected="GlassFish Server.GlassFish">
     <configuration name="GlassFish" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -188,6 +186,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -292,7 +291,7 @@
       <workItem from="1702395521970" duration="7687000" />
       <workItem from="1702505316287" duration="1748000" />
       <workItem from="1702599945942" duration="2102000" />
-      <workItem from="1702889139367" duration="11716000" />
+      <workItem from="1702889139367" duration="13697000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -406,7 +405,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702899724773</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="reformat the librarytest.sql and the loan test">
+      <option name="closed" value="true" />
+      <created>1702901985122</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702901985123</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,6 +460,7 @@
     <MESSAGE value="workspace.xml commit" />
     <MESSAGE value="working on the dashboard.jsp" />
     <MESSAGE value="fixing main page and add profile, no functions yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing main page and add profile, no functions yet" />
+    <MESSAGE value="reformat the librarytest.sql and the loan test" />
+    <option name="LAST_COMMIT_MESSAGE" value="reformat the librarytest.sql and the loan test" />
   </component>
 </project>

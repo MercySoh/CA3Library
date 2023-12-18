@@ -35,7 +35,7 @@
                             List<Genre> genres = genreDao.getAllGenres();
                             for(Genre g : genres){
                         %>
-                        <li><a class="dropdown-item" href="#"><%=g.getGenreName()%></a></li>
+                        <li><a class="dropdown-item" href=<%="controller?action=dashboard&genreID=" + g.getGenreID() %>><%=g.getGenreName()%></a></li>
                         <%}%>
                     </ul>
                 </div>

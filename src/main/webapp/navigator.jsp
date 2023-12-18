@@ -6,6 +6,7 @@
             Library
         </a>
 
+
         <!-- Toggle button for small screens -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,6 +14,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
+
             <!-- Search Bar -->
             <form class="d-flex mx-auto">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -21,6 +23,22 @@
 
             <!-- right, could be a profile / logout too -->
             <ul class="navbar-nav ms-3">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select genre
+                    </button>
+                    <ul class="dropdown-menu">
+                        <%
+                            GenreDao genreDao = new GenreDao("ca3library");
+                            List<Genre> genres = genreDao.getAllGenres();
+                            for(Genre g : genres){
+                        %>
+                        <li><a class="dropdown-item" href="#"><%=g.getGenreName()%></a></li>
+                        <%}%>
+                    </ul>
+                </div>
+
+
                 <%
                     Users u = (Users) session.getAttribute("user");
                     if (u != null) {%>

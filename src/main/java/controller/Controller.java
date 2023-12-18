@@ -3,6 +3,8 @@ package controller;
 import java.io.*;
 
 import business.Users;
+import daos.BookDao;
+import daos.GenreDao;
 import daos.UsersDao;
 
 import daos.UsersDao;
@@ -11,6 +13,9 @@ import jakarta.servlet.annotation.*;
 
 @WebServlet(name = "Controller", value = "/controller")
 public class Controller extends HttpServlet {
+
+    private GenreDao genreDao = new GenreDao("ca3library");
+    private BookDao bookDao = new BookDao("ca3library");
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {

@@ -1149,8 +1149,8 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="326" parent="1" name="ca3librarytest">
-      <IntrospectionTimestamp>2023-12-12.12:08:42</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-12-12.12:08:42</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-12-18.08:50:08</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-12-18.08:50:08</LocalIntrospectionTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="327" parent="1" name="calabexam">

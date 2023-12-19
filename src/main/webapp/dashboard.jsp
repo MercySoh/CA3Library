@@ -43,7 +43,7 @@
                     <%}%>
                 </td>
                 <td><%=b.getQuantity()%></td>
-                <td><a href="controller?action=borrow&bookId="<%=b.getBookID()%>>borrow</a> </td>
+                <td><a href=<%="controller?action=borrow&bookId=" + b.getBookID()%>>borrow</a> </td>
             </tr>
         <%}%>
     </tbody>

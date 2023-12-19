@@ -87,17 +87,13 @@ public class Controller extends HttpServlet {
 
             case "show_profile":
                 pageTitle = "profile";
-                dest = "profile.jsp";
+                c = new CurrentLoansCommand(request,response);
+                dest= c.execute();
                 break;
 
             case "login":
                 c = new LoginCommand(request, response);
                 dest = c.execute();
-                break;
-
-            case "currentLoans":
-                c = new CurrentLoansCommand(request,response);
-                dest= c.execute();
                 break;
         }
 

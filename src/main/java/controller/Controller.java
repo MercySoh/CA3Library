@@ -60,6 +60,7 @@ public class Controller extends HttpServlet {
                     dest = c.execute();
                 }
                 break;
+
             case "register":
                 c = new RegisterCommand(request, response);
                 dest = c.execute();
@@ -81,8 +82,10 @@ public class Controller extends HttpServlet {
                 break;
 
             case "borrow":
-                c=new BorrowBookCommand(request,response);
-                dest= c.execute();
+                c = new BorrowBookCommand(request,response);
+                c.execute();
+                c = new CurrentLoansCommand(request, response);
+                dest = c.execute();
                 break;
 
             case "show_profile":
@@ -98,12 +101,13 @@ public class Controller extends HttpServlet {
 
             case "returnBook":
                 c = new ReturnBookCommand(request, response);
-                dest = c.execute();
-                c = new CurrentLoansCommand(request, response);
                 c.execute();
+                c = new CurrentLoansCommand(request, response);
+                dest = c.execute();
                 break;
 
             case "payOverdueFees":
+                pageTitle = "pay fees";
                /* c = new ReturnBookCommand(request, response);
                 dest = c.execute();*/
                 dest ="payFee.jsp";

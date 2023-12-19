@@ -46,9 +46,9 @@
                             int days = (int) loan.getDueDate().until(LocalDate.now(), ChronoUnit.DAYS);
                             double fee=days*1;
                     %>
+                    <td style="background: #fd5252">OVERDUE <%="$"+ fee%></td>
                     <td><a href="controller?action=payOverdueFees&loanId=<%=loan.getLoanId()%>"><button class="btn btn-warning">pay fees</button></a>
                     </td>
-                    <td style="background: #fd5252">OVERDUE</td>  <td><%="€ "+ fee +" fee"%></td>
                     <%
                     } else {
                     %>

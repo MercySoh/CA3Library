@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="commit">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="they all merge, but some require fixing. flag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/ReturnBookCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/ReturnBookCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/PayOverdueFeesCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/PayOverdueFeesCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
     </list>
@@ -302,7 +302,7 @@
       <workItem from="1702972285870" duration="15334000" />
       <workItem from="1702991353536" duration="467000" />
       <workItem from="1702994813614" duration="1922000" />
-      <workItem from="1703002163989" duration="3104000" />
+      <workItem from="1703002163989" duration="4699000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -480,7 +480,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703008271923</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="they all merge, but some require fixing. flag">
+      <option name="closed" value="true" />
+      <created>1703010389260</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1703010389260</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,7 +555,8 @@
     <MESSAGE value="optimized the code on the dashboard, also added the features to search and filter" />
     <MESSAGE value="fixed borrow book with profile" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="they all merge, but some require fixing. flag" />
+    <option name="LAST_COMMIT_MESSAGE" value="they all merge, but some require fixing. flag" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -556,6 +565,21 @@
           <url>file://$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java</url>
           <line>41</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/CurrentLoansCommand.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/BorrowBookCommand.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/ReturnBookCommand.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

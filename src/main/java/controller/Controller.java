@@ -96,16 +96,13 @@ public class Controller extends HttpServlet {
                 dest = c.execute();
                 break;
 
-            case "currentLoans":
-                c = new CurrentLoansCommand(request, response);
-                dest = c.execute();
-                break;
             case "returnBook":
                 c = new ReturnBookCommand(request, response);
                 dest = c.execute();
                 c = new CurrentLoansCommand(request, response);
                 c.execute();
                 break;
+
             case "payOverdueFees":
                /* c = new ReturnBookCommand(request, response);
                 dest = c.execute();*/

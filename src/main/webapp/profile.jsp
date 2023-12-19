@@ -1,3 +1,5 @@
+<%@ page import="java.time.LocalDate" %>
+<%@ page import="java.time.temporal.ChronoUnit" %>
 <%@include file="header.jsp"%>
 
 <%@include file="navigator.jsp"%>
@@ -10,6 +12,7 @@
             <p>email: <%=u.getEmail()%></p>
             <p>address: <%=u.getAddress()%></p>
             <p>phone: <%=u.getPhone()%></p>
+            <button class="btn btn-info">update user</button>
         </div>
         <div class="col">
             <h1>loans</h1>
@@ -38,12 +41,25 @@
                     </td>
                     <td><%=loan.getDueDate()%>
                     </td>
-                    <td><a href="controller?action=&bookId=<%=loan.getBookId()%>" >return book</a>
+                    <%
+                        if (LocalDate.now().compareTo(loan.getDueDate()) > 0) {
+                            int days = (int) loan.getDueDate().until(LocalDate.now(), ChronoUnit.DAYS);
+                            double fee=days*1;
+                    %>
+                    <td><a href="controller?action=payOverdueFees&loanId=<%=loan.getLoanId()%>"><button class="btn btn-warning">pay fees</button></a>
                     </td>
+                    <td style="background: #fd5252">OVERDUE</td>  <td><%="€ "+ fee +" fee"%></td>
+                    <%
+                    } else {
+                    %>
+                    <td><a href="controller?action=returnBook&loanId=<%=loan.getLoanId()%>"><button class="btn btn-info">return book</button></a>
+                    </td>
+                    <%
+                        }
+                    %>
                 </tr>
                 <%
-                    }
-                %>
+                    }%>
 
             </table>
             <%

@@ -9,6 +9,7 @@ import business.Users;
 import commands.BorrowBookCommand;
 import commands.Command;
 import commands.CurrentLoansCommand;
+import commands.ReturnBookCommand;
 import daos.UsersDao;
 
 import jakarta.servlet.http.*;
@@ -29,24 +30,24 @@ public class Controller extends HttpServlet {
         processRequest(request, response);
     }
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException{
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
         HttpSession session = request.getSession(true);
-        Command c=null;
+        Command c = null;
         String action = request.getParameter("action");
         String dest = "index.jsp";
 
-        if(action == null){
+        if (action == null) {
             action = "dashboard";
         }
 
-        switch (action){
+        switch (action) {
             case "dashboard":
                 session.setAttribute("pageTitle", "dashboard");
 
                 dest = "dashboard.jsp";
                 break;
             case "register":
-                dest=RegisterCommand(request,response);
+                dest = RegisterCommand(request, response);
                 break;
 
             case "show_register":
@@ -65,9 +66,9 @@ public class Controller extends HttpServlet {
                 break;
 
             case "borrow":
-               // dest = "profile.jsp";
-                c=new BorrowBookCommand(request,response);
-                dest= c.execute();
+                // dest = "profile.jsp";
+                c = new BorrowBookCommand(request, response);
+                dest = c.execute();
                 break;
 
             case "show_profile":
@@ -75,19 +76,31 @@ public class Controller extends HttpServlet {
                 break;
 
             case "login":
-                dest=loginCommand(request,response);
+                dest = loginCommand(request, response);
                 break;
 
             case "currentLoans":
-                c=new CurrentLoansCommand(request,response);
-                dest= c.execute();
+                c = new CurrentLoansCommand(request, response);
+                dest = c.execute();
                 break;
+            case "returnBook":
+                c = new ReturnBookCommand(request, response);
+                dest = c.execute();
+                c = new CurrentLoansCommand(request, response);
+                c.execute();
+                break;
+            case "payOverdueFees":
+               /* c = new ReturnBookCommand(request, response);
+                dest = c.execute();*/
+                dest ="payFee.jsp";
+                break;
+
         }
 
         response.sendRedirect(dest);
     }
 
-    private String loginCommand(HttpServletRequest request, HttpServletResponse response){
+    private String loginCommand(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession(true);
         String username = request.getParameter("username");
         String password = request.getParameter("password");
@@ -95,11 +108,10 @@ public class Controller extends HttpServlet {
         UsersDao userDao = new UsersDao("ca3library");
         Users user = userDao.findUserByUsernamePassword(username, password);
 
-        if(user != null){
+        if (user != null) {
             session.setAttribute("user", user);
             return "dashboard.jsp";
-        }
-        else{
+        } else {
             String msg = "Wrong password or UserName";
             session.setAttribute("msg", msg);
             return "login.jsp";
@@ -119,18 +131,17 @@ public class Controller extends HttpServlet {
         String phone = request.getParameter("phone");
         if (username != null && password != null && email != null && address != null && phone != null && !username.isEmpty() && !password.isEmpty() && !email.isEmpty() && !address.isEmpty() && !phone.isEmpty()) {
             UsersDao userDao = new UsersDao("ca3library");
-          int state=  userDao.addUser(username,email,password,address,phone,0);
-            if(state!=-1){
-                destination="index.jsp";
+            int state = userDao.addUser(username, email, password, address, phone, 0);
+            if (state != -1) {
+                destination = "index.jsp";
                 String msg = "You have been registered successfully!";
                 session.setAttribute("msg", msg);
-            }
-            else{
-                destination="register.jsp";
+            } else {
+                destination = "register.jsp";
                 String msg = "registration was not successful!";
                 session.setAttribute("msg", msg);
             }
         }
-      return destination;
+        return destination;
     }
 }

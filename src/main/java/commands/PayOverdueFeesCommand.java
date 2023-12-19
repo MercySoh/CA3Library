@@ -29,13 +29,15 @@ public class PayOverdueFeesCommand implements Command{
         Users u = (Users) session.getAttribute("user");
         String msg = null;
         if (u != null) {
-            int loanId = Integer.parseInt(request.getParameter("loanId"));
-            loanDao.returnBook(loanId);
+            String loanId1 = (String) session.getAttribute("OverdueLoan");
+            int loanId= Integer.parseInt(loanId1);
             Loan l = loanDao.getLoanById(loanId);
             int days = (int) l.getDueDate().until(LocalDate.now(), ChronoUnit.DAYS);
             double fee=days*1;
             loanDao.payOverDueFee(l.getLoanId(),fee);
-            //bookDao.updateBookQuantity(l.getBookId(), +1);
+            loanDao.returnBook(loanId);
+            session.removeAttribute("OverdueLoan");
+            bookDao.updateBookQuantity(l.getBookId(), +1);
         } else {
             msg = "You need to sign in";
             session.setAttribute("msg", msg);

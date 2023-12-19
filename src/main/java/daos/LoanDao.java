@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class LoanDao extends Dao implements LoanDaoInterface {
 
@@ -407,24 +408,21 @@ public class LoanDao extends Dao implements LoanDaoInterface {
         return loan;
     }
 
-    public Loan getTrendingBooks() {
+    public HashMap<Integer, Integer> getTrendingBooks() {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
         Loan loan = null;
+        HashMap<Integer, Integer> trends = new HashMap<>();
         try {
             con = getConnection();
 
-            String query = "SELECT count(bookID) as num, bookID from loans where  DATEDIFF(now(),borrowDate)<30 group by bookID order by num;";
+            String query = "SELECT count(bookID) as num, bookID from loans where  DATEDIFF(now(),borrowDate)<30 group by bookID order by num DESC";
             ps = con.prepareStatement(query);
             rs = ps.executeQuery();
 
-            if (rs.next()) {
-                if (rs.getDate("returnedDate") != null) {
-                    loan = new Loan(rs.getInt("loanId"), rs.getInt("userId"), rs.getInt("bookId"), rs.getDate("borrowDate").toLocalDate(), rs.getDate("dueDate").toLocalDate(), rs.getDate("returnedDate").toLocalDate(), rs.getDouble("fees"));
-                } else {
-                    loan = new Loan(rs.getInt("loanId"), rs.getInt("userId"), rs.getInt("bookId"), rs.getDate("borrowDate").toLocalDate(), rs.getDate("dueDate").toLocalDate(), null, rs.getDouble("fees"));
-                }
+            while (rs.next()) {
+                trends.put(rs.getInt("booKID"), rs.getInt("num"));
             }
 
         } catch (SQLException e) {
@@ -444,7 +442,7 @@ public class LoanDao extends Dao implements LoanDaoInterface {
                 System.out.println("Exception occurred in  the getLoanById() method:  " + e.getMessage());
             }
         }
-        return loan;
+        return trends;
     }
 
     public int deleteLoan(int loanId) {

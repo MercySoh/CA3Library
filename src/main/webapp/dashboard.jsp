@@ -34,12 +34,29 @@
     </tr>
     </thead>
     <tbody>
+    <p>current trending books</p>
+    <marquee>
+        <%
+            BookDao bookDao = new BookDao("ca3library");
+            BookgenreDao bookgenreDao = new BookgenreDao("ca3library");
+            LoanDao loanDao = new LoanDao("ca3library");
+            List<Book> books = bookDao.getAllBooks();
+            List<Loan> currentLoans = new ArrayList();
+            HashMap<Integer, Integer> trends = loanDao.getTrendingBooks();
+            for (Map.Entry<Integer, Integer> entry : trends.entrySet()) {
+                int bookId = entry.getKey();
+                Book b = bookDao.getBookByID(bookId);
+                int borrow = trends.get(bookId);
+        %>
+        <i><%=b.getBookName()%> borrowed <%=borrow%> times,
+        </i>
+        <%
+
+            }
+        %>
+    </marquee>
     <%
-        BookDao bookDao = new BookDao("ca3library");
-        BookgenreDao bookgenreDao = new BookgenreDao("ca3library");
-        LoanDao loanDao = new LoanDao("ca3library");
-        List<Book> books = bookDao.getAllBooks();
-        List<Loan> currentLoans = new ArrayList();
+
         if (u != null) {
             currentLoans = loanDao.getCurrentLoans(u.getUserID());
         }

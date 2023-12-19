@@ -6,10 +6,7 @@ import java.util.List;
 
 import business.Book;
 import business.Users;
-import commands.BorrowBookCommand;
-import commands.Command;
-import commands.CurrentLoansCommand;
-import commands.ReturnBookCommand;
+import commands.*;
 import daos.UsersDao;
 
 import jakarta.servlet.http.*;
@@ -90,9 +87,14 @@ public class Controller extends HttpServlet {
                 c.execute();
                 break;
             case "payOverdueFees":
-               /* c = new ReturnBookCommand(request, response);
-                dest = c.execute();*/
-                dest ="payFee.jsp";
+                session.setAttribute("OverdueLoan", request.getParameter("loanId"));
+                dest = "payFee.jsp";
+                break;
+            case "PayFee":
+                c = new PayOverdueFeesCommand(request, response);
+                c.execute();
+                c = new CurrentLoansCommand(request, response);
+                dest = c.execute();
                 break;
 
         }

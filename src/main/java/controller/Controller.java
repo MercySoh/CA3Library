@@ -6,6 +6,7 @@ import java.util.List;
 
 import business.Book;
 import business.Genre;
+import business.Loan;
 import business.Users;
 import commands.*;
 import daos.UsersDao;
@@ -18,7 +19,7 @@ public class Controller extends HttpServlet {
 
     public static String pageTitle;
     public static List<Book> books;
-    public static List<Genre> genres;
+    public static List<Loan> loans;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -42,10 +43,22 @@ public class Controller extends HttpServlet {
 
         switch (action){
             case "dashboard":
-//                session.setAttribute("pageTitle", "dashboard");
-                c = new DisplayBookCommand(request, response);
                 pageTitle = "dashboard";
-                dest = c.execute();
+                int genreID;
+                String title;
+                c = new DisplayBookCommand(request, response);
+
+                if(request.getParameter("genreID") != null){
+                    genreID = Integer.parseInt(request.getParameter("genreID"));
+                    dest = ((DisplayBookCommand)c).execute(genreID);
+                }
+                else if(request.getParameter("searchTitle") != null){
+                    title = request.getParameter("searchTitle");
+                    dest = ((DisplayBookCommand)c).execute(title);
+                }
+                else{
+                    dest = c.execute();
+                }
                 break;
             case "register":
                 c = new RegisterCommand(request, response);
@@ -53,13 +66,11 @@ public class Controller extends HttpServlet {
                 break;
 
             case "show_register":
-//                session.setAttribute("pageTitle", "register");
                 pageTitle = "register";
                 dest = "register.jsp";
                 break;
 
             case "show_login":
-//                session.setAttribute("pageTitle", "login");
                 pageTitle = "login";
                 dest = "login.jsp";
                 break;
@@ -70,7 +81,6 @@ public class Controller extends HttpServlet {
                 break;
 
             case "borrow":
-               // dest = "profile.jsp";
                 c=new BorrowBookCommand(request,response);
                 dest= c.execute();
                 break;

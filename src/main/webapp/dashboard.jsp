@@ -132,6 +132,28 @@
             }
         }
     %>
+        <%
+            BookgenreDao bookgenreDao = new BookgenreDao("ca3library");
+            for(Book b : Controller.books){
+                ArrayList<Bookgenre> genreBook = bookgenreDao.getAllBookGenres(b.getBookID());
+                List<Genre> genresList = new ArrayList<>();
+                for(Bookgenre bg : genreBook){
+                    genresList.add(genreDao.getGenreByID(bg.getGenreId()));
+                }
+        %>
+            <tr>
+                <td><%=b.getBookID()%></td>
+                <td><%=b.getBookName()%></td>
+                <td><%=b.getAuthor()%></td>
+                <td><%=b.getDescription()%></td>
+                <td><%for(Genre g : genresList){%>
+                    <%=g.getGenreName()%>
+                    <%}%>
+                </td>
+                <td><%=b.getQuantity()%></td>
+                <td><a href=<%="controller?action=borrow&bookId=" + b.getBookID()%>>borrow</a> </td>
+            </tr>
+        <%}%>
     </tbody>
 </table>
 

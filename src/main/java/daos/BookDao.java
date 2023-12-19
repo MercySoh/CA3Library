@@ -6,9 +6,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author cheePheng
- */
+
 public class BookDao extends Dao implements BookDaoInterface {
 
     public BookDao(String dbName) {
@@ -93,6 +91,12 @@ public class BookDao extends Dao implements BookDaoInterface {
         return book;
     }
 
+
+    /**
+     * search book by title
+     * @param title the book title
+     * @return the list of books found
+     */
     @Override
     public List<Book> searchBookByTitle(String title) {
         List<Book> books = new ArrayList<>();

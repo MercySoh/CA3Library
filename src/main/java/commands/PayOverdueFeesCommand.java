@@ -22,7 +22,7 @@ public class PayOverdueFeesCommand implements Command{
 
     @Override
     public String execute() {
-        String destination = "currentLoans.jsp";
+        String destination = "profile.jsp";
         LoanDao loanDao = new LoanDao("ca3library");
         BookDao bookDao = new BookDao("ca3library");
         HttpSession session = request.getSession(true);

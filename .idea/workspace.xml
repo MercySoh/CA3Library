@@ -9,16 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/PayOverdueFeesCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/ReturnBookCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/payFee.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/currentLoans.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/currentLoans.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -295,7 +286,7 @@
       <workItem from="1702583449699" duration="1939000" />
       <workItem from="1702825531212" duration="9491000" />
       <workItem from="1702906688382" duration="10806000" />
-      <workItem from="1702994533408" duration="7634000" />
+      <workItem from="1702994533408" duration="7957000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -425,7 +416,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702995133611</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="making return book functional">
+      <option name="closed" value="true" />
+      <created>1703002362688</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1703002362688</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,6 +469,7 @@
     <MESSAGE value="creating BorrowBookCommand" />
     <MESSAGE value="creating currentLoans.jsp and making dashbo&#10;more restricted" />
     <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="making return book functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="making return book functional" />
   </component>
 </project>

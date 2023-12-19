@@ -23,8 +23,8 @@ public class CurrentLoansCommand implements Command {
     public String execute() {
         HttpSession session = request.getSession(true);
         Users u = (Users) session.getAttribute("user");
-       String destination="currentLoans.jsp";
-       String msg=null;
+        String destination="currentLoans.jsp";
+        String msg=null;
         if (u != null) {
             LoanDao loanDao= new LoanDao("ca3library");
             List<Loan> loans= loanDao.getCurrentLoans(u.getUserID());
@@ -35,7 +35,6 @@ public class CurrentLoansCommand implements Command {
             session.setAttribute("msg", msg);
             destination = "login.jsp";
         }
-       return destination;
-
+        return destination;
     }
 }

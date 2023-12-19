@@ -31,17 +31,17 @@ public class Controller extends HttpServlet {
         processRequest(request, response);
     }
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException{
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
         HttpSession session = request.getSession(true);
         Command c = null;
         String action = request.getParameter("action");
         String dest = "index.jsp";
 
-        if(action == null){
+        if (action == null) {
             action = "dashboard";
         }
 
-        switch (action){
+        switch (action) {
             case "dashboard":
                 pageTitle = "dashboard";
                 int genreID;
@@ -95,6 +95,23 @@ public class Controller extends HttpServlet {
                 c = new LoginCommand(request, response);
                 dest = c.execute();
                 break;
+
+            case "currentLoans":
+                c = new CurrentLoansCommand(request, response);
+                dest = c.execute();
+                break;
+            case "returnBook":
+                c = new ReturnBookCommand(request, response);
+                dest = c.execute();
+                c = new CurrentLoansCommand(request, response);
+                c.execute();
+                break;
+            case "payOverdueFees":
+               /* c = new ReturnBookCommand(request, response);
+                dest = c.execute();*/
+                dest ="payFee.jsp";
+                break;
+
         }
 
         response.sendRedirect(dest);

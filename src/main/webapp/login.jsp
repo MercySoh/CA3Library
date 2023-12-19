@@ -18,7 +18,7 @@
         <label class="form-label">username</label> <br/>
         <input class="form-control" name="username" required/> <br/>
         <label class="form-label">password</label> <br/>
-        <input class="form-control" name="password" required/> <br/>
+        <input class="form-control" name="password" type="password" required/> <br/>
 
         <input type="submit" value="Register" class="btn btn-success"/>
         <!-- Include a hidden field to identify what the user wants to do -->

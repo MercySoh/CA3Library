@@ -11,16 +11,6 @@
 <%@include file="navigator.jsp" %>
 
 <br/>
-<%
-    String msg = (String) session.getAttribute("msg");
-    if (msg != null) {
-%>
-<p><%=msg%>
-</p>
-<%
-        session.removeAttribute("msg");
-    }
-%>
 
 <table class="table">
     <thead>
@@ -34,87 +24,28 @@
     </tr>
     </thead>
     <tbody>
-    <%
-        BookDao bookDao = new BookDao("ca3library");
-        BookgenreDao bookgenreDao = new BookgenreDao("ca3library");
-        LoanDao loanDao = new LoanDao("ca3library");
-        List<Book> books = bookDao.getAllBooks();
-        List<Loan> currentLoans = new ArrayList();
-        if (u != null) {
-            currentLoans = loanDao.getCurrentLoans(u.getUserID());
-        }
-        for (Book b : books) {
-
-            if (u == null) {
-                if (b.getQuantity() > 0) {
-                    ArrayList<Bookgenre> bookgenres = bookgenreDao.getAllBookGenres(b.getBookID());
-                    List<Genre> genresBook = new ArrayList<>();
-
-                    for (Bookgenre bg : bookgenres) {
-                        genresBook.add(genreDao.getGenreByID(bg.getGenreId()));
-                    }
-    %>
-    <tr>
-        <td><%=b.getBookID()%>
-        </td>
-        <td><%=b.getBookName()%>
-        </td>
-        <td><%=b.getAuthor()%>
-        </td>
-        <td><%=b.getDescription()%>
-        </td>
-        <td>
-            <% for (Genre g : genresBook) { %>
-            <%=g.getGenreName()%>
-            <%}%>
-        </td>
-        <td><%=b.getQuantity()%>
-        </td>
-        <td><a href="controller?action=borrow&bookId=<%=b.getBookID()%>">borrow</a></td>
-    </tr>
-    <%
-        }
-    } else {
-
-        if (b.getQuantity() > 0) {
-            boolean borrowState = false;
-            for (Loan loan : currentLoans) {
-                if (loan.getBookId() == b.getBookID()) {
-                    borrowState = true;
+        <%
+            BookgenreDao bookgenreDao = new BookgenreDao("ca3library");
+            for(Book b : Controller.books){
+                ArrayList<Bookgenre> genreBook = bookgenreDao.getAllBookGenres(b.getBookID());
+                List<Genre> genresList = new ArrayList<>();
+                for(Bookgenre bg : genreBook){
+                    genresList.add(genreDao.getGenreByID(bg.getGenreId()));
                 }
-            }
-            if (borrowState == false) {
-                ArrayList<Bookgenre> bookgenres = bookgenreDao.getAllBookGenres(b.getBookID());
-                List<Genre> genresBook = new ArrayList<>();
-
-                for (Bookgenre bg : bookgenres) {
-                    genresBook.add(genreDao.getGenreByID(bg.getGenreId()));
-                }
-    %>
-    <tr>
-        <td><%=b.getBookID()%>
-        </td>
-        <td><%=b.getBookName()%>
-        </td>
-        <td><%=b.getAuthor()%>
-        </td>
-        <td><%=b.getDescription()%>
-        </td>
-        <td>
-            <% for (Genre g : genresBook) { %>
-            <%=g.getGenreName()%>
-            <%}%>
-        </td>
-        <td><%=b.getQuantity()%>
-        </td>
-        <td><a href="controller?action=borrow&bookId=<%=b.getBookID()%>">borrow</a></td>
-    </tr>
-    <%
-                    }
-                }
-            }
-        }
-    %>
+        %>
+            <tr>
+                <td><%=b.getBookID()%></td>
+                <td><%=b.getBookName()%></td>
+                <td><%=b.getAuthor()%></td>
+                <td><%=b.getDescription()%></td>
+                <td><%for(Genre g : genresList){%>
+                    <%=g.getGenreName()%>
+                    <%}%>
+                </td>
+                <td><%=b.getQuantity()%></td>
+                <td><a href="controller?action=borrow&bookID="<%=b.getBookID()%>>borrow</a> </td>
+            </tr>
+        <%}%>
     </tbody>
 </table>
 

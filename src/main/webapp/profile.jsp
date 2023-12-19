@@ -6,10 +6,10 @@
     <div class="row align-items-start">
         <div class="col">
             <h1>Profile</h1>
-            <p>username: </p>
-            <p>email: </p>
-            <p>address: </p>
-            <p>phone: </p>
+            <p>username: <%=u.getUserName()%></p>
+            <p>email: <%=u.getEmail()%></p>
+            <p>address: <%=u.getAddress()%></p>
+            <p>phone: <%=u.getPhone()%></p>
         </div>
         <div class="col">
             <h1>loans</h1>

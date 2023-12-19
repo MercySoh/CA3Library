@@ -34,7 +34,7 @@ public class DisplayBookCommand implements Command{
 
         if(session.getAttribute("user") != null){
             List<Loan> currentLoans = loanDao.getCurrentLoans(u.getUserID());
-            List<Book> books = bookDao.getAllBooks();
+            List<Book> books = new ArrayList<>();
 
             for(Loan l : currentLoans){
                 books.add(bookDao.getBookByID(l.getBookId()));

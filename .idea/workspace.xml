@@ -10,16 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/CurrentLoansCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/currentLoans.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/BorrowBookCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/BorrowBookCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/navigator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/navigator.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BookgenreDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BookgenreDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +286,8 @@
       <workItem from="1702505316287" duration="2193000" />
       <workItem from="1702583449699" duration="1939000" />
       <workItem from="1702825531212" duration="9491000" />
-      <workItem from="1702906688382" duration="10511000" />
+      <workItem from="1702906688382" duration="10806000" />
+      <workItem from="1702994533408" duration="578000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -409,7 +401,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702907261333</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="creating currentLoans.jsp and making dashbo&#10;more restricted">
+      <option name="closed" value="true" />
+      <created>1702917502611</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702917502611</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,6 +453,7 @@
     <MESSAGE value="commit" />
     <MESSAGE value="creating BorrowBookCommand" />
     <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="creating currentLoans.jsp and making dashbo&#10;more restricted" />
+    <option name="LAST_COMMIT_MESSAGE" value="creating currentLoans.jsp and making dashbo&#10;more restricted" />
   </component>
 </project>

@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="optimized the code on the dashboard, also added the features to search and filter">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="fixed borrow book with profile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +298,8 @@
       <workItem from="1702889139367" duration="15155000" />
       <workItem from="1702972285870" duration="15334000" />
       <workItem from="1702991353536" duration="467000" />
-      <workItem from="1702994813614" duration="965000" />
+      <workItem from="1702994813614" duration="1922000" />
+      <workItem from="1703002163989" duration="1088000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -462,7 +461,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702991693293</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="fixed borrow book with profile">
+      <option name="closed" value="true" />
+      <created>1702996045206</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1702996045206</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +534,8 @@
     <MESSAGE value="experiment with Controller" />
     <MESSAGE value="optimized the code on the dashboard" />
     <MESSAGE value="optimized the code on the dashboard, also added the features to search and filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimized the code on the dashboard, also added the features to search and filter" />
+    <MESSAGE value="fixed borrow book with profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed borrow book with profile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

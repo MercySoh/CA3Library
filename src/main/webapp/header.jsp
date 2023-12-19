@@ -1,8 +1,9 @@
+<%@ page import="controller.Controller" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= session.getAttribute("pageTitle") %></title>
+    <title><%= Controller.pageTitle %></title>
 
 
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">

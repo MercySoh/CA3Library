@@ -41,7 +41,7 @@ public class BorrowBookCommand implements Command {
                 loanDao.borrowBook(u.getUserID(), bookId, returnDate);
                 msg = "You borrowed " + b1.getBookName() +" successfully";
                 session.setAttribute("msg", msg);
-                destination = "index.jsp";
+                destination = "profile.jsp";
             } else {
                 msg =  "the are no more copies available";
                 session.setAttribute("msg", msg);

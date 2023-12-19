@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.49">
+    <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <ServerVersion>10.4.24</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="information_schema">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="3" parent="1" name="ca3library">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="4" parent="1" name="ca3librarytest">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="5" parent="1" name="calabexam">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="6" parent="1" name="chating">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="7" parent="1" name="classicmodels">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="8" parent="1" name="companies">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="9" parent="1" name="cyber_database">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="10" parent="1" name="d00234340">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="11" parent="1" name="dojo_database">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="12" parent="1" name="jwtclient">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="13" parent="1" name="jwtserver">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="14" parent="1" name="library">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="15" parent="1" name="mysql">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="16" parent="1" name="my_guitar_shop1">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="17" parent="1" name="payments">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="18" parent="1" name="performance_schema">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="19" parent="1" name="phpmyadmin">
+      <CollationName>utf8_bin</CollationName>
+    </schema>
+    <schema id="20" parent="1" name="sample_persistence">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="21" parent="1" name="stockdb">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="22" parent="1" name="testlibrary">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="23" parent="1" name="teststockdb">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="24" parent="1" name="test_db">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="25" parent="1" name="time_database">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="26" parent="1" name="tourism">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+  </database-model>
+</dataSource>

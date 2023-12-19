@@ -9,15 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/PayOverdueFeesCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/ReturnBookCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/payFee.jsp" afterDir="false" />
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="they all merge, but some require fixing. flag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/PayOverdueFeesCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/PayOverdueFeesCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/currentLoans.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/currentLoans.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,15 +23,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
+        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -51,9 +53,6 @@
       </UrlAndAccount>
     </option>
   </component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -77,27 +76,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;experiment&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -107,8 +111,8 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="GlassFish Server.GlassFish 7.0.10">
-    <configuration name="GlassFish 7.0.10" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+  <component name="RunManager" selected="GlassFish Server.GlassFish">
+    <configuration name="GlassFish" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="CA3Library:war exploded">
@@ -116,7 +120,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="DOMAIN" value="D:\glassfish7\glassfish\domains\domain1" />
+        <option name="DOMAIN" value="domain1" />
         <option name="PRESERVE" value="false" />
         <option name="COMPATIBILITY" value="false" />
         <option name="VIRTUAL_SERVER" />
@@ -179,69 +183,6 @@
         </option>
       </method>
     </configuration>
-    <configuration name="BookgenreDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA3Library" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BookgenreDaoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookgenreDaoTest.getAllBookGenres_WhenNoMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA3Library" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BookgenreDaoTest" />
-      <option name="METHOD_NAME" value="getAllBookGenres_WhenNoMatch" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookgenreDaoTest.getBookGenresByGenreId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA3Library" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BookgenreDaoTest" />
-      <option name="METHOD_NAME" value="getBookGenresByGenreId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookgenreDaoTest.getBookGenresByGenreId_WhenNoMatchExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA3Library" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BookgenreDaoTest" />
-      <option name="METHOD_NAME" value="getBookGenresByGenreId_WhenNoMatchExist" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LoanDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
@@ -258,21 +199,85 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoanDaoTest.getCurrentLoans_WhenLoansArePresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA3Library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
+      <option name="METHOD_NAME" value="getCurrentLoans_WhenLoansArePresent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanDaoTest.getCurrentLoans_WhenNoLoansArePresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA3Library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
+      <option name="METHOD_NAME" value="getCurrentLoans_WhenNoLoansArePresent" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanDaoTest.getLoanByLoanFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA3Library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
+      <option name="METHOD_NAME" value="getLoanByLoanFields" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanDaoTest.getPreviousLoans_WhenPreviousLoansExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA3Library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
+      <option name="METHOD_NAME" value="getPreviousLoans_WhenPreviousLoansExist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="GlassFish Server.GlassFish 7.0.10" />
-      <item itemvalue="JUnit.BookgenreDaoTest" />
-      <item itemvalue="JUnit.BookgenreDaoTest.getAllBookGenres_WhenNoMatch" />
-      <item itemvalue="JUnit.BookgenreDaoTest.getBookGenresByGenreId" />
-      <item itemvalue="JUnit.BookgenreDaoTest.getBookGenresByGenreId_WhenNoMatchExist" />
+      <item itemvalue="GlassFish Server.GlassFish" />
+      <item itemvalue="JUnit.LoanDaoTest.getCurrentLoans_WhenLoansArePresent" />
+      <item itemvalue="JUnit.LoanDaoTest.getCurrentLoans_WhenNoLoansArePresent" />
+      <item itemvalue="JUnit.LoanDaoTest.getLoanByLoanFields" />
+      <item itemvalue="JUnit.LoanDaoTest.getPreviousLoans_WhenPreviousLoansExist" />
       <item itemvalue="JUnit.LoanDaoTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LoanDaoTest" />
-        <item itemvalue="JUnit.BookgenreDaoTest" />
-        <item itemvalue="JUnit.BookgenreDaoTest.getBookGenresByGenreId_WhenNoMatchExist" />
-        <item itemvalue="JUnit.BookgenreDaoTest.getBookGenresByGenreId" />
-        <item itemvalue="JUnit.BookgenreDaoTest.getAllBookGenres_WhenNoMatch" />
+        <item itemvalue="JUnit.LoanDaoTest.getCurrentLoans_WhenNoLoansArePresent" />
+        <item itemvalue="JUnit.LoanDaoTest.getCurrentLoans_WhenLoansArePresent" />
+        <item itemvalue="JUnit.LoanDaoTest.getPreviousLoans_WhenPreviousLoansExist" />
+        <item itemvalue="JUnit.LoanDaoTest.getLoanByLoanFields" />
       </list>
     </recent_temporary>
   </component>
@@ -291,11 +296,13 @@
       <workItem from="1701885540510" duration="1397000" />
       <workItem from="1701897432313" duration="1553000" />
       <workItem from="1702395521970" duration="7687000" />
-      <workItem from="1702505316287" duration="2193000" />
-      <workItem from="1702583449699" duration="1939000" />
-      <workItem from="1702825531212" duration="9491000" />
-      <workItem from="1702906688382" duration="10806000" />
-      <workItem from="1702994533408" duration="7634000" />
+      <workItem from="1702505316287" duration="1748000" />
+      <workItem from="1702599945942" duration="2102000" />
+      <workItem from="1702889139367" duration="15155000" />
+      <workItem from="1702972285870" duration="15334000" />
+      <workItem from="1702991353536" duration="467000" />
+      <workItem from="1702994813614" duration="1922000" />
+      <workItem from="1703002163989" duration="4699000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -361,71 +368,127 @@
       <option name="project" value="LOCAL" />
       <updated>1702505419250</updated>
     </task>
-    <task id="LOCAL-00009" summary="creating BookgenreDaoTest">
+    <task id="LOCAL-00009" summary="Change amendUser() method in UsersDao.">
       <option name="closed" value="true" />
-      <created>1702507543333</created>
+      <created>1702600122226</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1702507543333</updated>
+      <updated>1702600122226</updated>
     </task>
-    <task id="LOCAL-00010" summary="commit">
+    <task id="LOCAL-00010" summary="modify the pages, no functionality">
       <option name="closed" value="true" />
-      <created>1702825608762</created>
+      <created>1702646539389</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1702825608762</updated>
+      <updated>1702646539390</updated>
     </task>
-    <task id="LOCAL-00011" summary="creating BorrowBookCommand">
+    <task id="LOCAL-00011" summary="add design to the login and register.jsp">
       <option name="closed" value="true" />
-      <created>1702841844168</created>
+      <created>1702649078836</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1702841844168</updated>
+      <updated>1702649078836</updated>
     </task>
-    <task id="LOCAL-00012" summary="Commit">
+    <task id="LOCAL-00012" summary="workspace.xml commit">
       <option name="closed" value="true" />
-      <created>1702906834661</created>
+      <created>1702889207266</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1702906834661</updated>
+      <updated>1702889207266</updated>
     </task>
-    <task id="LOCAL-00013" summary="Commit">
+    <task id="LOCAL-00013" summary="working on the dashboard.jsp">
       <option name="closed" value="true" />
-      <created>1702907065848</created>
+      <created>1702897831500</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1702907065848</updated>
+      <updated>1702897831502</updated>
     </task>
-    <task id="LOCAL-00014" summary="Commit">
+    <task id="LOCAL-00014" summary="fixing main page and add profile, no functions yet">
       <option name="closed" value="true" />
-      <created>1702907261333</created>
+      <created>1702899724772</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1702907261333</updated>
+      <updated>1702899724773</updated>
     </task>
-    <task id="LOCAL-00015" summary="creating currentLoans.jsp and making dashbo&#10;more restricted">
+    <task id="LOCAL-00015" summary="reformat the librarytest.sql and the loan test">
       <option name="closed" value="true" />
-      <created>1702917502611</created>
+      <created>1702901985122</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1702917502611</updated>
+      <updated>1702901985123</updated>
     </task>
-    <task id="LOCAL-00016" summary="Commit">
+    <task id="LOCAL-00016" summary="update controller, wondering what to do next">
       <option name="closed" value="true" />
-      <created>1702995133611</created>
+      <created>1702903628472</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1702995133611</updated>
+      <updated>1702903628473</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="the commands are filled">
+      <option name="closed" value="true" />
+      <created>1702973894796</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702973894797</updated>
+    </task>
+    <task id="LOCAL-00018" summary="experiment with Controller">
+      <option name="closed" value="true" />
+      <created>1702977331413</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702977331413</updated>
+    </task>
+    <task id="LOCAL-00019" summary="optimized the code on the dashboard">
+      <option name="closed" value="true" />
+      <created>1702980825510</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1702980825510</updated>
+    </task>
+    <task id="LOCAL-00020" summary="optimized the code on the dashboard, also added the features to search and filter">
+      <option name="closed" value="true" />
+      <created>1702991693293</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1702991693293</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fixed borrow book with profile">
+      <option name="closed" value="true" />
+      <created>1702996045206</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1702996045206</updated>
+    </task>
+    <task id="LOCAL-00022" summary="commit">
+      <option name="closed" value="true" />
+      <created>1703008271923</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1703008271923</updated>
+    </task>
+    <task id="LOCAL-00023" summary="they all merge, but some require fixing. flag">
+      <option name="closed" value="true" />
+      <created>1703010389260</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1703010389260</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +514,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/experiment" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -465,11 +540,48 @@
     <MESSAGE value="Add checkUsername() in UsersDao and interface." />
     <MESSAGE value="creating login.jsp" />
     <MESSAGE value="adding more test in LoanDaoTest" />
-    <MESSAGE value="creating BookgenreDaoTest" />
-    <MESSAGE value="commit" />
-    <MESSAGE value="creating BorrowBookCommand" />
-    <MESSAGE value="creating currentLoans.jsp and making dashbo&#10;more restricted" />
     <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="Change amendUser() method in UsersDao." />
+    <MESSAGE value="modify the pages, no functionality" />
+    <MESSAGE value="add design to the login and register.jsp" />
+    <MESSAGE value="workspace.xml commit" />
+    <MESSAGE value="working on the dashboard.jsp" />
+    <MESSAGE value="fixing main page and add profile, no functions yet" />
+    <MESSAGE value="reformat the librarytest.sql and the loan test" />
+    <MESSAGE value="update controller, wondering what to do next" />
+    <MESSAGE value="the commands are filled" />
+    <MESSAGE value="experiment with Controller" />
+    <MESSAGE value="optimized the code on the dashboard" />
+    <MESSAGE value="optimized the code on the dashboard, also added the features to search and filter" />
+    <MESSAGE value="fixed borrow book with profile" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="they all merge, but some require fixing. flag" />
+    <option name="LAST_COMMIT_MESSAGE" value="they all merge, but some require fixing. flag" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/CurrentLoansCommand.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/BorrowBookCommand.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/commands/ReturnBookCommand.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

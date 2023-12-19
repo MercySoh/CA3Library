@@ -18,8 +18,8 @@
         <div class="collapse navbar-collapse" id="navbarNav">
 
             <!-- Search Bar -->
-            <form class="d-flex mx-auto">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form action="controller?action=dashboard" method="get" class="d-flex mx-auto">
+                <input class="form-control me-2" name="searchTitle" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
 
@@ -49,9 +49,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="controller?action=show_profile">profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="controller?action=currentLoans">current Loans</a>
                 </li>
                 <%} else {%>
                 <li class="nav-item">

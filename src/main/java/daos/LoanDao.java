@@ -4,11 +4,11 @@ import business.Book;
 import business.Loan;
 
 import java.sql.*;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 public class LoanDao extends Dao implements LoanDaoInterface {
 
@@ -408,21 +408,24 @@ public class LoanDao extends Dao implements LoanDaoInterface {
         return loan;
     }
 
-    public HashMap<Integer, Integer> getTrendingBooks() {
+    public TreeMap<Integer, Integer> getTrendingBooks() {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
-        Loan loan = null;
-        HashMap<Integer, Integer> trends = new HashMap<>();
+        TreeMap<Integer, Integer> trends = new TreeMap<>(Comparator.reverseOrder());
         try {
             con = getConnection();
 
             String query = "SELECT count(bookID) as num, bookID from loans where  DATEDIFF(now(),borrowDate)<30 group by bookID order by num DESC";
             ps = con.prepareStatement(query);
             rs = ps.executeQuery();
-
+            int count = 0;
             while (rs.next()) {
                 trends.put(rs.getInt("booKID"), rs.getInt("num"));
+                count++;
+                if (count == 10) {
+                    break;
+                }
             }
 
         } catch (SQLException e) {

@@ -1,0 +1,26 @@
+
+.textbox-red{
+    display: flex;
+    margin: 0 auto auto;
+    width: 25%;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.textbox-green{
+    display: flex;
+    margin: 0 auto auto;
+    width: 25%;
+    background-color: greenyellow;
+    color: white;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}

@@ -4,6 +4,19 @@
 
 <%@include file="navigator.jsp" %>
 
+<%
+    String msg = (String) session.getAttribute("msg");
+    if (msg != null) {
+%>
+<div class="textbox-green">
+    <p><%=msg%>
+    </p>
+</div>
+<%
+        session.removeAttribute("msg");
+    }
+%>
+
 <div class="container text-center">
     <div class="row align-items-start">
         <div class="col">

@@ -11,13 +11,14 @@
 
 <%@include file="navigator.jsp" %>
 
-<br/>
 <%
     String msg = (String) session.getAttribute("msg");
     if (msg != null) {
 %>
-<p><%=msg%>
-</p>
+<div class="textbox-green">
+    <p><%=msg%>
+    </p>
+</div>
 <%
         session.removeAttribute("msg");
     }

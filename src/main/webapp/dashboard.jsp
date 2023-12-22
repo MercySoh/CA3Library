@@ -36,8 +36,8 @@
     </tr>
     </thead>
     <tbody>
-    <p>current trending books</p>
-    <marquee>
+
+    <div id="moving-div">
         <%
             BookDao bookDao = new BookDao("ca3library");
             BookgenreDao bookgenreDao = new BookgenreDao("ca3library");
@@ -54,7 +54,7 @@
 
             }
         %>
-    </marquee>
+    </div>
 
     <%
         for (Book b : Controller.books) {

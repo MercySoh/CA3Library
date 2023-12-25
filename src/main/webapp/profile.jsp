@@ -89,7 +89,7 @@
                     <%
                     } else if (loan.getReturnedDate() != null) {
                     %>
-                    <td>RETRUNED</td>
+                    <td>RETURNED</td>
                     <%
                     } else {
                     %>

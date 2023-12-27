@@ -11,13 +11,14 @@
 
 <%@include file="navigator.jsp" %>
 
-<br/>
 <%
     String msg = (String) session.getAttribute("msg");
     if (msg != null) {
 %>
-<p><%=msg%>
-</p>
+<div class="textbox-green">
+    <p><%=msg%>
+    </p>
+</div>
 <%
         session.removeAttribute("msg");
     }
@@ -35,8 +36,8 @@
     </tr>
     </thead>
     <tbody>
-    <p>current trending books</p>
-    <marquee>
+
+    <div id="moving-div">
         <%
             BookDao bookDao = new BookDao("ca3library");
             BookgenreDao bookgenreDao = new BookgenreDao("ca3library");
@@ -53,7 +54,7 @@
 
             }
         %>
-    </marquee>
+    </div>
 
     <%
         for (Book b : Controller.books) {

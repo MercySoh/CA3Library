@@ -2,18 +2,21 @@
 
 <%@include file="navigator.jsp" %>
 
+<%
+    String msg = (String) session.getAttribute("msg");
+    if (msg != null) {
+%>
+<div class="textbox-red">
+    <p><%=msg%>
+    </p>
+</div>
+<%
+        session.removeAttribute("msg");
+    }
+%>
 
 <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
     <form action="controller" method="post">
-        <%
-            String msg = (String) session.getAttribute("msg");
-            if (msg != null) {
-        %>
-        <p style="color: red"><%=msg%> </p>
-        <%
-                session.removeAttribute("msg");
-            }
-        %>
         <h3>Log in!</h3>
         <label class="form-label">username</label> <br/>
         <input class="form-control" name="username" required/> <br/>

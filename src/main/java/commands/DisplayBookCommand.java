@@ -23,6 +23,10 @@ public class DisplayBookCommand implements Command{
         this.response = response;
     }
 
+    /**
+     * execute the command
+     * @return the destination link
+     */
     @Override
     public String execute() {
         HttpSession session = request.getSession(true);
@@ -47,6 +51,11 @@ public class DisplayBookCommand implements Command{
         return "dashboard.jsp";
     }
 
+    /**
+     * search a book by genre
+     * @param genreID the genreID
+     * @return back to dashboard
+     */
     public String execute(int genreID){
         HttpSession session = request.getSession(true);
         BookgenreDao bookgenreDao = new BookgenreDao("ca3library");
@@ -77,6 +86,11 @@ public class DisplayBookCommand implements Command{
         return "dashboard.jsp";
     }
 
+    /**
+     * search for a book title
+     * @param title the title
+     * @return back to dashboard
+     */
     public String execute(String title){
         HttpSession session = request.getSession(true);
         LoanDao loanDao = new LoanDao("ca3library");

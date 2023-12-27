@@ -21,6 +21,10 @@ public class BorrowBookCommand implements Command {
     }
 
 
+    /**
+     * borrow a book, it will be set to 2 weeks time
+     * @return to index
+     */
     @Override
     public String execute() {
         String destination = "index.jsp";

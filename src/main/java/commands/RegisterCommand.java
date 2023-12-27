@@ -1,5 +1,6 @@
 package commands;
 
+import business.Users;
 import daos.UsersDao;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -15,6 +16,10 @@ public class RegisterCommand implements Command{
         this.response = response;
     }
 
+    /**
+     * register user
+     * @return to index, which gets redirected to dashboard
+     */
     @Override
     public String execute() {
         String destination = "register.jsp";
@@ -26,10 +31,12 @@ public class RegisterCommand implements Command{
         String phone = request.getParameter("phone");
         if (username != null && password != null && email != null && address != null && phone != null && !username.isEmpty() && !password.isEmpty() && !email.isEmpty() && !address.isEmpty() && !phone.isEmpty()) {
             UsersDao userDao = new UsersDao("ca3library");
-            int state=  userDao.addUser(username,email,password,address,phone,0);
-            if(state!=-1){
+            int id = userDao.addUser(username,email,password,address,phone,0);
+            if(id != -1){
                 destination="index.jsp";
                 String msg = "You have been registered successfully!";
+                Users user = new Users(id, username, password, email, address, phone, 0);
+                session.setAttribute("user", user);
                 session.setAttribute("msg", msg);
             }
             else{

@@ -2,6 +2,19 @@
 
 <%@include file="navigator.jsp"%>
 
+<%
+    String msg = (String) session.getAttribute("msg");
+    if (msg != null) {
+%>
+<div class="textbox-red">
+    <p><%=msg%>
+    </p>
+</div>
+<%
+        session.removeAttribute("msg");
+    }
+%>
+
 <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
     <form action="controller" method="post">
         <h3>Sign in!</h3>

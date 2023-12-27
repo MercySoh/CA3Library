@@ -19,6 +19,10 @@ public class CurrentLoansCommand implements Command {
         this.response = response;
     }
 
+    /**
+     * get loans displayed
+     * @return the profile page
+     */
     @Override
     public String execute() {
         HttpSession session = request.getSession(true);

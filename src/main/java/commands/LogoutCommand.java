@@ -15,6 +15,10 @@ public class LogoutCommand implements Command{
     }
 
 
+    /**
+     * logout
+     * @return back to index, which will be redirected to the dashboard
+     */
     @Override
     public String execute() {
         HttpSession session = request.getSession(true);

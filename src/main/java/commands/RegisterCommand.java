@@ -16,6 +16,10 @@ public class RegisterCommand implements Command{
         this.response = response;
     }
 
+    /**
+     * register user
+     * @return to index, which gets redirected to dashboard
+     */
     @Override
     public String execute() {
         String destination = "register.jsp";

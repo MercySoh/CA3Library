@@ -18,6 +18,10 @@ public class ReturnBookCommand implements Command {
         this.response = response;
     }
 
+    /**
+     * return book to library
+     * @return to the profile page
+     */
     @Override
     public String execute() {
         String destination = "profile.jsp";

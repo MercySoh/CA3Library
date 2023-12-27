@@ -20,6 +20,10 @@ public class PayOverdueFeesCommand implements Command{
         this.response = response;
     }
 
+    /**
+     * pay the overdue
+     * @return the destination link
+     */
     @Override
     public String execute() {
         String destination = "profile.jsp";

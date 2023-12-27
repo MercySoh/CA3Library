@@ -15,6 +15,11 @@ public class LoginCommand implements Command{
         this.request = request;
         this.response = response;
     }
+
+    /**
+     * login user
+     * @return the destination link
+     */
     @Override
     public String execute() {
         HttpSession session = request.getSession(true);

@@ -1,6 +1,7 @@
 package tests;
 
 import business.Loan;
+import com.sun.source.tree.Tree;
 import daos.LoanDao;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,11 +10,13 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.TreeMap;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class LoanDaoTest {
-  private LoanDao loanDao = new LoanDao("ca3librarytest");
+    private LoanDao loanDao = new LoanDao("ca3librarytest");
+
     @BeforeEach
     void setUp() {
         // insert loan for payOverdueLoan
@@ -56,6 +59,11 @@ class LoanDaoTest {
         Loan l2 = loanDao.getLoanByLoanFields(2, 3, borrowDate2, dueDate2);
         loanDao.deleteLoan(l2.getLoanId());
 
+        //delete loan for borrowBook2()
+        /*LocalDate dueDate3 = LocalDate.now().plusDays(1);
+        LocalDate borrowedDate3 = LocalDate.now();
+        Loan l3 = loanDao.getLoanByLoanFields(2, 2, LocalDate.now(), LocalDate.now().plusDays(1));
+        loanDao.deleteLoan(l3.getLoanId());*/
         loanDao.updateIncrement("loans", 4);
     }
 
@@ -80,7 +88,6 @@ class LoanDaoTest {
     /*Test for get current loans when no loans are present**/
     @Test
     void getCurrentLoans_WhenNoLoansArePresent() {
-        //LoanDao loanDao = new LoanDao("testca3library");
         ArrayList<Loan> actual = loanDao.getCurrentLoans(10);
         ArrayList<Loan> expected = new ArrayList();
         assertEquals(actual, expected);
@@ -196,14 +203,14 @@ class LoanDaoTest {
         boolean expected = false;
         assertEquals(actual, expected);
         if (actual == expected) {
-          Loan actualL = loanDao.getLoanById(expectedl.getLoanId());
-           assertEquals(actualL.getLoanId(),expectedl.getLoanId());
-            assertEquals(actualL.getUserId(),expectedl.getUserId());
-            assertEquals(actualL.getBookId(),expectedl.getBookId());
-            assertEquals(actualL.getBorrowDate(),expectedl.getBorrowDate());
-            assertEquals(actualL.getDueDate(),expectedl.getDueDate());
-            assertEquals(actualL.getReturnedDate(),expectedl.getReturnedDate());
-            assertEquals(actualL.getFees(),expectedl.getFees());
+            Loan actualL = loanDao.getLoanById(expectedl.getLoanId());
+            assertEquals(actualL.getLoanId(), expectedl.getLoanId());
+            assertEquals(actualL.getUserId(), expectedl.getUserId());
+            assertEquals(actualL.getBookId(), expectedl.getBookId());
+            assertEquals(actualL.getBorrowDate(), expectedl.getBorrowDate());
+            assertEquals(actualL.getDueDate(), expectedl.getDueDate());
+            assertEquals(actualL.getReturnedDate(), expectedl.getReturnedDate());
+            assertEquals(actualL.getFees(), expectedl.getFees());
         }
     }
 
@@ -266,6 +273,9 @@ class LoanDaoTest {
         assertEquals(actual, expected);
     }
 
+    /**
+     * test for borrow book with userId, bookId and due Date as parameters
+     **/
     @Test
     void borrowBook() {
         LocalDate dueDate = LocalDate.now().plusDays(1);
@@ -285,6 +295,32 @@ class LoanDaoTest {
         }
     }
 
+    /**
+     * test for borrow book with userId, bookId, borrowDate and dueDate as parameters
+     **/
+    @Test
+    void borrowBook_withMoreParameters() {
+        LocalDate dueDate = LocalDate.now().plusDays(1);
+        LocalDate borrowedDate = LocalDate.now();
+        boolean actual = loanDao.borrowBook(2, 2, borrowedDate, dueDate);
+        boolean expected = true;
+        assertEquals(actual, expected);
+        if (actual == expected) {
+            Loan l1 = loanDao.getLoanByLoanFields(2, 2, borrowedDate, dueDate);
+            Loan l2 = new Loan(l1.getLoanId(), 2, 2, borrowedDate, dueDate, null);
+            assertEquals(l1.getLoanId(), l2.getLoanId());
+            assertEquals(l1.getUserId(), l2.getUserId());
+            assertEquals(l1.getBookId(), l2.getBookId());
+            assertEquals(l1.getBorrowDate(), l2.getBorrowDate());
+            assertEquals(l1.getDueDate(), l2.getDueDate());
+            assertEquals(l1.getReturnedDate(), l2.getReturnedDate());
+            loanDao.deleteLoan(l1.getLoanId());
+        }
+    }
+
+    /**
+     * test for deleteLoan() when loan is present
+     **/
     @Test
     void deleteLoan() {
         LocalDate dueDate = LocalDate.now().plusDays(1);
@@ -303,30 +339,54 @@ class LoanDaoTest {
             assertEquals(actualLoan.getFees(), expectedLoan.getFees());
         }
     }
-/**Delete a loan when the loanId doesn't exist in the database **/
+
+    /**
+     * Delete a loan when the loanId doesn't exist in the database
+     **/
     @Test
     void deleteLoan_whenNoLoanIdIsFound() {
         int actual = loanDao.deleteLoan(10000);
         int expected = 0;
         assertEquals(actual, expected);
     }
-/**Get a loan by loanId,bookId, borrowDate and dueDate when a loan exist with those details **/
+
+    /**
+     * Get a loan by loanId,bookId, borrowDate and dueDate when a loan exist with those details
+     **/
     @Test
     void getLoanByLoanFields() {
         LocalDate borrowDate = LocalDate.of(2023, 12, 7);
         LocalDate dueDate = LocalDate.of(2023, 12, 8);
         Loan expected = new Loan(1, 1, 1, borrowDate, dueDate, null);
-        Loan actual = loanDao.getLoanByLoanFields(1,1,borrowDate,dueDate);
-        assertEquals(expected,actual);
+        Loan actual = loanDao.getLoanByLoanFields(1, 1, borrowDate, dueDate);
+        assertEquals(expected, actual);
     }
-/**Get a loan by loanId,bookId, borrowDate and dueDate when no loan exist with those details **/
+
+    /**
+     * Get a loan by loanId,bookId, borrowDate and dueDate when no loan exist with those details
+     **/
     @Test
     void getLoanByLoanFields_whenFieldsDoNotMatch() {
         LocalDate borrowDate = LocalDate.of(2023, 12, 7);
         LocalDate dueDate = LocalDate.of(2023, 12, 8);
         Loan expected = null;
-        Loan actual = loanDao.getLoanByLoanFields(55,7,borrowDate,dueDate);
-        assertEquals(expected,actual);
+        Loan actual = loanDao.getLoanByLoanFields(55, 7, borrowDate, dueDate);
+        assertEquals(expected, actual);
+    }
+
+    /**
+     * test for getTrendingBooks()
+     **/
+    @Test
+    void getTrendingBooks() {
+        TreeMap<Integer, Integer> actual = loanDao.getTrendingBooks();
+        TreeMap<Integer, Integer> expected = new TreeMap();
+        expected.put(3, 2);
+        expected.put(1, 1);
+        expected.put(2, 1);
+        expected.put(4, 1);
+        expected.put(5, 1);
+        assertEquals(actual, expected);
     }
 
 

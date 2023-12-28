@@ -322,6 +322,7 @@ public class LoanDao extends Dao implements LoanDaoInterface {
      * @param dueDate ,the due date to return the book
      * @return true if the book was borrowed or false for otherwise
      **/
+    @Override
     public boolean borrowBook(int userId, int bookId, LocalDate dueDate) {
         Connection con = null;
         PreparedStatement ps = null;
@@ -371,6 +372,7 @@ public class LoanDao extends Dao implements LoanDaoInterface {
      * @param dueDate     ,the due date to return the book
      * @return true if the book was borrowed or false for otherwise
      **/
+    @Override
     public boolean borrowBook(int userId, int bookId, LocalDate borrowDate, LocalDate dueDate) {
         Connection con = null;
         PreparedStatement ps = null;
@@ -421,6 +423,7 @@ public class LoanDao extends Dao implements LoanDaoInterface {
      * @param dueDate,    the loan's dueDate
      * @return a Loan, or a null Loan if Loan wasn't found
      **/
+    @Override
     public Loan getLoanByLoanFields(int userId, int bookId, LocalDate borrowDate, LocalDate dueDate) {
         Connection con = null;
         PreparedStatement ps = null;
@@ -470,6 +473,7 @@ public class LoanDao extends Dao implements LoanDaoInterface {
      *
      * @return TreeMap <Integer, Integer> where the key is the bookId and the value is the number of times it was borrowed
      **/
+    @Override
     public TreeMap<Integer, Integer> getTrendingBooks() {
         Connection con = null;
         PreparedStatement ps = null;
@@ -516,6 +520,7 @@ public class LoanDao extends Dao implements LoanDaoInterface {
      * @param loanId, the loanId of the Loan to be deleted
      * @return 1 if the loan was deleted or 0 if the Loan wasn't deleted
      **/
+    @Override
     public int deleteLoan(int loanId) {
         Connection con = null;
         PreparedStatement ps = null;

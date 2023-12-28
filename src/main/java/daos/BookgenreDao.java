@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class BookgenreDao extends Dao implements BookgenreDaoInterface{
+public class BookgenreDao extends Dao implements BookgenreDaoInterface {
 
     public BookgenreDao(String dbName) {
         super(dbName);
@@ -19,8 +19,14 @@ public class BookgenreDao extends Dao implements BookgenreDaoInterface{
         super(con);
     }
 
+    /**
+     * gets all BookGenres based on the bookId
+     *
+     * @param bookId, the bookId to be searched
+     * @return an ArrayList of BookGenres or an empty arraylist if no match was found
+     **/
     @Override
-        public ArrayList<Bookgenre> getAllBookGenres(int bookId) {
+    public ArrayList<Bookgenre> getAllBookGenres(int bookId) {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -58,7 +64,12 @@ public class BookgenreDao extends Dao implements BookgenreDaoInterface{
         return bookgenres;
     }
 
-
+    /**
+     * gets all BookGenres based on the genreId
+     *
+     * @param genreId, the intended genreId to be searched
+     * @return an ArrayList of BookGenres or an empty ArrayList if no match was found
+     **/
     @Override
     public ArrayList<Bookgenre> getBookGenresByGenreId(int genreId) {
         Connection con = null;

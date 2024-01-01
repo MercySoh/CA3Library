@@ -1,0 +1,25 @@
+This website is designed to be a library
+
+you can login, register, view books, search books, borrow books, return them and
+
+pay overdue fees in case you forgot to return your book
+
+you can also update user
+
+--Programmer defined features
+
+-filter books by genre (Jeremiah)-
+it filters the books by genre, just click on the dropdown menu and select a genre, only one genre
+can be clicked at a time
+
+found in: DisplayBookCommand, DAO in BookGenre
+
+-password encryption (Mercy)-
+encrypts the password with BCrypt
+
+found in: UserDao
+
+-trending books, it moves (Carlson)-
+displays trending books, it is based on how many times a book is borrowed, the most borrowed one is the trending one
+
+found in: dashboard.jsp, DAO in LoanDao

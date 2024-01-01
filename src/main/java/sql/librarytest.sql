@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2023 at 02:10 PM
+-- Generation Time: Jan 01, 2024 at 08:31 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.4
 
@@ -203,7 +203,7 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT for table `loans`
 --
 ALTER TABLE `loans`
-    MODIFY `loanID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=293;
+    MODIFY `loanID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`

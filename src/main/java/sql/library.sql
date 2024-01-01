@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2023 at 10:53 AM
+-- Generation Time: Jan 01, 2024 at 08:28 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.4
 
@@ -64,7 +64,7 @@ CREATE TABLE `books` (
 
 INSERT INTO `books` (`bookID`, `bookName`, `author`, `description`, `quantity`) VALUES
                                                                                     (1, 'one piece', 'oda', 'it is a manga of pirates', 1000),
-                                                                                    (2, 'gintama', 'Hideaki Sorachi', 'it is a manga of gintama', 20),
+                                                                                    (2, 'gintama', 'Hideaki Sorachi', 'it is a manga of gintama', 22),
                                                                                     (3, 'naruto', 'Masashi Kishimoto', 'it is a manga of ninjas', 5),
                                                                                     (4, 'Mieruko-chan', 'Tomoki Izumi', 'horror manga with ability to see ghost', 4),
                                                                                     (5, 'blue lock', 'yusuke nomura', 'hardcore soccer', 66);
@@ -109,6 +109,15 @@ CREATE TABLE `loans` (
                          `fees` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `loans`
+--
+
+INSERT INTO `loans` (`loanID`, `userID`, `bookID`, `borrowDate`, `dueDate`, `returnedDate`, `fees`) VALUES
+                                                                                                        (9, 1, 2, '2023-12-20', '2023-12-21', '2023-12-27', '6.00'),
+                                                                                                        (10, 1, 1, '2023-12-20', '2024-01-03', '2023-12-20', NULL),
+                                                                                                        (11, 1, 3, '2023-12-20', '2024-01-03', '2023-12-20', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -132,7 +141,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`userID`, `userName`, `email`, `password`, `address`, `phone`, `userType`) VALUES
                                                                                                     (1, 'jerry', 'jerry@gmail.com', '$2a$10$K.uvVBVFs1HRMO83Y6Er0.Qx6CTy40VJf38TgkA7csG1.ecyKctUC', 'address', '231030213', 0),
-                                                                                                    (2, 'admin', 'admin@gmail.com', '$2a$10$KLMZQ1aqt95iVgI/ir1qWOmE.Docxd5VucQRSIE62IkAVhvPVbXk2', 'address', '0231030213', 1);
+                                                                                                    (2, 'admin', 'admin@gmail.com', '$2a$10$KLMZQ1aqt95iVgI/ir1qWOmE.Docxd5VucQRSIE62IkAVhvPVbXk2', 'address', '0231030213', 1),
+                                                                                                    (3, 'bob', 'bob@gmail.com', '$2a$10$HdnetGtgXFa5DNGu2pWLcO2bv/VOH29b4GoEUrKRyIOLbUfbrck6G', 'asdsad', '213213213231', 0),
+                                                                                                    (4, 'saa', 'sadsadasdsad', '$2a$10$FTZf4szQpabJX10n0JmN/eVGdlLb1ovw9CnsGSnfMBHn1bLrQfnvO', 'sadsad', 'asdsadsad', 0),
+                                                                                                    (5, 'asd', 'asdsadss', '$2a$10$pS6WX8LEKqAqGRfswI/JRe6N7XmNXA78/DuoFcsO.lmxDhghPhDo6', 'aa', 'aa', 0);
 
 --
 -- Indexes for dumped tables
@@ -194,13 +206,13 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT for table `loans`
 --
 ALTER TABLE `loans`
-    MODIFY `loanID` int(11) NOT NULL AUTO_INCREMENT;
+    MODIFY `loanID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-    MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+    MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables

@@ -34,7 +34,18 @@ class UsersDaoTest {
     }
 
     @Test
+    void findUserById_NotFound() {
+        UsersDao usersDao = new UsersDao("ca3librarytest");
+        System.out.println("findUserById_NotFound");
+        int userID = 2500;
+        Users expResult = null;
+        Users result = usersDao.findUserById(userID);
+        assertEquals(expResult, result);
+    }
+
+    @Test
     void addUser() {
+
     }
 
     @Test

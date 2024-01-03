@@ -44,8 +44,24 @@ class UsersDaoTest {
     }
 
     @Test
-    void addUser() {
+    void addUser_6args() {
+       UsersDao usersDao = new UsersDao("ca3librarytest");
+        System.out.println("addUser_6args");
+        String userName = "Leo Zen";
+        String email = "leo234@gmail.com";
+        String password = "234Leo";
+        String address = "address";
+        String phone = "0881234567";
+        int userType = 0;
 
+        int result = usersDao.addUser(userName,email,password,address,phone,userType);
+        assertTrue((result > 0));
+
+        if (result != -1) {
+            System.out.println("Method returned appropriately, confirming database changed by trying to remove what was added");
+            int rowsDeleted = usersDao.deleteUser(result);
+            assertEquals(rowsDeleted, 1);
+        }
     }
 
     @Test

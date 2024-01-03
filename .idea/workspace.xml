@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="javadoc the commands">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_12_2023_13_45__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_12_2023_13_45__Changes_.xml" afterDir="false" />
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="test  findUserById_NotFound in UsersDaoTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/daos/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/UsersDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +103,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UsersDaoTest.findUserById_NotFound">
+  <component name="RunManager" selected="JUnit.UsersDaoTest.addUser_6args">
     <configuration name="GlassFish 7.0.10" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -193,22 +191,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoanDaoTest.borrowBook2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA3Library" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
-      <option name="METHOD_NAME" value="borrowBook2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LoanDaoTest.hey2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
@@ -241,6 +223,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UsersDaoTest.addUser_6args" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA3Library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UsersDaoTest" />
+      <option name="METHOD_NAME" value="addUser_6args" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UsersDaoTest.findUserById_NotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
@@ -260,18 +258,18 @@
     <list>
       <item itemvalue="GlassFish Server.GlassFish 7.0.10" />
       <item itemvalue="JUnit.UsersDaoTest.addUser" />
+      <item itemvalue="JUnit.UsersDaoTest.addUser_6args" />
       <item itemvalue="JUnit.UsersDaoTest.findUserById_NotFound" />
-      <item itemvalue="JUnit.LoanDaoTest.borrowBook2" />
       <item itemvalue="JUnit.LoanDaoTest.hey2" />
       <item itemvalue="JUnit.LoanDaoTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UsersDaoTest.findUserById_NotFound" />
+        <item itemvalue="JUnit.UsersDaoTest.addUser_6args" />
         <item itemvalue="JUnit.UsersDaoTest.addUser" />
+        <item itemvalue="JUnit.UsersDaoTest.findUserById_NotFound" />
         <item itemvalue="JUnit.LoanDaoTest" />
         <item itemvalue="JUnit.LoanDaoTest.hey2" />
-        <item itemvalue="JUnit.LoanDaoTest.borrowBook2" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +300,7 @@
       <workItem from="1703693067718" duration="9318000" />
       <workItem from="1703766474443" duration="1143000" />
       <workItem from="1704134941306" duration="2084000" />
-      <workItem from="1704293472374" duration="254000" />
+      <workItem from="1704293472374" duration="4749000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -488,7 +486,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703705360917</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="test  findUserById_NotFound in UsersDaoTest">
+      <option name="closed" value="true" />
+      <created>1704293783610</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1704293783610</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,6 +544,7 @@
     <MESSAGE value="Commit" />
     <MESSAGE value="Changing to treemap for trendingBooks" />
     <MESSAGE value="putting Javadocs in LoanDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="putting Javadocs in LoanDao" />
+    <MESSAGE value="test  findUserById_NotFound in UsersDaoTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="test  findUserById_NotFound in UsersDaoTest" />
   </component>
 </project>

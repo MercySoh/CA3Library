@@ -193,7 +193,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         try {
             con = this.getConnection();
 
-            String query = "INSERT INTO users(userName, email,password,address,phone,userType) VALUES (?, ?, ?, ?,?,?)";
+            String query = "INSERT INTO users(userName, email,password,address,phone,userType) VALUES (?, ?, ?, ?, ?,?)";
 
             ps = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
 
@@ -254,7 +254,7 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         try {
             con = getConnection();
 
-            String command = "DELETE FROM Users WHERE ID=?";
+            String command = "DELETE FROM Users WHERE userID=?";
             ps = con.prepareStatement(command);
             ps.setInt(1, userId);
 

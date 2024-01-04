@@ -246,6 +246,11 @@ public class UsersDao extends Dao implements UsersDaoInterface {
     }
 
     @Override
+    public int addUser(Users newUser) {
+        return addUser(newUser.getUserName(),newUser.getEmail(),newUser.getPassword(),newUser.getAddress(),newUser.getPhone(),newUser.getUserType());
+    }
+
+    @Override
     public int deleteUser(int userId) {
         Connection con = null;
         PreparedStatement ps = null;

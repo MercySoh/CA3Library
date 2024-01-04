@@ -88,9 +88,28 @@ class UsersDaoTest {
 
     }
 
-
     @Test
-    void deleteUser() {
+    void deleteUser_ById() {
+        UsersDao usersDao = new UsersDao("ca3librarytest");
+        System.out.println("deleteUserById");
+
+        Users u = new Users(1, "jerry", "jerry@gmail.com", "password", "address", "231030213", 0);
+        int id = u.getUserID();
+        int expResult = 1;
+
+        int result = usersDao.deleteUser(id);
+        assertEquals(expResult, result);
+
+        if (result == 1) {
+            System.out.println("Method returned appropriately, confirming database "
+                    + "changed by trying to select what was deleted");
+            Users selectedUser = usersDao.findUserById(u.getUserID());
+            assertEquals(null, selectedUser);
+
+            if (selectedUser == null) {
+                usersDao.addUser(u);
+            }
+        }
     }
 
     @Test

@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="add addUser by User method in UsersDao and interface">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="test addUser_Users in UsersDaoTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" afterDir="false" />
     </list>
@@ -102,7 +102,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UsersDaoTest.addUser_Users">
+  <component name="RunManager" selected="JUnit.UsersDaoTest.deleteUser">
     <configuration name="GlassFish 7.0.10" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -174,22 +174,6 @@
         </option>
       </method>
     </configuration>
-    <configuration name="LoanDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA3Library" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UsersDaoTest.addUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
@@ -238,6 +222,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UsersDaoTest.deleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA3Library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UsersDaoTest" />
+      <option name="METHOD_NAME" value="deleteUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UsersDaoTest.findUserById_NotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
@@ -259,16 +259,16 @@
       <item itemvalue="JUnit.UsersDaoTest.addUser" />
       <item itemvalue="JUnit.UsersDaoTest.addUser_6args" />
       <item itemvalue="JUnit.UsersDaoTest.addUser_Users" />
+      <item itemvalue="JUnit.UsersDaoTest.deleteUser" />
       <item itemvalue="JUnit.UsersDaoTest.findUserById_NotFound" />
-      <item itemvalue="JUnit.LoanDaoTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UsersDaoTest.deleteUser" />
         <item itemvalue="JUnit.UsersDaoTest.addUser_Users" />
         <item itemvalue="JUnit.UsersDaoTest.addUser_6args" />
         <item itemvalue="JUnit.UsersDaoTest.addUser" />
         <item itemvalue="JUnit.UsersDaoTest.findUserById_NotFound" />
-        <item itemvalue="JUnit.LoanDaoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -299,7 +299,7 @@
       <workItem from="1703693067718" duration="9318000" />
       <workItem from="1703766474443" duration="1143000" />
       <workItem from="1704134941306" duration="2084000" />
-      <workItem from="1704293472374" duration="6610000" />
+      <workItem from="1704293472374" duration="7269000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -509,7 +509,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704329254361</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="test addUser_Users in UsersDaoTest">
+      <option name="closed" value="true" />
+      <created>1704329562725</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1704329562725</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,6 +570,7 @@
     <MESSAGE value="test  findUserById_NotFound in UsersDaoTest" />
     <MESSAGE value="test addUser_6args in UsersDaoTest" />
     <MESSAGE value="add addUser by User method in UsersDao and interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="add addUser by User method in UsersDao and interface" />
+    <MESSAGE value="test addUser_Users in UsersDaoTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="test addUser_Users in UsersDaoTest" />
   </component>
 </project>

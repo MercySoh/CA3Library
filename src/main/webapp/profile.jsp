@@ -29,7 +29,9 @@
             </p>
             <p>phone: <%=u.getPhone()%>
             </p>
+            <a href="updateProfile.jsp">
             <button class="btn btn-info">update user</button>
+            </a>
         </div>
         <div class="col">
             <h1>loans</h1>

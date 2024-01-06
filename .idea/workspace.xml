@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="test addUser_Users in UsersDaoTest">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="test deleteUser_ById in UsersDaoTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +102,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UsersDaoTest.deleteUser">
+  <component name="RunManager" selected="GlassFish Server.GlassFish 7.0.10">
     <configuration name="GlassFish 7.0.10" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -299,7 +299,7 @@
       <workItem from="1703693067718" duration="9318000" />
       <workItem from="1703766474443" duration="1143000" />
       <workItem from="1704134941306" duration="2084000" />
-      <workItem from="1704293472374" duration="7269000" />
+      <workItem from="1704293472374" duration="9416000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -517,7 +517,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704329562725</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="test deleteUser_ById in UsersDaoTest">
+      <option name="closed" value="true" />
+      <created>1704330257240</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1704330257240</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -571,6 +579,7 @@
     <MESSAGE value="test addUser_6args in UsersDaoTest" />
     <MESSAGE value="add addUser by User method in UsersDao and interface" />
     <MESSAGE value="test addUser_Users in UsersDaoTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="test addUser_Users in UsersDaoTest" />
+    <MESSAGE value="test deleteUser_ById in UsersDaoTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="test deleteUser_ById in UsersDaoTest" />
   </component>
 </project>

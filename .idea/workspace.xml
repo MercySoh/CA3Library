@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="user profile can be updated">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,10 +82,12 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/asus/Downloads/SampleWebTemplate&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -96,15 +97,24 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Documents\CA3Library\src\main\webapp\WEB-INF" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Documents\CA3Library\src\main\webapp" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="daos" />
       <recent name="tests" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="commands" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoanDaoTest">
+  <component name="RunManager" selected="GlassFish Server.GlassFish 7.0.10">
     <configuration name="GlassFish 7.0.10" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -113,7 +123,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="DOMAIN" value="D:\glassfish7\glassfish\domains\domain1" />
+        <option name="DOMAIN" value="domain1" />
         <option name="PRESERVE" value="false" />
         <option name="COMPATIBILITY" value="false" />
         <option name="VIRTUAL_SERVER" />
@@ -176,7 +186,7 @@
         </option>
       </method>
     </configuration>
-    <configuration name="BookDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsersDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
         <pattern>
@@ -185,13 +195,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BookDaoTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.UsersDaoTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookgenreDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsersDaoTest.checkEmail_isPresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
         <pattern>
@@ -200,13 +210,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BookgenreDaoTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="tests.UsersDaoTest" />
+      <option name="METHOD_NAME" value="checkEmail_isPresent" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenreDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsersDaoTest.checkEmail_notPresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
         <pattern>
@@ -215,13 +226,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.GenreDaoTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="tests.UsersDaoTest" />
+      <option name="METHOD_NAME" value="checkEmail_notPresent" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoanDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsersDaoTest.checkUsername_notPresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
         <pattern>
@@ -230,14 +242,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="tests.UsersDaoTest" />
+      <option name="METHOD_NAME" value="checkUsername_notPresent" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoanDaoTest.hey2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsersDaoTest.findUserByUsernamePassword_Found" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
         <pattern>
@@ -246,8 +258,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
-      <option name="METHOD_NAME" value="hey2" />
+      <option name="MAIN_CLASS_NAME" value="tests.UsersDaoTest" />
+      <option name="METHOD_NAME" value="findUserByUsernamePassword_Found" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -255,19 +267,19 @@
     </configuration>
     <list>
       <item itemvalue="GlassFish Server.GlassFish 7.0.10" />
-      <item itemvalue="JUnit.BookDaoTest" />
-      <item itemvalue="JUnit.GenreDaoTest" />
-      <item itemvalue="JUnit.LoanDaoTest.hey2" />
-      <item itemvalue="JUnit.BookgenreDaoTest" />
-      <item itemvalue="JUnit.LoanDaoTest" />
+      <item itemvalue="JUnit.UsersDaoTest" />
+      <item itemvalue="JUnit.UsersDaoTest.checkEmail_isPresent" />
+      <item itemvalue="JUnit.UsersDaoTest.checkEmail_notPresent" />
+      <item itemvalue="JUnit.UsersDaoTest.checkUsername_notPresent" />
+      <item itemvalue="JUnit.UsersDaoTest.findUserByUsernamePassword_Found" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LoanDaoTest" />
-        <item itemvalue="JUnit.GenreDaoTest" />
-        <item itemvalue="JUnit.BookDaoTest" />
-        <item itemvalue="JUnit.BookgenreDaoTest" />
-        <item itemvalue="JUnit.LoanDaoTest.hey2" />
+        <item itemvalue="JUnit.UsersDaoTest.findUserByUsernamePassword_Found" />
+        <item itemvalue="JUnit.UsersDaoTest" />
+        <item itemvalue="JUnit.UsersDaoTest.checkEmail_isPresent" />
+        <item itemvalue="JUnit.UsersDaoTest.checkEmail_notPresent" />
+        <item itemvalue="JUnit.UsersDaoTest.checkUsername_notPresent" />
       </list>
     </recent_temporary>
   </component>
@@ -296,9 +308,9 @@
       <workItem from="1703169818233" duration="99000" />
       <workItem from="1703170137342" duration="1748000" />
       <workItem from="1703693067718" duration="9318000" />
-      <workItem from="1703766474443" duration="1256000" />
-      <workItem from="1703784648775" duration="949000" />
-      <workItem from="1704657917651" duration="2234000" />
+      <workItem from="1703766474443" duration="1143000" />
+      <workItem from="1704134941306" duration="2084000" />
+      <workItem from="1704293472374" duration="30707000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -484,23 +496,111 @@
       <option name="project" value="LOCAL" />
       <updated>1703705360917</updated>
     </task>
-    <task id="LOCAL-00024" summary="putting more Javadocs in LoanDao, LoanDaoInterface and BookgenreDao">
+    <task id="LOCAL-00024" summary="test  findUserById_NotFound in UsersDaoTest">
       <option name="closed" value="true" />
-      <created>1703767705369</created>
+      <created>1704293783610</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1703767705369</updated>
+      <updated>1704293783610</updated>
     </task>
-    <task id="LOCAL-00025" summary="Commit">
+    <task id="LOCAL-00025" summary="test addUser_6args in UsersDaoTest">
       <option name="closed" value="true" />
-      <created>1704657978337</created>
+      <created>1704312744861</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1704657978337</updated>
+      <updated>1704312744861</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add addUser by User method in UsersDao and interface">
+      <option name="closed" value="true" />
+      <created>1704329254361</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1704329254361</updated>
+    </task>
+    <task id="LOCAL-00027" summary="test addUser_Users in UsersDaoTest">
+      <option name="closed" value="true" />
+      <created>1704329562725</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1704329562725</updated>
+    </task>
+    <task id="LOCAL-00028" summary="test deleteUser_ById in UsersDaoTest">
+      <option name="closed" value="true" />
+      <created>1704330257240</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1704330257240</updated>
+    </task>
+    <task id="LOCAL-00029" summary="change login button value in login.jsp">
+      <option name="closed" value="true" />
+      <created>1704555861494</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1704555861495</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add updateProfile.jsp,function update button in profile.jsp">
+      <option name="closed" value="true" />
+      <created>1704557327413</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1704557327413</updated>
+    </task>
+    <task id="LOCAL-00031" summary="function updateProfile.jsp">
+      <option name="closed" value="true" />
+      <created>1704613289254</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1704613289254</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add UpdateProfileCommand in command and add updateProfile in Controller">
+      <option name="closed" value="true" />
+      <created>1704615004833</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1704615004833</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Finished all test case in UsersDaoTest">
+      <option name="closed" value="true" />
+      <created>1704625253425</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1704625253425</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Update findUserByUsernamePassword_Found test case">
+      <option name="closed" value="true" />
+      <created>1704628405221</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1704628405221</updated>
+    </task>
+    <task id="LOCAL-00035" summary="JavaDoc UsersDaoInterface">
+      <option name="closed" value="true" />
+      <created>1704634919419</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1704634919419</updated>
+    </task>
+    <task id="LOCAL-00036" summary="JavaDoc update UsersDaoInterface">
+      <option name="closed" value="true" />
+      <created>1704635471493</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1704635471493</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,11 +633,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add book, genre and some dependency. Also add sql database" />
-    <MESSAGE value="added the daos to the project" />
-    <MESSAGE value="add the sql file" />
-    <MESSAGE value="Update and Change freeConnection() in UsersDao method." />
-    <MESSAGE value="Add checkUsername() in UsersDao and interface." />
     <MESSAGE value="creating login.jsp" />
     <MESSAGE value="adding more test in LoanDaoTest" />
     <MESSAGE value="creating BookgenreDaoTest" />
@@ -547,10 +642,22 @@
     <MESSAGE value="commit" />
     <MESSAGE value="creating trending books section" />
     <MESSAGE value="getting all loans in profile.jsp" />
+    <MESSAGE value="Commit" />
     <MESSAGE value="Changing to treemap for trendingBooks" />
     <MESSAGE value="putting Javadocs in LoanDao" />
-    <MESSAGE value="putting more Javadocs in LoanDao, LoanDaoInterface and BookgenreDao" />
-    <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="test  findUserById_NotFound in UsersDaoTest" />
+    <MESSAGE value="test addUser_6args in UsersDaoTest" />
+    <MESSAGE value="add addUser by User method in UsersDao and interface" />
+    <MESSAGE value="test addUser_Users in UsersDaoTest" />
+    <MESSAGE value="test deleteUser_ById in UsersDaoTest" />
+    <MESSAGE value="change login button value in login.jsp" />
+    <MESSAGE value="add updateProfile.jsp,function update button in profile.jsp" />
+    <MESSAGE value="function updateProfile.jsp" />
+    <MESSAGE value="add UpdateProfileCommand in command and add updateProfile in Controller" />
+    <MESSAGE value="Finished all test case in UsersDaoTest" />
+    <MESSAGE value="Update findUserByUsernamePassword_Found test case" />
+    <MESSAGE value="JavaDoc UsersDaoInterface" />
+    <MESSAGE value="JavaDoc update UsersDaoInterface" />
+    <option name="LAST_COMMIT_MESSAGE" value="JavaDoc update UsersDaoInterface" />
   </component>
 </project>

@@ -11,6 +11,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UsersDaoTest {
 
+    /**
+     * Test of findAllUsers_Found() method, of class UsersDao.
+     */
     @Test
     void findAllUsers_Found() {
         UsersDao usersDao = new UsersDao("ca3librarytest");
@@ -19,6 +22,9 @@ class UsersDaoTest {
         assertEquals(2, result.size());
     }
 
+    /**
+     * Test of findUserByUsernamePassword_Found() method, of class UsersDao.
+     */
     @Test
     void findUserByUsernamePassword_Found() {
         UsersDao usersDao = new UsersDao("ca3librarytest");
@@ -31,6 +37,9 @@ class UsersDaoTest {
         assertEquals(expResult,result);
     }
 
+    /**
+     * Test of findUserByUsernamePassword_NotFound() method, of class UsersDao.
+     */
     @Test
     void findUserByUsernamePassword_NotFound() {
         UsersDao usersDao = new UsersDao("ca3librarytest");
@@ -43,6 +52,9 @@ class UsersDaoTest {
         assertEquals(expResult,result);
     }
 
+    /**
+     * Test of findUserById_Found() method, of class UsersDao.
+     */
     @Test
     void findUserById_Found() {
         UsersDao usersDao = new UsersDao("ca3librarytest");
@@ -53,6 +65,9 @@ class UsersDaoTest {
         assertEquals(expResult, result);
     }
 
+    /**
+     * Test of findUserById_NotFound() method, of class UsersDao.
+     */
     @Test
     void findUserById_NotFound() {
         UsersDao usersDao = new UsersDao("ca3librarytest");
@@ -63,6 +78,9 @@ class UsersDaoTest {
         assertEquals(expResult, result);
     }
 
+    /**
+     * Test of addUser_6args() method, of class UsersDao.
+     */
     @Test
     void addUser_6args() {
        UsersDao usersDao = new UsersDao("ca3librarytest");
@@ -85,6 +103,9 @@ class UsersDaoTest {
     }
 
 
+    /**
+     * Test of addUser_Users() method, of class UsersDao.
+     */
     @Test
     void addUser_Users() {
         UsersDao usersDao = new UsersDao("ca3librarytest");
@@ -108,6 +129,9 @@ class UsersDaoTest {
 
     }
 
+    /**
+     * Test of deleteUser_ById() method, of class UsersDao.
+     */
     @Test
     void deleteUser_ById() {
         UsersDao usersDao = new UsersDao("ca3librarytest");
@@ -132,6 +156,9 @@ class UsersDaoTest {
         }
     }
 
+    /**
+     * Test of amendUser() method, of class UsersDao.
+     */
     @Test
     void amendUser() {
         {
@@ -165,6 +192,9 @@ class UsersDaoTest {
 
     }
 
+    /**
+     * Test of checkUsername_isPresent() method, of class UsersDao.
+     */
     @Test
     void checkUsername_isPresent() {
             UsersDao usersDao = new UsersDao("ca3librarytest");
@@ -177,6 +207,9 @@ class UsersDaoTest {
 
     }
 
+    /**
+     * Test of checkUsername_notPresent() method, of class UsersDao.
+     */
     @Test
     void checkUsername_notPresent() {
         UsersDao usersDao = new UsersDao("ca3librarytest");
@@ -189,6 +222,9 @@ class UsersDaoTest {
         assertEquals(expResult, result);
     }
 
+    /**
+     * Test of checkEmail_isPresent() method, of class UsersDao.
+     */
     @Test
     void checkEmail_isPresent() {
         UsersDao usersDao = new UsersDao("ca3librarytest");
@@ -201,6 +237,9 @@ class UsersDaoTest {
         assertEquals(expResult, result);
     }
 
+    /**
+     * Test of checkEmail_notPresent() method, of class UsersDao.
+     */
     @Test
     void checkEmail_notPresent() {
         UsersDao usersDao = new UsersDao("ca3librarytest");

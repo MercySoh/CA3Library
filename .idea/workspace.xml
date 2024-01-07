@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="Finished all test case in UsersDaoTest">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="Update findUserByUsernamePassword_Found test case">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/daos/UsersDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/UsersDaoInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +86,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -112,7 +113,7 @@
       <recent name="commands" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UsersDaoTest.findUserByUsernamePassword_Found">
+  <component name="RunManager" selected="GlassFish Server.GlassFish 7.0.10">
     <configuration name="GlassFish 7.0.10" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -308,7 +309,7 @@
       <workItem from="1703693067718" duration="9318000" />
       <workItem from="1703766474443" duration="1143000" />
       <workItem from="1704134941306" duration="2084000" />
-      <workItem from="1704293472374" duration="23672000" />
+      <workItem from="1704293472374" duration="29594000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -574,7 +575,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704625253425</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Update findUserByUsernamePassword_Found test case">
+      <option name="closed" value="true" />
+      <created>1704628405221</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1704628405221</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +616,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add the sql file" />
     <MESSAGE value="Update and Change freeConnection() in UsersDao method." />
     <MESSAGE value="Add checkUsername() in UsersDao and interface." />
     <MESSAGE value="creating login.jsp" />
@@ -632,6 +640,7 @@
     <MESSAGE value="function updateProfile.jsp" />
     <MESSAGE value="add UpdateProfileCommand in command and add updateProfile in Controller" />
     <MESSAGE value="Finished all test case in UsersDaoTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished all test case in UsersDaoTest" />
+    <MESSAGE value="Update findUserByUsernamePassword_Found test case" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update findUserByUsernamePassword_Found test case" />
   </component>
 </project>

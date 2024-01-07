@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="Update findUserByUsernamePassword_Found test case">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="JavaDoc UsersDaoInterface">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/daos/UsersDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/UsersDaoInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/daos/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/UsersDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +309,7 @@
       <workItem from="1703693067718" duration="9318000" />
       <workItem from="1703766474443" duration="1143000" />
       <workItem from="1704134941306" duration="2084000" />
-      <workItem from="1704293472374" duration="29594000" />
+      <workItem from="1704293472374" duration="30122000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -583,7 +583,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704628405221</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="JavaDoc UsersDaoInterface">
+      <option name="closed" value="true" />
+      <created>1704634919419</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1704634919419</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,7 +624,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update and Change freeConnection() in UsersDao method." />
     <MESSAGE value="Add checkUsername() in UsersDao and interface." />
     <MESSAGE value="creating login.jsp" />
     <MESSAGE value="adding more test in LoanDaoTest" />
@@ -641,6 +648,7 @@
     <MESSAGE value="add UpdateProfileCommand in command and add updateProfile in Controller" />
     <MESSAGE value="Finished all test case in UsersDaoTest" />
     <MESSAGE value="Update findUserByUsernamePassword_Found test case" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update findUserByUsernamePassword_Found test case" />
+    <MESSAGE value="JavaDoc UsersDaoInterface" />
+    <option name="LAST_COMMIT_MESSAGE" value="JavaDoc UsersDaoInterface" />
   </component>
 </project>

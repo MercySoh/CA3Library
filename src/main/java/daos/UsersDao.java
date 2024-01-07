@@ -7,11 +7,14 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class UsersDao extends Dao implements UsersDaoInterface {
     public UsersDao(String dbName) {
         super(dbName);
     }
     public UsersDao(Connection con) {super(con); }
+
+
     @Override
     public List<Users> findAllUsers() {
         Connection con = null;

@@ -23,11 +23,10 @@ class UsersDaoTest {
     void findUserByUsernamePassword_Found() {
         UsersDao usersDao = new UsersDao("ca3librarytest");
         System.out.println("findUserByUsernamePassword_Found");
-        boolean match = true;
         String username = "jerry";
         String password = "rippleMMW1$";
 
-        boolean expResult = match;
+        Users expResult = new Users(1,"jerry", "jerry@gmail.com", "$2a$10$BeXVetm90C0MmTtMDkA.u.cB7zz6YYJrQuMPlXnGTF5U/arwzw8K.", "address", "231030213", 0);
         Users result = usersDao.findUserByUsernamePassword(username,password);
         assertEquals(expResult,result);
     }

@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="add UpdateProfileCommand in command and add updateProfile in Controller">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="Finished all test case in UsersDaoTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" afterDir="false" />
     </list>
@@ -112,7 +112,7 @@
       <recent name="commands" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UsersDaoTest">
+  <component name="RunManager" selected="JUnit.UsersDaoTest.findUserByUsernamePassword_Found">
     <configuration name="GlassFish 7.0.10" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -273,8 +273,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UsersDaoTest" />
         <item itemvalue="JUnit.UsersDaoTest.findUserByUsernamePassword_Found" />
+        <item itemvalue="JUnit.UsersDaoTest" />
         <item itemvalue="JUnit.UsersDaoTest.checkEmail_isPresent" />
         <item itemvalue="JUnit.UsersDaoTest.checkEmail_notPresent" />
         <item itemvalue="JUnit.UsersDaoTest.checkUsername_notPresent" />
@@ -308,7 +308,7 @@
       <workItem from="1703693067718" duration="9318000" />
       <workItem from="1703766474443" duration="1143000" />
       <workItem from="1704134941306" duration="2084000" />
-      <workItem from="1704293472374" duration="22104000" />
+      <workItem from="1704293472374" duration="23672000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -566,7 +566,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704615004833</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Finished all test case in UsersDaoTest">
+      <option name="closed" value="true" />
+      <created>1704625253425</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1704625253425</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +607,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added the daos to the project" />
     <MESSAGE value="add the sql file" />
     <MESSAGE value="Update and Change freeConnection() in UsersDao method." />
     <MESSAGE value="Add checkUsername() in UsersDao and interface." />
@@ -624,6 +631,7 @@
     <MESSAGE value="add updateProfile.jsp,function update button in profile.jsp" />
     <MESSAGE value="function updateProfile.jsp" />
     <MESSAGE value="add UpdateProfileCommand in command and add updateProfile in Controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="add UpdateProfileCommand in command and add updateProfile in Controller" />
+    <MESSAGE value="Finished all test case in UsersDaoTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished all test case in UsersDaoTest" />
   </component>
 </project>

@@ -79,17 +79,35 @@ class UsersDaoTest {
     }
 
     /**
-     * Test of addUser_6args() method, of class UsersDao.
+     * Test of addUser_6args_withoutDeleted()method, of class UsersDao.
      */
     @Test
-    void addUser_6args() {
+    void addUser_6args_withoutDeleted() {
        UsersDao usersDao = new UsersDao("ca3librarytest");
-        System.out.println("addUser_6args");
+        System.out.println("addUser_6args_withoutDeleted");
         String userName = "Leo Zen";
         String email = "leo234@gmail.com";
         String password = "234Leo";
         String address = "address";
         String phone = "0881234567";
+        int userType = 0;
+
+        int result = usersDao.addUser(userName,email,password,address,phone,userType);
+        assertTrue((result > 0));
+    }
+
+    /**
+     * Test of addUser_6args_with Deleted()method, of class UsersDao.
+     */
+    @Test
+    void addUser_6args_withDeleted() {
+        UsersDao usersDao = new UsersDao("ca3librarytest");
+        System.out.println("addUser_6args_withDeleted");
+        String userName = "Ray";
+        String email = "rayyy@gmail.com";
+        String password = "rAy000";
+        String address = "address";
+        String phone = "0881230971";
         int userType = 0;
 
         int result = usersDao.addUser(userName,email,password,address,phone,userType);
@@ -102,17 +120,36 @@ class UsersDaoTest {
         }
     }
 
-
     /**
-     * Test of addUser_Users() method, of class UsersDao.
+     * Test of addUser_Users_withoutDeleted() method, of class UsersDao.
      */
     @Test
-    void addUser_Users() {
+    void addUser_Users_withoutDeleted() {
         UsersDao usersDao = new UsersDao("ca3librarytest");
-        System.out.println("addUser_Users");
-        String userName = "Ray Shawn";
-        String email = "ray000@gmail.com";
-        String password = "ray000";
+        System.out.println("addUser_Users_withoutDeleted");
+        String userName = "Ken";
+        String email = "ken@gmail.com";
+        String password = "0Ken0";
+        String address = "address";
+        String phone = "0887872566";
+        int userType = 0;
+        Users u = new Users(userName,email,password,address,phone,userType);
+
+        int result = usersDao.addUser(u);
+        assertTrue((result > 0));
+
+    }
+
+    /**
+     * Test of addUser_Users_withDeleted() method, of class UsersDao.
+     */
+    @Test
+    void addUser_Users_withDeleted() {
+        UsersDao usersDao = new UsersDao("ca3librarytest");
+        System.out.println("addUser_Users_withDeleted");
+        String userName = "Shawn";
+        String email = "Shawn000@gmail.com";
+        String password = "Shawn000";
         String address = "address";
         String phone = "0887894561";
         int userType = 0;
@@ -137,7 +174,7 @@ class UsersDaoTest {
         UsersDao usersDao = new UsersDao("ca3librarytest");
         System.out.println("deleteUserById");
 
-        Users u = new Users(1, "jerry", "jerry@gmail.com", "rippleMMW1$", "address", "231030213", 0);
+        Users u = new Users(5, "Ken", "ken@gmail.com", "0Ken0", "address", "0887872566", 0);
         int id = u.getUserID();
         int expResult = 1;
 

@@ -9,11 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="function updateProfile.jsp">
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/UpdateProfileCommand.java" afterDir="false" />
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="add UpdateProfileCommand in command and add updateProfile in Controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/updateProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/updateProfile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +81,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/asus/Documents/CA3Library/src/main/webapp/WEB-INF",
+    "last_opened_file_path": "C:/Users/asus/Downloads/SampleWebTemplate",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -115,7 +112,7 @@
       <recent name="commands" />
     </key>
   </component>
-  <component name="RunManager" selected="GlassFish Server.GlassFish 7.0.10">
+  <component name="RunManager" selected="JUnit.UsersDaoTest">
     <configuration name="GlassFish 7.0.10" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -187,7 +184,7 @@
         </option>
       </method>
     </configuration>
-    <configuration name="UsersDaoTest.addUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsersDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
         <pattern>
@@ -197,13 +194,28 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.UsersDaoTest" />
-      <option name="METHOD_NAME" value="addUser" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsersDaoTest.checkEmail_isPresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA3Library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UsersDaoTest" />
+      <option name="METHOD_NAME" value="checkEmail_isPresent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsersDaoTest.addUser_6args" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsersDaoTest.checkEmail_notPresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
         <pattern>
@@ -213,13 +225,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.UsersDaoTest" />
-      <option name="METHOD_NAME" value="addUser_6args" />
+      <option name="METHOD_NAME" value="checkEmail_notPresent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsersDaoTest.addUser_Users" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsersDaoTest.checkUsername_notPresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
         <pattern>
@@ -229,13 +241,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.UsersDaoTest" />
-      <option name="METHOD_NAME" value="addUser_Users" />
+      <option name="METHOD_NAME" value="checkUsername_notPresent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsersDaoTest.deleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UsersDaoTest.findUserByUsernamePassword_Found" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
         <pattern>
@@ -245,23 +257,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.UsersDaoTest" />
-      <option name="METHOD_NAME" value="deleteUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsersDaoTest.findUserById_NotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA3Library" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.UsersDaoTest" />
-      <option name="METHOD_NAME" value="findUserById_NotFound" />
+      <option name="METHOD_NAME" value="findUserByUsernamePassword_Found" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -269,19 +265,19 @@
     </configuration>
     <list>
       <item itemvalue="GlassFish Server.GlassFish 7.0.10" />
-      <item itemvalue="JUnit.UsersDaoTest.addUser" />
-      <item itemvalue="JUnit.UsersDaoTest.addUser_6args" />
-      <item itemvalue="JUnit.UsersDaoTest.addUser_Users" />
-      <item itemvalue="JUnit.UsersDaoTest.deleteUser" />
-      <item itemvalue="JUnit.UsersDaoTest.findUserById_NotFound" />
+      <item itemvalue="JUnit.UsersDaoTest" />
+      <item itemvalue="JUnit.UsersDaoTest.checkEmail_isPresent" />
+      <item itemvalue="JUnit.UsersDaoTest.checkEmail_notPresent" />
+      <item itemvalue="JUnit.UsersDaoTest.checkUsername_notPresent" />
+      <item itemvalue="JUnit.UsersDaoTest.findUserByUsernamePassword_Found" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UsersDaoTest.deleteUser" />
-        <item itemvalue="JUnit.UsersDaoTest.addUser_Users" />
-        <item itemvalue="JUnit.UsersDaoTest.addUser_6args" />
-        <item itemvalue="JUnit.UsersDaoTest.addUser" />
-        <item itemvalue="JUnit.UsersDaoTest.findUserById_NotFound" />
+        <item itemvalue="JUnit.UsersDaoTest" />
+        <item itemvalue="JUnit.UsersDaoTest.findUserByUsernamePassword_Found" />
+        <item itemvalue="JUnit.UsersDaoTest.checkEmail_isPresent" />
+        <item itemvalue="JUnit.UsersDaoTest.checkEmail_notPresent" />
+        <item itemvalue="JUnit.UsersDaoTest.checkUsername_notPresent" />
       </list>
     </recent_temporary>
   </component>
@@ -312,7 +308,7 @@
       <workItem from="1703693067718" duration="9318000" />
       <workItem from="1703766474443" duration="1143000" />
       <workItem from="1704134941306" duration="2084000" />
-      <workItem from="1704293472374" duration="13736000" />
+      <workItem from="1704293472374" duration="22104000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -562,7 +558,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704613289254</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="add UpdateProfileCommand in command and add updateProfile in Controller">
+      <option name="closed" value="true" />
+      <created>1704615004833</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1704615004833</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -595,7 +599,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add book, genre and some dependency. Also add sql database" />
     <MESSAGE value="added the daos to the project" />
     <MESSAGE value="add the sql file" />
     <MESSAGE value="Update and Change freeConnection() in UsersDao method." />
@@ -620,6 +623,7 @@
     <MESSAGE value="change login button value in login.jsp" />
     <MESSAGE value="add updateProfile.jsp,function update button in profile.jsp" />
     <MESSAGE value="function updateProfile.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="function updateProfile.jsp" />
+    <MESSAGE value="add UpdateProfileCommand in command and add updateProfile in Controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="add UpdateProfileCommand in command and add updateProfile in Controller" />
   </component>
 </project>

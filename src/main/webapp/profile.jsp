@@ -17,6 +17,7 @@
     }
 
     tr:hover {background-color: #D6EEEE;}
+
 </style>
 
 
@@ -50,7 +51,7 @@
             </a>
         </div>
         <div class="col">
-            <h1>loans</h1>
+            <h1>Loans</h1>
             <%
                 List<Loan> currentLoans = (List<Loan>) session.getAttribute("currentLoans");
                 BookDao bookDao = new BookDao("ca3library");

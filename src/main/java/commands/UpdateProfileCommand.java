@@ -29,12 +29,12 @@ public class UpdateProfileCommand implements Command{
 
             Users tempUser = (Users)session.getAttribute("user");
 
-            Users user = new Users(tempUser.getUserID(), username, password, email, address, phone, 0);
+            Users user = new Users(tempUser.getUserID(), username, email, password, address, phone, 0);
             int rowsAffected = userDao.amendUser(user);
             if(rowsAffected != -1){
                 destination="profile.jsp";
                 String msg = "profile updated successfully!";
-                Users updateuser = new Users(tempUser.getUserID(), username, password, email, address, phone, 0);
+                Users updateuser = new Users(tempUser.getUserID(), username, email, password, address, phone, 0);
                 session.setAttribute("user", updateuser);
                 session.setAttribute("msg", msg);
             }

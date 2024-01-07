@@ -9,9 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="add updateProfile.jsp,function update button in profile.jsp">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="function updateProfile.jsp">
+      <change afterPath="$PROJECT_DIR$/src/main/java/commands/UpdateProfileCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/updateProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/updateProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +110,9 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="daos" />
       <recent name="tests" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="commands" />
     </key>
   </component>
   <component name="RunManager" selected="GlassFish Server.GlassFish 7.0.10">
@@ -306,7 +312,7 @@
       <workItem from="1703693067718" duration="9318000" />
       <workItem from="1703766474443" duration="1143000" />
       <workItem from="1704134941306" duration="2084000" />
-      <workItem from="1704293472374" duration="12134000" />
+      <workItem from="1704293472374" duration="13736000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -548,7 +554,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704557327413</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="function updateProfile.jsp">
+      <option name="closed" value="true" />
+      <created>1704613289254</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1704613289254</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,6 +619,7 @@
     <MESSAGE value="test deleteUser_ById in UsersDaoTest" />
     <MESSAGE value="change login button value in login.jsp" />
     <MESSAGE value="add updateProfile.jsp,function update button in profile.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="add updateProfile.jsp,function update button in profile.jsp" />
+    <MESSAGE value="function updateProfile.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="function updateProfile.jsp" />
   </component>
 </project>

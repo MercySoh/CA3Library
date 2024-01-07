@@ -23,7 +23,7 @@
         <label class="form-label">password</label> <br/>
         <input class="form-control" name="password" type="password" required/> <br/>
 
-        <input type="submit" value="Register" class="btn btn-success"/>
+        <input type="submit" value="Login" class="btn btn-success"/>
         <!-- Include a hidden field to identify what the user wants to do -->
         <input type="hidden" name="action" value="login"/>
     </form>

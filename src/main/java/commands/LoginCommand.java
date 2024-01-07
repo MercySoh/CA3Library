@@ -30,6 +30,7 @@ public class LoginCommand implements Command{
         Users user = userDao.findUserByUsernamePassword(username, password);
 
         if(user != null){
+            user.setPassword(password);
             session.setAttribute("user", user);
             return "dashboard.jsp";
         }

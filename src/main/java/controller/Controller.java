@@ -8,6 +8,7 @@ import business.Book;
 import business.Genre;
 import business.Loan;
 import business.Users;
+import com.mysql.cj.jdbc.result.UpdatableResultSet;
 import commands.*;
 import daos.UsersDao;
 
@@ -117,6 +118,10 @@ public class Controller extends HttpServlet {
                 c = new PayOverdueFeesCommand(request, response);
                 c.execute();
                 c = new CurrentLoansCommand(request, response);
+                dest = c.execute();
+                break;
+            case "updateProfile":
+                c = new UpdateProfileCommand(request, response);
                 dest = c.execute();
                 break;
 

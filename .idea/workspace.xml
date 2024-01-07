@@ -10,14 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a388fb0-8ef9-49ec-ad4c-773a682e40cb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_20_2023_6_00_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_20_2023_6_00_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/daos/BookgenreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/BookgenreDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/daos/BookgenreDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/BookgenreDaoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/daos/LoanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/LoanDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/daos/LoanDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/daos/LoanDaoInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +101,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoanDaoTest">
+  <component name="RunManager" selected="GlassFish Server.GlassFish 7.0.10">
     <configuration name="GlassFish 7.0.10" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -302,7 +295,8 @@
       <workItem from="1703169818233" duration="99000" />
       <workItem from="1703170137342" duration="1748000" />
       <workItem from="1703693067718" duration="9318000" />
-      <workItem from="1703766474443" duration="1143000" />
+      <workItem from="1703766474443" duration="1256000" />
+      <workItem from="1703784648775" duration="949000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -488,7 +482,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703705360917</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="putting more Javadocs in LoanDao, LoanDaoInterface and BookgenreDao">
+      <option name="closed" value="true" />
+      <created>1703767705369</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1703767705369</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,6 +540,7 @@
     <MESSAGE value="Commit" />
     <MESSAGE value="Changing to treemap for trendingBooks" />
     <MESSAGE value="putting Javadocs in LoanDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="putting Javadocs in LoanDao" />
+    <MESSAGE value="putting more Javadocs in LoanDao, LoanDaoInterface and BookgenreDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="putting more Javadocs in LoanDao, LoanDaoInterface and BookgenreDao" />
   </component>
 </project>

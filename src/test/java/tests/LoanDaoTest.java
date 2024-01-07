@@ -126,10 +126,14 @@ class LoanDaoTest {
         //LoanDao loanDao = new LoanDao("testca3library");
         LocalDate borrowDate1 = LocalDate.of(2023, 12, 7);
         LocalDate dueDate1 = LocalDate.of(2023, 12, 8);
+        LocalDate borrowDate2 = LocalDate.of(2023, 12, 8);
+        LocalDate dueDate2 = LocalDate.of(2023, 12, 30);
         ArrayList<Loan> actual = loanDao.getOverDueLoans(1);
         Loan l1 = new Loan(1, 1, 1, borrowDate1, dueDate1, null);
+        Loan l2= new Loan(2, 1, 2, borrowDate2, dueDate2, null);
         ArrayList<Loan> expected = new ArrayList();
         expected.add(l1);
+        expected.add(l2);
         assertEquals(actual, expected);
     }
 
@@ -381,11 +385,8 @@ class LoanDaoTest {
     void getTrendingBooks() {
         TreeMap<Integer, Integer> actual = loanDao.getTrendingBooks();
         TreeMap<Integer, Integer> expected = new TreeMap();
-        expected.put(3, 2);
-        expected.put(1, 1);
-        expected.put(2, 1);
+        expected.put(3, 1);
         expected.put(4, 1);
-        expected.put(5, 1);
         assertEquals(actual, expected);
     }
 

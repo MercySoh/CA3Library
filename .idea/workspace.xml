@@ -10,7 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoanDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +104,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="GlassFish Server.GlassFish 7.0.10">
+  <component name="RunManager" selected="JUnit.LoanDaoTest">
     <configuration name="GlassFish 7.0.10" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -173,6 +176,21 @@
         </option>
       </method>
     </configuration>
+    <configuration name="BookDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA3Library" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.BookDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BookgenreDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
@@ -188,7 +206,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookgenreDaoTest.getBookGenresByGenreId_WhenNoMatchExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GenreDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA3Library" />
       <extension name="coverage">
         <pattern>
@@ -197,9 +215,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.BookgenreDaoTest" />
-      <option name="METHOD_NAME" value="getBookGenresByGenreId_WhenNoMatchExist" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="tests.GenreDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -216,22 +233,6 @@
       <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoanDaoTest.borrowBook2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA3Library" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoanDaoTest" />
-      <option name="METHOD_NAME" value="borrowBook2" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -254,19 +255,19 @@
     </configuration>
     <list>
       <item itemvalue="GlassFish Server.GlassFish 7.0.10" />
-      <item itemvalue="JUnit.LoanDaoTest.borrowBook2" />
+      <item itemvalue="JUnit.BookDaoTest" />
+      <item itemvalue="JUnit.GenreDaoTest" />
       <item itemvalue="JUnit.LoanDaoTest.hey2" />
       <item itemvalue="JUnit.BookgenreDaoTest" />
-      <item itemvalue="JUnit.BookgenreDaoTest.getBookGenresByGenreId_WhenNoMatchExist" />
       <item itemvalue="JUnit.LoanDaoTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LoanDaoTest" />
-        <item itemvalue="JUnit.LoanDaoTest.hey2" />
-        <item itemvalue="JUnit.LoanDaoTest.borrowBook2" />
+        <item itemvalue="JUnit.GenreDaoTest" />
+        <item itemvalue="JUnit.BookDaoTest" />
         <item itemvalue="JUnit.BookgenreDaoTest" />
-        <item itemvalue="JUnit.BookgenreDaoTest.getBookGenresByGenreId_WhenNoMatchExist" />
+        <item itemvalue="JUnit.LoanDaoTest.hey2" />
       </list>
     </recent_temporary>
   </component>
@@ -297,6 +298,7 @@
       <workItem from="1703693067718" duration="9318000" />
       <workItem from="1703766474443" duration="1256000" />
       <workItem from="1703784648775" duration="949000" />
+      <workItem from="1704657917651" duration="2234000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -490,7 +492,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703767705369</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1704657978337</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1704657978337</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,10 +547,10 @@
     <MESSAGE value="commit" />
     <MESSAGE value="creating trending books section" />
     <MESSAGE value="getting all loans in profile.jsp" />
-    <MESSAGE value="Commit" />
     <MESSAGE value="Changing to treemap for trendingBooks" />
     <MESSAGE value="putting Javadocs in LoanDao" />
     <MESSAGE value="putting more Javadocs in LoanDao, LoanDaoInterface and BookgenreDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="putting more Javadocs in LoanDao, LoanDaoInterface and BookgenreDao" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
 </project>

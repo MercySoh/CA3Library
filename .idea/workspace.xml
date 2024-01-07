@@ -9,8 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="user profile can be updated">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="fix profile update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,6 +310,8 @@
       <workItem from="1703766474443" duration="1143000" />
       <workItem from="1704134941306" duration="2084000" />
       <workItem from="1704293472374" duration="30707000" />
+      <workItem from="1704643938817" duration="941000" />
+      <workItem from="1704655967362" duration="369000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -598,7 +601,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704635471493</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="fix profile update">
+      <option name="closed" value="true" />
+      <created>1704644279395</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1704644279395</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,7 +642,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="creating login.jsp" />
     <MESSAGE value="adding more test in LoanDaoTest" />
     <MESSAGE value="creating BookgenreDaoTest" />
     <MESSAGE value="creating BorrowBookCommand" />
@@ -656,6 +666,7 @@
     <MESSAGE value="Update findUserByUsernamePassword_Found test case" />
     <MESSAGE value="JavaDoc UsersDaoInterface" />
     <MESSAGE value="JavaDoc update UsersDaoInterface" />
-    <option name="LAST_COMMIT_MESSAGE" value="JavaDoc update UsersDaoInterface" />
+    <MESSAGE value="fix profile update" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix profile update" />
   </component>
 </project>

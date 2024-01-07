@@ -14,7 +14,10 @@ public class UsersDao extends Dao implements UsersDaoInterface {
     }
     public UsersDao(Connection con) {super(con); }
 
-
+    /**
+     * findAllUsers method able to list out all user.
+     * @return a list of User
+     */
     @Override
     public List<Users> findAllUsers() {
         Connection con = null;
@@ -74,6 +77,13 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         return users;
     }
 
+    /**
+     * findUserByUsernamePassword method able to let user login.
+     * @param uname is user's username
+     * @param pword is user's password
+     *
+     * @return user's detail
+     */
     @Override
     public Users findUserByUsernamePassword(String uname, String pword) {
         Connection con = null;
@@ -131,6 +141,11 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         return u;
     }
 
+    /**
+     * findUserById method able to get user by userId.
+     * @param id is the user's id that want to get.
+     * @return that userId's user detail
+     */
     @Override
     public Users findUserById(int id) {
         Connection con = null;
@@ -186,6 +201,19 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         return u;
     }
 
+    /**
+     * addUser(with 6 args) method able to register a new user.
+     * userID will increase automatic.
+     *
+     * @param uname is user's username
+     * @param email is user's email
+     * @param pword is user's password
+     * @param address is user's address
+     * @param phone is user's phone
+     * @param userType is type of user
+
+     * @return int of user id if added else added fail will return -1
+     */
     @Override
     public int addUser(String uname, String email, String pword, String address, String phone, int userType) {
         Connection con = null;
@@ -248,11 +276,26 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         return newId;
     }
 
+    /**
+     * addUser(with Users) method able to register a new user.
+     * userID will increase automatic.
+     *
+     * @param newUser is the new user's detail to be added
+
+     * @return int of user id if added else added fail will return -1
+     */
     @Override
     public int addUser(Users newUser) {
         return addUser(newUser.getUserName(),newUser.getEmail(),newUser.getPassword(),newUser.getAddress(),newUser.getPhone(),newUser.getUserType());
     }
 
+    /**
+     * deleteUser method able to delete a user by userId
+     *
+     * @param userId is the user's id to be deleted
+
+     * @return an int after deleted else return 0 when no rows are affected by the deleted.
+     */
     @Override
     public int deleteUser(int userId) {
         Connection con = null;
@@ -291,6 +334,14 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         return rowsAffected;
     }
 
+    /**
+     * amendUser method allow user to update their detail.
+     *userID will not be able to change.
+     *
+     * @param u is the user's detail that able to change.
+
+     * @return an int after update else return 0 when no rows are affected by the update.
+     */
     @Override
     public int amendUser(Users u) {
         Connection con = null;
@@ -331,6 +382,13 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         return rowsAffected;
     }
 
+    /**
+     * checkUsername(unique) method able to check username that already register.
+     *
+     * @param uname is the user's name that want to be checked.
+
+     * @return true when the username is register else return false .
+     */
     @Override
     public boolean checkUsername(String uname) {
         boolean isPresent = false;
@@ -359,6 +417,13 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         return isPresent;
     }
 
+    /**
+     * checkEmail(unique) method able to check email that already register.
+     *
+     * @param email is the user's email that want to be checked.
+
+     * @return true when the email is register else return false .
+     */
     @Override
     public boolean checkEmail(String email) {
         boolean isPresent = false;

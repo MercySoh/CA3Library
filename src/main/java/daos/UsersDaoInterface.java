@@ -12,10 +12,17 @@ public interface UsersDaoInterface {
      */
     public List<Users> findAllUsers();
 
-
+    /**
+     * findUserByUsernamePassword method able to let user login.
+     * @param uname is user's username
+     * @param pword is user's password
+     *
+     * @return user's detail
+     */
     public Users findUserByUsernamePassword(String uname, String pword);
     /**
      * findUserById method able to get user by userId.
+     * @param id is the user's id that want to get.
      * @return that userId's user detail
      */
     public Users findUserById(int id);
@@ -24,7 +31,7 @@ public interface UsersDaoInterface {
      * addUser(with 6 args) method able to register a new user.
      * userID will increase automatic.
      *
-     * @param uname is user's name
+     * @param uname is user's username
      * @param email is user's email
      * @param pword is user's password
      * @param address is user's address

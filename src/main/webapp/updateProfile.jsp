@@ -19,15 +19,15 @@
     <form action="controller" method="post">
         <h3>Update my profile</h3>
         <label class="form-label">username</label> <br/>
-        <input class="form-control" name<%=u.getUserName()%> required/> <br/>
+        <input class="form-control" name="username" value="<%=u.getUserName()%>" required/> <br/>
         <label class="form-label">password</label> <br/>
-        <input class="form-control" name="password" type="password" required/> <br/>
+        <input class="form-control" name="password" value="<%=u.getPassword()%>" type="password" required/> <br/>
         <label class="form-label">email</label> <br/>
-        <input class="form-control" name="email" required/> <br/>
+        <input class="form-control" name="email" value="<%=u.getEmail()%>" required/> <br/>
         <label class="form-label">address</label> <br/>
-        <input class="form-control" name="address" required/> <br/>
+        <input class="form-control" name="address" value="<%=u.getAddress()%>" required/> <br/>
         <label class="form-label">phone</label> <br/>
-        <input class="form-control" name="phone" required/> <br/><br/>
+        <input class="form-control" name="phone" value="<%=u.getPhone()%>" required/> <br/><br/>
 
         <input type="submit" value="Update" class="btn btn-success"/>
         <!-- Include a hidden field to identify what the user wants to do -->

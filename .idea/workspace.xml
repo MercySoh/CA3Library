@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="change login button value in login.jsp">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/updateProfile.jsp" afterDir="false" />
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="add updateProfile.jsp,function update button in profile.jsp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/updateProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/updateProfile.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,7 +306,7 @@
       <workItem from="1703693067718" duration="9318000" />
       <workItem from="1703766474443" duration="1143000" />
       <workItem from="1704134941306" duration="2084000" />
-      <workItem from="1704293472374" duration="10929000" />
+      <workItem from="1704293472374" duration="12134000" />
     </task>
     <task id="LOCAL-00001" summary="add book, genre and some dependency. Also add sql database">
       <option name="closed" value="true" />
@@ -541,7 +540,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704555861495</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="add updateProfile.jsp,function update button in profile.jsp">
+      <option name="closed" value="true" />
+      <created>1704557327413</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1704557327413</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,6 +604,7 @@
     <MESSAGE value="test addUser_Users in UsersDaoTest" />
     <MESSAGE value="test deleteUser_ById in UsersDaoTest" />
     <MESSAGE value="change login button value in login.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="change login button value in login.jsp" />
+    <MESSAGE value="add updateProfile.jsp,function update button in profile.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="add updateProfile.jsp,function update button in profile.jsp" />
   </component>
 </project>

@@ -26,12 +26,15 @@ public class UpdateProfileCommand implements Command{
         String phone = request.getParameter("phone");
         if (username != null && password != null && email != null && address != null && phone != null && !username.isEmpty() && !password.isEmpty() && !email.isEmpty() && !address.isEmpty() && !phone.isEmpty()) {
             UsersDao userDao = new UsersDao("ca3library");
-            Users user = new Users(username, password, email, address, phone, 0);
-            int id = userDao.amendUser(user);
-            if(id != -1){
-                destination="index.jsp";
-                String msg = "You have been update successfully!";
-                Users updateuser = new Users(username, password, email, address, phone, 0);
+
+            Users tempUser = (Users)session.getAttribute("user");
+
+            Users user = new Users(tempUser.getUserID(), username, password, email, address, phone, 0);
+            int rowsAffected = userDao.amendUser(user);
+            if(rowsAffected != -1){
+                destination="profile.jsp";
+                String msg = "profile updated successfully!";
+                Users updateuser = new Users(tempUser.getUserID(), username, password, email, address, phone, 0);
                 session.setAttribute("user", updateuser);
                 session.setAttribute("msg", msg);
             }

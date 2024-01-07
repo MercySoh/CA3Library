@@ -297,11 +297,13 @@ public class UsersDao extends Dao implements UsersDaoInterface {
         try {
             con = getConnection();
 
+            String hashPassword = BCrypt.hashpw(u.getPassword(), BCrypt.gensalt());
+
             String command = "UPDATE users SET username=?, email=?, password=?, address=?, phone=? WHERE userID=?";
             ps = con.prepareStatement(command);
             ps.setString(1, u.getUserName());
             ps.setString(2, u.getEmail());
-            ps.setString(3, u.getPassword());
+            ps.setString(3, hashPassword);
             ps.setString(4, u.getAddress());
             ps.setString(5,u.getPhone());
             ps.setInt(6, u.getUserID());

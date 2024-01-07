@@ -18,15 +18,15 @@
 <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
     <form action="controller" method="post">
         <h3>Sign in!</h3>
-        <label class="form-label">username</label> <br/>
+        <label class="form-label">Username</label> <br/>
         <input class="form-control" name="username" required/> <br/>
-        <label class="form-label">password</label> <br/>
+        <label class="form-label">Password</label> <br/>
         <input class="form-control" name="password" type="password" required/> <br/>
-        <label class="form-label">email</label> <br/>
+        <label class="form-label">Email</label> <br/>
         <input class="form-control" name="email" required/> <br/>
-        <label class="form-label">address</label> <br/>
+        <label class="form-label">Address</label> <br/>
         <input class="form-control" name="address" required/> <br/>
-        <label class="form-label">phone</label> <br/>
+        <label class="form-label">Phone</label> <br/>
         <input class="form-control" name="phone" required/> <br/><br/>
 
         <input type="submit" value="Register" class="btn btn-success"/>

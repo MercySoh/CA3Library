@@ -18,15 +18,15 @@
 <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
     <form action="controller" method="post">
         <h3>Update my profile</h3>
-        <label class="form-label">username</label> <br/>
+        <label class="form-label">Username</label> <br/>
         <input class="form-control" name="username" value="<%=u.getUserName()%>" required/> <br/>
-        <label class="form-label">password</label> <br/>
+        <label class="form-label">Password</label> <br/>
         <input class="form-control" name="password" value="<%=u.getPassword()%>" type="password" required/> <br/>
-        <label class="form-label">email</label> <br/>
+        <label class="form-label">Email</label> <br/>
         <input class="form-control" name="email" value="<%=u.getEmail()%>" required/> <br/>
-        <label class="form-label">address</label> <br/>
+        <label class="form-label">Address</label> <br/>
         <input class="form-control" name="address" value="<%=u.getAddress()%>" required/> <br/>
-        <label class="form-label">phone</label> <br/>
+        <label class="form-label">Phone</label> <br/>
         <input class="form-control" name="phone" value="<%=u.getPhone()%>" required/> <br/><br/>
 
         <input type="submit" value="Update" class="btn btn-success"/>

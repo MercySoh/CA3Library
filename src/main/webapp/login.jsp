@@ -18,9 +18,9 @@
 <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
     <form action="controller" method="post">
         <h3>Log in!</h3>
-        <label class="form-label">username</label> <br/>
+        <label class="form-label">Username</label> <br/>
         <input class="form-control" name="username" required/> <br/>
-        <label class="form-label">password</label> <br/>
+        <label class="form-label">Password</label> <br/>
         <input class="form-control" name="password" type="password" required/> <br/>
 
         <input type="submit" value="Login" class="btn btn-success"/>

@@ -27,12 +27,12 @@
 <table class="table">
     <thead>
     <tr>
-        <th scope="col">bookID</th>
-        <th scope="col">name</th>
-        <th scope="col">author</th>
-        <th scope="col">description</th>
-        <th scope="col">genres</th>
-        <th scope="col">quantity</th>
+        <th scope="col">BookID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Author</th>
+        <th scope="col">Description</th>
+        <th scope="col">Genres</th>
+        <th scope="col">Quantity</th>
     </tr>
     </thead>
     <tbody>
@@ -79,7 +79,7 @@
         </td>
         <td><%=b.getQuantity()%>
         </td>
-        <td><a href=<%="controller?action=borrow&bookId=" + b.getBookID()%>>borrow</a></td>
+        <td><a href=<%="controller?action=borrow&bookId=" + b.getBookID()%>>Borrow</a></td>
     </tr>
     <%}%>
     </tbody>

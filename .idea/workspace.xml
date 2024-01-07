@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="add JavaDoc in UsersDaoTest.">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="add more testcase for addUser method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/UsersDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +114,7 @@
       <recent name="commands" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UsersDaoTest">
+  <component name="RunManager" selected="GlassFish Server.GlassFish 7.0.10">
     <configuration name="GlassFish 7.0.10" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.10" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -607,7 +608,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704663579762</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="add more testcase for addUser method">
+      <option name="closed" value="true" />
+      <created>1704666014243</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1704666014243</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -640,7 +649,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adding more test in LoanDaoTest" />
     <MESSAGE value="creating BookgenreDaoTest" />
     <MESSAGE value="creating BorrowBookCommand" />
     <MESSAGE value="creating currentLoans.jsp and making dashbo&#10;more restricted" />
@@ -665,6 +673,7 @@
     <MESSAGE value="JavaDoc UsersDaoInterface" />
     <MESSAGE value="JavaDoc update UsersDaoInterface" />
     <MESSAGE value="add JavaDoc in UsersDaoTest." />
-    <option name="LAST_COMMIT_MESSAGE" value="add JavaDoc in UsersDaoTest." />
+    <MESSAGE value="add more testcase for addUser method" />
+    <option name="LAST_COMMIT_MESSAGE" value="add more testcase for addUser method" />
   </component>
 </project>

@@ -4,6 +4,22 @@
 
 <%@include file="navigator.jsp" %>
 
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #DDD;
+    }
+
+    tr:hover {background-color: #D6EEEE;}
+</style>
+
+
 <%
     String msg = (String) session.getAttribute("msg");
     if (msg != null) {
@@ -85,7 +101,7 @@
                     <td style="background: #fd5252">OVERDUE <%="$" + fee%>
                     </td>
                     <td><a href="controller?action=payOverdueFees&loanId=<%=loan.getLoanId()%>">
-                        <button class="btn btn-warning">pay fees</button>
+                        <button class="btn btn-warning">Pay fees</button>
                     </a>
                     </td>
                     <%
@@ -96,7 +112,7 @@
                     } else {
                     %>
                     <td><a href="controller?action=returnBook&loanId=<%=loan.getLoanId()%>">
-                        <button class="btn btn-info">return book</button>
+                        <button class="btn btn-info">Return book</button>
                     </a>
                     </td>
                     <%

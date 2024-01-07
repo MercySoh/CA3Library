@@ -9,10 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="add more testcase for addUser method">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="small adjust first letter to capital letter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/navigator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/navigator.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -616,7 +616,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704666014243</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="small adjust first letter to capital letter">
+      <option name="closed" value="true" />
+      <created>1704666458685</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1704666458685</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -649,7 +657,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="creating BookgenreDaoTest" />
     <MESSAGE value="creating BorrowBookCommand" />
     <MESSAGE value="creating currentLoans.jsp and making dashbo&#10;more restricted" />
     <MESSAGE value="making return book functional" />
@@ -674,6 +681,7 @@
     <MESSAGE value="JavaDoc update UsersDaoInterface" />
     <MESSAGE value="add JavaDoc in UsersDaoTest." />
     <MESSAGE value="add more testcase for addUser method" />
-    <option name="LAST_COMMIT_MESSAGE" value="add more testcase for addUser method" />
+    <MESSAGE value="small adjust first letter to capital letter" />
+    <option name="LAST_COMMIT_MESSAGE" value="small adjust first letter to capital letter" />
   </component>
 </project>

@@ -45,14 +45,14 @@
                     Users u = (Users) session.getAttribute("user");
                     if (u != null) {%>
                 <li class="nav-item">
-                    <a class="nav-link" href="controller?action=logout">logout</a>
+                    <a class="nav-link" href="controller?action=logout">Logout</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="controller?action=show_profile">profile</a>
+                    <a class="nav-link" href="controller?action=show_profile">Profile</a>
                 </li>
                 <%} else {%>
                 <li class="nav-item">
-                    <a class="nav-link" href="controller?action=show_login">login</a>
+                    <a class="nav-link" href="controller?action=show_login">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="controller?action=show_register">REGISTER</a>

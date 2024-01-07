@@ -21,16 +21,16 @@
     <div class="row align-items-start">
         <div class="col">
             <h1>Profile</h1>
-            <p>username: <%=u.getUserName()%>
+            <p>Username: <%=u.getUserName()%>
             </p>
-            <p>email: <%=u.getEmail()%>
+            <p>Email: <%=u.getEmail()%>
             </p>
-            <p>address: <%=u.getAddress()%>
+            <p>Address: <%=u.getAddress()%>
             </p>
-            <p>phone: <%=u.getPhone()%>
+            <p>Phone: <%=u.getPhone()%>
             </p>
             <a href="updateProfile.jsp">
-            <button class="btn btn-info">update user</button>
+            <button class="btn btn-info">Update user</button>
             </a>
         </div>
         <div class="col">

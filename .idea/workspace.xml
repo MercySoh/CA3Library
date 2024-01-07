@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="small adjust first letter to capital letter in register.jsp and updateProfile.jsp">
+    <list default="true" id="4397a16e-bd24-4118-a1fc-019e4311d75e" name="Changes" comment="small adjust in updateProfile.jsp">
+      <change afterPath="$PROJECT_DIR$/LibraryDoc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -639,7 +640,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704669411946</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="small adjust in updateProfile.jsp">
+      <option name="closed" value="true" />
+      <created>1704670367592</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1704670367592</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -672,7 +681,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="making return book functional" />
     <MESSAGE value="commit" />
     <MESSAGE value="creating trending books section" />
     <MESSAGE value="getting all loans in profile.jsp" />
@@ -697,6 +705,7 @@
     <MESSAGE value="small adjust first letter to capital letter" />
     <MESSAGE value="small adjust first letter to capital letter in navigator.jsp and add more design for loan area in profile.jsp" />
     <MESSAGE value="small adjust first letter to capital letter in register.jsp and updateProfile.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="small adjust first letter to capital letter in register.jsp and updateProfile.jsp" />
+    <MESSAGE value="small adjust in updateProfile.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="small adjust in updateProfile.jsp" />
   </component>
 </project>

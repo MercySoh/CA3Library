@@ -1,0 +1,34 @@
+link:
+https://github.com/MercySoh/CA3Library
+
+*Website description*
+This website is designed to be a library you can login, register, view books, search books, borrow books, return them and
+pay overdue fees in case you forgot to return your book
+you can also update user
+
+*For database and daos incharge person*
+Mercy : User
+Jeremiah : Book and Genre
+Carlson: Loan and Bookgenre
+
+*Programmer defined features*
+-Jeremiah --- filter books by genre -
+It filters the books by genre, just click on the dropdown menu and select a genre, only one genre can be clicked at a time.
+Found in: DisplayBookCommand, DAO in BookGenre
+
+-Mercy --- password encryption -
+Encrypts the password with BCrypt to add more secure.
+Found in: UsersDao login and register method
+
+-Carlson --- trending books, it moves -
+Displays trending books, it is based on how many times a book is borrowed, the top 10 most borrowed ones are the trending ones.
+Found in: dashboard.jsp, DAO in LoanDao
+
+-------------------------------------
+* Test login user's detail*
+(In SQL database, the password is hash already,
+so can't see as a string password, please use jerry as a user to test our login)
+
+Username: jerry
+Password: rippleMMW1$
+-------------------------------------

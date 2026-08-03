@@ -214,6 +214,7 @@ Import `librarytest.sql`, verify the `ca3librarytest` database exists, and confi
 ## Contributors
 
 - Mercy — [@MercySoh](https://github.com/MercySoh)
+- Jeremiah — [@playerzer0-ui](https://github.com/playerzer0-ui)
 - Carlson — [@Carlson29](https://github.com/Carlson29)
 
 ## License
